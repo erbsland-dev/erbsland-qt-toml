@@ -14,11 +14,13 @@
 #pragma once
 
 
+#include "Char.hpp"
 #include "Error.hpp"
 #include "InputStream.hpp"
 #include "Location.hpp"
 #include "Namespace.hpp"
 #include "Parser.hpp"
+#include "Specification.hpp"
 #include "Value.hpp"
 
 

@@ -18,12 +18,12 @@
 #include <type_traits>
 
 
-namespace erbsland::qt\toml {
+namespace erbsland::qt::toml {
 
 
 class Parser;
 class Value;
-using ValuePtr = std::shared_ptr<Value>;;
+using ValuePtr = std::shared_ptr<Value>;
 
 
 }

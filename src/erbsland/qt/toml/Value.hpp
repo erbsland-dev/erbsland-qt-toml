@@ -46,7 +46,7 @@ using ValuePtr = std::shared_ptr<Value>;
 ///
 class Value final {
     // fwd-entry: class Value
-    // fwd-entry: using ValuePtr = std::shared_ptr<Value>;
+    // fwd-entry: using ValuePtr = std::shared_ptr<Value>
 
 private:
     /// The variant used to store the values.
