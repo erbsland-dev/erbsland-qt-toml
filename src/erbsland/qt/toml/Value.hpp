@@ -15,7 +15,9 @@
 
 
 #include "Namespace.hpp"
-#include "Location.hpp"
+#include "LocationRange.hpp"
+#include "ValueSource.hpp"
+#include "ValueType.hpp"
 
 #include <QtCore/QString>
 #include <QtCore/QTime>
@@ -62,32 +64,11 @@ private:
         std::unordered_map<QString, ValuePtr>, // 7, Table
         std::vector<ValuePtr>>;                // 8, Array
 
-public:
-    /// The type of a value.
-    ///
-    enum class Type {
-        Integer, ///< A signed integer.
-        Float, ///< A floating-point number.
-        Boolean, ///< A boolean value (either `true` or `false`).
-        String, ///< A string.
-        Time, ///< A local time of day.
-        Date, ///< A local calendar date.
-        DateTime, ///< A date and time with or without offset.
-        Table, ///< An unordered map of TOML key-value pairs.
-        Array, ///< An ordered list of TOML values.
-    };
+public: // local enum names.
+    using Type = ValueType;
+    using Source = ValueSource;
 
-    /// The source that defined the value.
-    ///
-    enum class Source {
-        ImplicitTable, ///< Implicit key of a table `[this.this.key]`
-        ExplicitTable, ///< Explicit key of a table `[key.key.this]`
-        ImplicitValue, ///< Implicit key of a value `this.key.name = 5`
-        ExplicitValue, ///< Explicit key of a value `key.this.name = 5`
-        Value, ///< A value or an inline table or list: `key = { ... }` or `key = [ ... ]`
-    };
-
-public:
+public: // access
     /// Get the type of this value.
     ///
     [[nodiscard]] inline auto type() const noexcept -> Type {
@@ -100,16 +81,10 @@ public:
         return _source;
     }
 
-    /// Test if this is a table (`Table` or `InlineTable`).
+    /// Get the location range.
     ///
-    [[nodiscard]] inline auto isTable() const noexcept -> bool {
-        return _type == Type::Table;
-    }
-
-    /// Test if this is an array (`Array` or `ArrayOfTables`).
-    ///
-    [[nodiscard]] inline auto isArray() const noexcept -> bool {
-        return _type == Type::Array;
+    [[nodiscard]] inline auto locationRange() const noexcept -> LocationRange {
+        return _locationRange;
     }
 
     /// Get the size of a table or array.
@@ -125,14 +100,6 @@ public:
     ///
     [[nodiscard]] auto value(std::size_t index) const noexcept -> ValuePtr;
 
-    /// Append a value to an array.
-    ///
-    /// If this value is no array, the call is ignored.
-    ///
-    /// @param value The value to add.
-    ///
-    void addValue(const ValuePtr &value) noexcept;
-
     /// Test if the value with a given key exists in a table.
     ///
     /// @param key The key to test.
@@ -147,6 +114,13 @@ public:
     ///
     [[nodiscard]] auto value(const QString &key) const noexcept -> ValuePtr;
 
+public: // modification
+    /// Set the location range.
+    ///
+    inline void setLocationRange(const LocationRange &locationRange) noexcept {
+        _locationRange = locationRange;
+    }
+
     /// Set or overwrite the value in a table.
     ///
     /// @param key The key of the value.
@@ -154,9 +128,30 @@ public:
     ///
     void setValue(const QString &key, const ValuePtr &value) noexcept;
 
+    /// Append a value to an array.
+    ///
+    /// If this value is no array, the call is ignored.
+    ///
+    /// @param value The value to add.
+    ///
+    void addValue(const ValuePtr &value) noexcept;
+
     /// Make this table explicit defined.
     ///
     void makeExplicit() noexcept;
+
+public: // tests
+    /// Test if this is a table (`Table` or `InlineTable`).
+    ///
+    [[nodiscard]] inline auto isTable() const noexcept -> bool {
+        return _type == Type::Table;
+    }
+
+    /// Test if this is an array (`Array` or `ArrayOfTables`).
+    ///
+    [[nodiscard]] inline auto isArray() const noexcept -> bool {
+        return _type == Type::Array;
+    }
 
 public: // conversion
     /// Get an integer from this value.
@@ -369,6 +364,7 @@ private:
 private:
     Type _type; ///< The type for this value.
     Source _source; ///< The source for this value.
+    LocationRange _locationRange{LocationRange::createNotSet()}; ///< The location range for this value.
     Storage _storage; ///< The storage for this value.
 };
 

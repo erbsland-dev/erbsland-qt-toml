@@ -23,12 +23,18 @@ target_sources(erbsland-qt-toml PRIVATE
         Error.hpp
         InputStream.cpp
         InputStream.hpp
+        Location.cpp
         Location.hpp
+        LocationFormat.hpp
+        LocationRange.cpp
+        LocationRange.hpp
         Namespace.hpp
         Parser.cpp
         Parser.hpp
         Specification.hpp
         Value.cpp
         Value.hpp
+        ValueSource.hpp
+        ValueType.hpp
 )
 

@@ -14,7 +14,10 @@
 #pragma once
 
 
+#include "LocationFormat.hpp"
 #include "Namespace.hpp"
+
+#include <QtCore/QString>
 
 #include <cstdint>
 
@@ -42,7 +45,10 @@ public:
     auto operator=(const Location&) noexcept -> Location& = default;
     ~Location() = default;
 
-public:
+    // A local name for the enum.
+    using Format = LocationFormat;
+
+public: // access
     /// Get the index of the location.
     ///
     /// @note Do not confuse this with the byte index.
@@ -62,16 +68,56 @@ public:
     ///
     [[nodiscard]] constexpr auto column() const noexcept -> int64_t { return _column; }
 
-    /// Test if this is a negative location.
+public: // comparisons
+    /// Compare two locations.
     ///
-    /// Negative values can be used to indicate no existing location.
+    /// When comparing two locations for equality, all three parts (`index`, line and column) are compared.
+    /// When locations are compared to see if they are greater or less, the `index` is mainly compared and
+    /// only when the index is equal, `line` and `column` are also compared too. While it makes no sense to
+    /// compare locations from two different files, by comparing all elements the behaviour when used as key
+    /// is well defined.
+    ///
+    /// @param other The other location to compare.
+    /// @return The comparison result.
+    ///
+    constexpr auto operator==(const Location &other) const noexcept -> bool {
+        return _index == other._index && _line == other._line && _column == other._column;
+    }
+    /// @copydoc operator==(const Location &)
+    constexpr auto operator!=(const Location &other) const noexcept -> bool {
+        return !operator==(other);
+    }
+    /// @copydoc operator==(const Location &)
+    constexpr auto operator<(const Location &other) const noexcept -> bool {
+        return (_index == other._index) ?
+               ((_line == other._line) ? _column < other._column : _line < other._line) :
+               _index < other._index;
+    }
+    /// @copydoc operator==(const Location &)
+    constexpr auto operator<=(const Location &other) const noexcept -> bool {
+        return operator<(other) && operator==(other);
+    }
+    /// @copydoc operator==(const Location &)
+    constexpr auto operator>(const Location &other) const noexcept -> bool {
+        return (_index == other._index) ?
+               ((_line == other._line) ? _column > other._column : _line > other._line) :
+               _index > other._index;
+    }
+    /// @copydoc operator==(const Location &)
+    constexpr auto operator>=(const Location &other) const noexcept -> bool {
+        return operator>(other) && operator==(other);
+    }
+
+public: // tests
+    /// Test if an element of this location is negative, indicating it is not set.
     ///
     /// @return `true` if any of the values `index`, `line` or `column` is negative.
     ///
-    [[nodiscard]] constexpr auto isNegative() const noexcept -> bool {
+    [[nodiscard]] constexpr auto isNotSet() const noexcept -> bool {
         return _index < 0 || _line < 0 || _column < 0;
     }
 
+public: // modification
     /// Increment the location by one character.
     ///
     /// @param isNewLine If a newline was read. In this case the line is incremented and the column is set to one.
@@ -84,6 +130,22 @@ public:
         } else {
             _column += 1;
         }
+    }
+
+public: // conversion
+    /// Convert this location into a string.
+    ///
+    /// @param format The format of the output.
+    /// @return A string with the format.
+    ///
+    [[nodiscard]] auto toString(Format format) const noexcept -> QString;
+
+
+public:
+    /// Create a location that is not set.
+    ///
+    [[nodiscard]] constexpr static auto createNotSet() noexcept -> Location {
+        return {-1ll, -1ll, -1ll};
     }
 
 private:

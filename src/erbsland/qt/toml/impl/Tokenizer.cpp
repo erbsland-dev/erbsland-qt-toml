@@ -56,8 +56,8 @@ void Tokenizer::stop() {
 
 
 auto Tokenizer::createToken(TokenType tokenType) -> Token {
-    auto [buffer, start, end] = _reader.takeToken();
-    auto token = Token(tokenType, buffer, start, end);
+    auto [buffer, range] = _reader.takeToken();
+    auto token = Token(tokenType, buffer, range);
     _stringQuotes = StringQuotes::None;
     _stringMode = StringMode::None;
     return token;

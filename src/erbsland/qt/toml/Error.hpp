@@ -123,7 +123,7 @@ private:
 private:
     Type _type{Type::Generic}; ///< The type of this error.
     QString _document{}; ///< The optional document that caused the error (e.g. file path).
-    Location _location{-1, -1, -1}; ///< The location of the error.
+    Location _location{Location::createNotSet()}; ///< The location of the error.
     QString _message{}; ///< The message of this error.
     mutable std::string _whatCache; ///< A cache for the implementation of the `what()` method.
 };

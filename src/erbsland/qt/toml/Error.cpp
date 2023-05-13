@@ -59,7 +59,7 @@ auto Error::toString() const noexcept -> QString {
     }
 
     // Append line and column information if available
-    if (!_location.isNegative()) {
+    if (!_location.isNotSet()) {
         result.append(QStringLiteral(" at line "));
         result.append(QString::number(_location.line()));
         result.append(QStringLiteral(", column "));

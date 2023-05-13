@@ -16,7 +16,7 @@
 
 #include "TokenType.hpp"
 
-#include "../Location.hpp"
+#include "../LocationRange.hpp"
 
 #include <QtCore/QString>
 
@@ -44,11 +44,10 @@ public:
     ///
     /// @param type The token type.
     /// @param text The token text.
-    /// @param begin The begin location.
-    /// @param end The end location.
+    /// @param range The location range.
     ///
-    inline Token(TokenType type, QString text, Location begin, Location end) noexcept
-        : _type{type}, _text{std::move(text)}, _begin{begin}, _end{end} {
+    inline Token(TokenType type, QString text, LocationRange range) noexcept
+        : _type{type}, _text{std::move(text)}, _range{range} {
     }
 
     // defaults
@@ -80,13 +79,19 @@ public:
     /// Get the begin location.
     ///
     [[nodiscard]] inline auto begin() const noexcept -> Location {
-        return _begin;
+        return _range.begin();
     }
 
     /// Get the end location.
     ///
     [[nodiscard]] inline auto end() const noexcept -> Location {
-        return _end;
+        return _range.end();
+    }
+
+    /// Get the location range.
+    ///
+    [[nodiscard]] inline auto range() const noexcept -> LocationRange {
+        return _range;
     }
 
     /// Test if this token is a value.
@@ -128,8 +133,7 @@ public:
 private:
     TokenType _type{TokenType::EndOfDocument}; ///< The type of the token.
     QString _text{}; ///< The text of the token.
-    Location _begin{}; ///< The begin location.
-    Location _end{}; ///< The end location.
+    LocationRange _range{LocationRange::createNotSet()}; ///< The location range.
 };
 
 

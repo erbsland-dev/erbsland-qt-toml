@@ -35,8 +35,8 @@ void CharReader::resetWithInputStream(InputStreamPtr inputStream) noexcept {
 }
 
 
-auto CharReader::takeToken() noexcept -> std::tuple<QString, Location, Location> {
-    auto result = std::make_tuple(_token, _startLocation, _location);
+auto CharReader::takeToken() noexcept -> std::tuple<QString, LocationRange> {
+    auto result = std::make_tuple(_token, LocationRange{_startLocation, _location});
     _token.clear();
     _startLocation = _location;
     _token.clear();

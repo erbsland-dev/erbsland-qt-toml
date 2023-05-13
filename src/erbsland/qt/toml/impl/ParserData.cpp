@@ -61,6 +61,7 @@ void ParserData::parseDocument() {
             throwSyntaxError(QStringLiteral("Expected a table, array or assignment."));
         }
     }
+    _document->setLocationRange({{}, _token.begin()}); // the whole document.
 }
 
 
@@ -76,6 +77,7 @@ void ParserData::parseDocumentLevelAssignment() {
 
 void ParserData::parseKeyValueAssignment() {
     auto valuePath = std::vector<Token>{_token};
+    auto beginLocation = _token.begin();
     readAndRequireNextToken();
     while (_token.isKeySeperator()) {
         readAndRequireNextToken();
@@ -90,6 +92,8 @@ void ParserData::parseKeyValueAssignment() {
     }
     readAndRequireNextToken(); // expect a value token next
     auto value = parseValue(); // read the next token and assume we get a value.
+    auto endLocation = _token.begin();
+    value->setLocationRange({beginLocation, endLocation});
     assignValue(valuePath, value);
 }
 
@@ -147,6 +151,7 @@ void ParserData::parseArrayOfTablesName() {
 
 
 void ParserData::createTable(std::vector<Token> keys) {
+    auto locationRange = LocationRange{keys.front().begin(), keys.back().end()};
     auto key = keys.back();
     keys.pop_back();
     auto table = createIntermediateNameElements(keys, _document, false);
@@ -166,14 +171,17 @@ void ParserData::createTable(std::vector<Token> keys) {
         }
         _currentTable = value;
         _currentTable->makeExplicit();
+        _currentTable->setLocationRange(locationRange); // update the location with the explicit definition.
     } else {
         _currentTable = Value::createTable(Value::Source::ExplicitTable);
+        _currentTable->setLocationRange(locationRange);
     }
     table->setValue(key.text(), _currentTable);
 }
 
 
 void ParserData::createArrayOfTables(std::vector<Token> keys) {
+    auto locationRange = LocationRange{keys.front().begin(), keys.back().end()};
     auto key = keys.back();
     keys.pop_back();
     auto table = createIntermediateNameElements(keys, _document, false);
@@ -187,12 +195,15 @@ void ParserData::createArrayOfTables(std::vector<Token> keys) {
         }
         // implicit and explicit tables should not exist.
         auto newTable = Value::createTable(Value::Source::ExplicitTable);
+        newTable->setLocationRange(locationRange);
         value->addValue(newTable);
         _currentTable = newTable;
     } else {
         auto newArray = Value::createArray(Value::Source::ExplicitTable);
+        newArray->setLocationRange(locationRange);
         table->setValue(key.text(), newArray);
         auto newTable = Value::createTable(Value::Source::ExplicitTable);
+        newTable->setLocationRange(locationRange);
         newArray->addValue(newTable);
         _currentTable = newTable;
     }
@@ -235,6 +246,7 @@ auto ParserData::createIntermediateNameElements(
             // If the key does not exist, create a new table for the value or structure.
             auto newTable = Value::createTable(
                 isValueAssignment ? Value::Source::ImplicitValue : Value::Source::ImplicitTable);
+            newTable->setLocationRange(_token.range());
             result->setValue(key.text(), newTable);
             result = newTable;
         }
@@ -391,6 +403,7 @@ auto ParserData::convertTime(const QStringView &text) -> std::tuple<QTime, Qt::T
 
 
 auto ParserData::parseArrayValue() -> ValuePtr {
+    auto beginArrayLocation = _token.begin();
     auto array = Value::createArray(Value::Source::Value);
     readAndRequireNextToken(); // Expect a value or array end.
     while (_token.type() != TokenType::ArrayEnd) {
@@ -398,7 +411,10 @@ auto ParserData::parseArrayValue() -> ValuePtr {
             readAndRequireNextToken();
             continue; // Skip newlines in an array.
         }
+        auto beginValueLocation = _token.begin();
         auto value = parseValue();
+        auto endValueLocation = _token.begin(); // not prefect
+        value->setLocationRange({beginValueLocation, endValueLocation});
         array->addValue(value);
         readAndRequireNextToken(); // Expect a value separator, value, or array end.
         while (_token.isNewLine()) { // Skip any number of newlines after the value.
@@ -410,11 +426,13 @@ auto ParserData::parseArrayValue() -> ValuePtr {
             throwSyntaxError(QStringLiteral("Expected a value separator or the end of the array."));
         }
     }
+    array->setLocationRange({beginArrayLocation, _token.end()});
     return array;
 }
 
 
 auto ParserData::parseInlineTableValue() -> ValuePtr {
+    auto beginTableLocation = _token.begin();
     auto table = Value::createTable(Value::Source::Value);
     readAndRequireNextToken(); // Expect a name or the end of the table.
     while (_token.type() != TokenType::TableEnd) {
@@ -425,6 +443,7 @@ auto ParserData::parseInlineTableValue() -> ValuePtr {
             }
             throwSyntaxError(QStringLiteral("Newlines are not allowed in inline tables for TOML 1.0."));
         }
+        auto beginAssignmentLocation = _token.begin(); // the value entry starts with the first key part.
         if (!_token.isKey()) {
             throwSyntaxError(QStringLiteral("Expected a key, but got something else."));
         }
@@ -445,6 +464,8 @@ auto ParserData::parseInlineTableValue() -> ValuePtr {
         // After we got the assignment operator, expect a value.
         readAndRequireNextToken();
         auto value = parseValue();
+        auto endAssignmentLocation = _token.begin();
+        value->setLocationRange({beginAssignmentLocation, endAssignmentLocation});
         // Assign this value.
         auto key = keys.back();
         keys.pop_back();
@@ -468,6 +489,7 @@ auto ParserData::parseInlineTableValue() -> ValuePtr {
             throwSyntaxError(QStringLiteral("Expected a value separator or the end of the inline table."));
         }
     }
+    table->setLocationRange({beginTableLocation, _token.end()});
     return table;
 }
 

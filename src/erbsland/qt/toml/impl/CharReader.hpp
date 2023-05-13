@@ -20,7 +20,7 @@
 #include "TokenType.hpp"
 
 #include "../InputStream.hpp"
-#include "../Location.hpp"
+#include "../LocationRange.hpp"
 #include "../Specification.hpp"
 
 #include <tuple>
@@ -199,9 +199,9 @@ public: // token buffer functions
 
     /// Get and clear the token buffer
     ///
-    /// @return The buffer contents, the start and end location of the token.
+    /// @return The buffer contents, the location range of the token.
     ///
-    auto takeToken() noexcept -> std::tuple<QString, Location, Location>;
+    auto takeToken() noexcept -> std::tuple<QString, LocationRange>;
 
     /// Write a character to the token buffer.
     ///
