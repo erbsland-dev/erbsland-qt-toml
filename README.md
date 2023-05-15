@@ -4,26 +4,6 @@ Welcome to the Erbsland Qt TOML Parser, a highly reliable and secure TOML parser
 
 A distinctive feature of this parser is its inherent strict and dependable UTF-8 parsing, which operates independently of the Qt library. Beyond merely returning the data from the parsed document, our parser provides a value structure that includes the start and end locations of each parsed table and value. This feature is instrumental in generating informative and useful error messages.
 
-## Getting Started
-
-The Erbsland Qt TOML Parser is ready to be included as a git submodule in your project and can be linked as a static library. Thanks to its lack of dependencies, it is highly flexible and can be conveniently incorporated into any build system.
-
-Here's a quick peek at how you can use it:
-
-```cpp
-#include <erbsland/qt/toml/Parser.hpp>
-
-using elqt::toml::Parser;
-
-void readConfiguration() {
-    Parser parser;
-    auto toml = parser.parseFile(QStringLiteral("config.toml"));
-    // ...
-}
-```
-
-For a practical illustration, please visit our [Example Project](https://github.com/erbsland-dev/erbsland-qt-toml-example/).
-
 ## Key Features
 
 - Compliance with TOML 1.0 and TOML 1.1 specifications
@@ -34,9 +14,31 @@ For a practical illustration, please visit our [Example Project](https://github.
 - Modern, clean C++ code base
 - Strict UTF-8 parsing, independent of Qt library
 
+## Getting Started
+
+The *Erbsland Qt TOML* parser is ready to be included as a git submodule in your project and can be linked as a static library. Thanks to its lack of dependencies, it is highly flexible and can be conveniently incorporated into any build system.
+
+Here's a quick peek at how you can use it:
+
+```cpp
+#include <erbsland/qt/toml/Parser.hpp>
+
+using elqt::toml::Parser;
+
+void readConfiguration() {
+    Parser parser{};
+    auto toml = parser.parseFile(QStringLiteral("config.toml"));
+    // ...
+}
+```
+
+For a practical illustration, please visit our [Example Project](https://github.com/erbsland-dev/erbsland-qt-toml-example/).
+
 ## Documentation
 
-Detailed documentation can be found on the wiki page of our GitHub project. Visit our [Documentation](https://github.com/erbsland-dev/erbsland-qt-toml/wiki/) for further insights and guidance.
+Detailed [documentation](https://erbsland-dev.github.io/erbsland-qt-toml/) can be found here:
+
+👉 [Documentation](https://erbsland-dev.github.io/erbsland-qt-toml/) 👈
 
 ## Feedback and Requests
 
