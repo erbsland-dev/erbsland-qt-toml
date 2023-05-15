@@ -31,10 +31,13 @@ target_sources(erbsland-qt-toml PRIVATE
         Namespace.hpp
         Parser.cpp
         Parser.hpp
+        Specification.cpp
         Specification.hpp
         Value.cpp
         Value.hpp
+        ValueSource.cpp
         ValueSource.hpp
+        ValueType.cpp
         ValueType.hpp
 )
 

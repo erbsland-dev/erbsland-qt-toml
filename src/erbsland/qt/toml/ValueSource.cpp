@@ -11,33 +11,29 @@
 //
 // You should have received a copy of the GNU Lesser General Public License along with this program.
 // If not, see <https://www.gnu.org/licenses/>.
-#pragma once
+#include "ValueSource.hpp"
 
 
-namespace erbsland::qt {}
+namespace erbsland::qt::toml {
 
 
-// Allow to disable the short namespace if it causes conflicts.
-#ifndef ERBSLAND_NO_SHORT_NAMESPACE
-#ifdef ERBSLAND_SHORT_NAMESPACE
-namespace ERBSLAND_SHORT_NAMESPACE = erbsland;
-#else
-namespace el = erbsland;
-#endif
-#ifdef ERBSLAND_QT_SHORT_NAMESPACE
-namespace ERBSLAND_QT_SHORT_NAMESPACE = erbsland::qt;
-#else
-namespace elqt = erbsland::qt;
-#endif
-#endif
+auto valueSourceToString(ValueSource valueSource) noexcept -> QString {
+    switch (valueSource) {
+        case ValueSource::ImplicitTable:
+            return QStringLiteral("Implicit Table");
+        case ValueSource::ExplicitTable:
+            return QStringLiteral("Explicit Table");
+        case ValueSource::ImplicitValue:
+            return QStringLiteral("Implicit Value");
+        case ValueSource::ExplicitValue:
+            return QStringLiteral("Explicit Value");
+        case ValueSource::Value:
+            return QStringLiteral("Value");
+        default:
+            return QStringLiteral("Unknown");
+    }
+}
 
 
-/// @namespace erbsland
-/// The base namespace for all Erbsland DEV libraries.
-
-/// @namespace erbsland::qt
-/// The base namespace for all Erbsland DEV libraries that are made for the Qt library.
-
-/// @namespace erbsland::qt::toml
-/// The namespace for the Erbsland Qt TOML library.
+}
 

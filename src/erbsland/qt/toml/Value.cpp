@@ -245,112 +245,98 @@ auto Value::toJson() const noexcept -> QJsonValue {
 
 
 auto Value::toVariant() const noexcept -> QVariant {
-    switch (type()) {
-    case Type::Integer:
-        return QVariant{toInteger()};
-    case Type::Float:
-        return QVariant{toFloat()};
-    case Type::Boolean:
-        return QVariant{toBoolean()};
-    case Type::String:
-        return QVariant{toString()};
-    case Type::Time:
-        return QVariant{toTime()};
-    case Type::Date:
-        return QVariant{toDate()};
-    case Type::DateTime:
-        return QVariant{toDateTime()};
-    case Type::Table: {
+    if (type() == Type::Table) {
         QVariantMap variantMap;
         for (const auto &[key, value] : toTable()) {
             variantMap.insert(key, value->toVariant());
         }
         return variantMap;
-    }
-    case Type::Array: {
+    } else if (type() == Type::Array) {
         QVariantList variantList;
         for (const auto &value: toArray()) {
             variantList.append(value->toVariant());
         }
         return variantList;
     }
-    default:
-        return {};
+
+    switch (type()) {
+        case Type::Integer:
+            return toInteger();
+        case Type::Float:
+            return toFloat();
+        case Type::Boolean:
+            return toBoolean();
+        case Type::String:
+            return toString();
+        case Type::Time:
+            return toTime();
+        case Type::Date:
+            return toDate();
+        case Type::DateTime:
+            return toDateTime();
+        default:
+            return {};
     }
 }
 
 
 auto Value::toUnitTestJson() const noexcept -> QJsonValue {
-    switch (type()) {
-    case Type::Integer: {
-        QJsonObject valueObj;
-        valueObj["type"] = QStringLiteral("integer");
-        valueObj["value"] = QString::number(toInteger());
-        return valueObj;
-    }
-    case Type::Float: {
-        QJsonObject valueObj;
-        valueObj["type"] = QStringLiteral("float");
-        auto value = toFloat();
-        if (std::isnan(value)) {
-            valueObj["value"] = QStringLiteral("nan");
-        } else {
-            valueObj["value"] = QString::number(toFloat(), 'g', 20);
-        }
-        return valueObj;
-    }
-    case Type::Boolean: {
-        QJsonObject valueObj;
-        valueObj["type"] = QStringLiteral("bool");
-        valueObj["value"] = toBoolean() ? QStringLiteral("true") : QStringLiteral("false");
-        return valueObj;
-    }
-    case Type::String: {
-        QJsonObject valueObj;
-        valueObj["type"] = QStringLiteral("string");
-        valueObj["value"] = toString();
-        return valueObj;
-    }
-    case Type::Time: {
-        QJsonObject valueObj;
-        valueObj["type"] = QStringLiteral("time-local");
-        valueObj["value"] = toTime().toString(Qt::ISODateWithMs);
-        return valueObj;
-    }
-    case Type::Date: {
-        QJsonObject valueObj;
-        valueObj["type"] = QStringLiteral("date-local");
-        valueObj["value"] = toDate().toString(Qt::ISODate);
-        return valueObj;
-    }
-    case Type::DateTime: {
-        QJsonObject valueObj;
-        auto dateTime = toDateTime();
-        if (dateTime.timeSpec() == Qt::LocalTime) {
-            valueObj["type"] = QStringLiteral("datetime-local");
-        } else {
-            valueObj["type"] = QStringLiteral("datetime");
-        }
-        valueObj["value"] = toDateTime().toString(Qt::ISODateWithMs);
-        return valueObj;
-    }
-    case Type::Table: {
+    if (type() == Type::Table) {
         QJsonObject jsonObject;
         for (const auto &[key, value] : toTable()) {
             jsonObject[key] = value->toUnitTestJson();
         }
         return jsonObject;
     }
-    case Type::Array: {
+
+    if (type() == Type::Array) {
         QJsonArray jsonArray;
         for (const auto &value: toArray()) {
             jsonArray.append(value->toUnitTestJson());
         }
         return jsonArray;
     }
-    default:
-        return {};
+
+    QString typeStr = valueTypeToUnitTestString(type());
+    QString valueStr;
+
+    switch (type()) {
+        case Type::Integer:
+            valueStr = QString::number(toInteger());
+            break;
+        case Type::Float: {
+            auto value = toFloat();
+            valueStr = std::isnan(value) ? QStringLiteral("nan") : QString::number(toFloat(), 'g', 20);
+            break;
+        }
+        case Type::Boolean:
+            valueStr = toBoolean() ? QStringLiteral("true") : QStringLiteral("false");
+            break;
+        case Type::String:
+            valueStr = toString();
+            break;
+        case Type::Time:
+            valueStr = toTime().toString(Qt::ISODateWithMs);
+            break;
+        case Type::Date:
+            valueStr = toDate().toString(Qt::ISODate);
+            break;
+        case Type::DateTime: {
+            auto dateTime = toDateTime();
+            if (dateTime.timeSpec() == Qt::LocalTime) {
+                typeStr = QStringLiteral("datetime-local");
+            }
+            valueStr = dateTime.toString(Qt::ISODateWithMs);
+            break;
+        }
+        default:
+            break;
     }
+
+    QJsonObject valueObj;
+    valueObj["type"] = typeStr;
+    valueObj["value"] = valueStr;
+    return valueObj;
 }
 
 

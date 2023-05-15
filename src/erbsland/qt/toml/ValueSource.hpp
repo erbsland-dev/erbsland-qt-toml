@@ -14,6 +14,11 @@
 #pragma once
 
 
+#include "Namespace.hpp"
+
+#include <QtCore/QString>
+
+
 namespace erbsland::qt::toml {
 
 
@@ -26,6 +31,14 @@ enum class ValueSource {
     ExplicitValue, ///< Explicit key of a value `key.this.name = 5`
     Value, ///< A value or an inline table or list: `key = { ... }` or `key = [ ... ]`
 };
+
+
+/// Convert a value source enumeration into a string.
+///
+/// @param valueSource The value source.
+/// @return A string for the enum value, like `Implicit Table`.
+///
+auto valueSourceToString(ValueSource valueSource) noexcept -> QString;
 
 
 }

@@ -39,6 +39,8 @@ using InputStreamPtr = std::shared_ptr<InputStream>;
 /// please use the `Custom` type.
 ///
 class InputStream {
+    // fwd-entry: class InputStream
+
 public:
     /// The type of this input stream.
     ///

@@ -25,6 +25,8 @@ namespace erbsland::qt::toml {
 /// The range covered by two locations in a file.
 ///
 class LocationRange {
+    // fwd-entry: class LocationRange
+
 public:
     /// Create a new location range.
     ///
@@ -63,7 +65,7 @@ public: // comparisons
     }
 
     constexpr auto operator!=(const LocationRange& other) const noexcept -> bool {
-        return !(*this == other);
+        return !operator==(other);
     }
 
 public: // modification
@@ -71,19 +73,13 @@ public: // modification
     ///
     /// @param other The other location range to extend with.
     ///
-    void extend(const LocationRange& other) noexcept {
-        _begin = std::min(_begin, other._begin);
-        _end = std::max(_end, other._end);
-    }
+    void extend(const LocationRange& other) noexcept;
 
     /// Extend the current location range.
     ///
     /// @param loc The location to extend with.
     ///
-    void extend(const Location& loc) noexcept {
-        _begin = std::min(_begin, loc);
-        _end = std::max(_end, loc);
-    }
+    void extend(const Location& loc) noexcept;
 
 public: // conversion
     /// Convert this location range into a string.
@@ -91,9 +87,7 @@ public: // conversion
     /// @param format The format of the output.
     /// @return A string with the format.
     ///
-    [[nodiscard]] auto toString(LocationFormat format) const noexcept -> QString {
-        return _begin.toString(format) + " - " + _end.toString(format);
-    }
+    [[nodiscard]] auto toString(LocationFormat format) const noexcept -> QString;
 
 public:
     /// Create a location range that is not set.
@@ -103,8 +97,8 @@ public:
     }
 
 private:
-    Location _begin;
-    Location _end;
+    Location _begin; ///< The begin location.
+    Location _end; ///< The end location.
 };
 
 

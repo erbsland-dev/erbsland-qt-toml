@@ -21,9 +21,12 @@
 namespace erbsland::qt::toml {
 
 
+class LocationRange;
 class Parser;
 class Value;
-using ValuePtr = std::shared_ptr<Value>;
+class Error;
+class InputStream;
+class Location;
 
 
 }

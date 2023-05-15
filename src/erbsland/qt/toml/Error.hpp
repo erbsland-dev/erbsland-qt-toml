@@ -30,6 +30,8 @@ namespace erbsland::qt::toml {
 /// An error thrown by the interfaces of the TOML library.
 ///
 class Error final : public std::exception {
+    // fwd-entry: class Error
+
 public:
     /// The type of the error.
     ///

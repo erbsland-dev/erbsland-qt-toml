@@ -28,6 +28,8 @@ namespace erbsland::qt::toml {
 /// The location in document.
 ///
 class Location {
+    // fwd-entry: class Location
+
 public:
     /// Create a new location.
     ///
@@ -122,15 +124,7 @@ public: // modification
     ///
     /// @param isNewLine If a newline was read. In this case the line is incremented and the column is set to one.
     ///
-    inline void increment(bool isNewLine) noexcept {
-        _index += 1;
-        if (isNewLine) {
-            _column = 1;
-            _line += 1;
-        } else {
-            _column += 1;
-        }
-    }
+    void increment(bool isNewLine) noexcept;
 
 public: // conversion
     /// Convert this location into a string.

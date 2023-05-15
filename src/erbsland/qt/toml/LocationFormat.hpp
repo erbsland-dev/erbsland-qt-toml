@@ -20,10 +20,10 @@ namespace erbsland::qt::toml {
 /// The string format for the location.
 ///
 enum class LocationFormat {
-    Compact, ///< `<line>:<column>`
-    CompactWithIndex, ///< `<line>:<column>:(<index>)
-    Long, ///< `line <line>, column <column>`
-    LongWithIndex, ///< `line <line>, column <column (index <index>)`
+    Compact, ///< Generates a text in the format `[line]:[column]`.
+    CompactWithIndex, ///< Generates a text in the format `[line]:[column]:([index])`.
+    Long, ///< Generates a text in the format `line [line], column [column]`.
+    LongWithIndex, ///< Generates a text in the format `line [line], column [column] (index [index])`.
 };
 
 

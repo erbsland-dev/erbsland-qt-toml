@@ -44,5 +44,16 @@ auto Location::toString(Location::Format format) const noexcept -> QString {
 }
 
 
+void Location::increment(bool isNewLine) noexcept {
+    _index += 1;
+    if (isNewLine) {
+        _column = 1;
+        _line += 1;
+    } else {
+        _column += 1;
+    }
+}
+
+
 }
 

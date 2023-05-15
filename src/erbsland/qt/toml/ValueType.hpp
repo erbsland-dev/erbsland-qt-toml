@@ -14,6 +14,11 @@
 #pragma once
 
 
+#include "Namespace.hpp"
+
+#include <QtCore/QString>
+
+
 namespace erbsland::qt::toml {
 
 
@@ -30,6 +35,26 @@ enum class ValueType {
     Table, ///< An unordered map of TOML key-value pairs.
     Array, ///< An ordered list of TOML values.
 };
+
+
+/// Convert a value type enumeration into a string.
+///
+/// @param valueType The value source.
+/// @return A string for the enum value, like `Integer`.
+///
+auto valueTypeToString(ValueType valueType) noexcept -> QString;
+
+
+/// Convert a value type enumeration into a string.
+///
+/// This function is like `valueTypeToString`, but returns the type information as: `integer`,
+/// `float`, `bool`, `string`, `date-local`, `time-local`, `datetime`, `table`, `array`. There is no `datetime-local`,
+/// as you have to inspect the actual date/time value to determine if its a local or offset date.
+///
+/// @param valueType The value source.
+/// @return A string for the enum value, like `integer`.
+///
+auto valueTypeToUnitTestString(ValueType valueType) noexcept -> QString;
 
 
 }
