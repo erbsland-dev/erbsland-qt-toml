@@ -17,7 +17,7 @@
 namespace erbsland::qt::toml::impl {
 
 
-/// @internal
+/// @private
 /// A number system.
 ///
 enum class NumberSystem {

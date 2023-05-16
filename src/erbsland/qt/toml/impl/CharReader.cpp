@@ -47,7 +47,7 @@ auto CharReader::takeToken() noexcept -> std::tuple<QString, LocationRange> {
 void CharReader::readNextChar() {
     if (!_hasChar) {
         try {
-            _char = _stream->read();
+            _char = _stream->readOrThrow();
         } catch (const Error &error) {
             throw Error::createEncoding(error.document(), _location);
         }
@@ -65,7 +65,7 @@ auto CharReader::consumeChar() -> StreamState {
 auto CharReader::skipChar() -> StreamState {
     _location.increment(_char == 0x0aU);
     try {
-        _char = _stream->read();
+        _char = _stream->readOrThrow();
     } catch (const Error &error) {
         throw Error::createEncoding(error.document(), _location);
     }

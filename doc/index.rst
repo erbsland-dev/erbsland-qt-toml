@@ -12,11 +12,13 @@ A distinctive feature of this parser is its inherent strict and dependable UTF-8
 
     chapters/preface
     chapters/quick-start
+    chapters/faq
     chapters/reference/namespaces
     chapters/reference/parser
     chapters/reference/errors
     chapters/reference/locations
     chapters/reference/streams
+    chapters/reference/classes
     chapters/reference/enumerations
     chapters/roadmap
 

@@ -35,6 +35,11 @@ auto ParserData::parseStream(const InputStreamPtr &inputStream) -> ValuePtr {
         parseDocument();
         _tokenizer.stop();
         return std::exchange(_document, {});
+    } catch (const Error &error) {
+        _lastError = error;
+        _tokenizer.stop();
+        _document = {};
+        throw;
     } catch (std::exception&) {
         _tokenizer.stop();
         _document = {};

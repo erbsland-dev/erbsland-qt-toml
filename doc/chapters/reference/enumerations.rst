@@ -3,6 +3,7 @@
 Enumerations
 ============
 
+.. cpp::namespace:: erbsland::qt::toml
 
 The ``LocationFormat`` Enum Class
 =================================
@@ -10,7 +11,7 @@ The ``LocationFormat`` Enum Class
 .. index::
     !single: LocationFormat
 
-.. doxygenenum:: erbsland::qt::toml::LocationFormat
+.. doxygenenum:: LocationFormat
 
 The ``Specification`` Enum Class
 ================================
@@ -18,7 +19,9 @@ The ``Specification`` Enum Class
 .. index::
     !single: Specification
 
-.. doxygenenum:: erbsland::qt::toml::Specification
+.. doxygenenum:: Specification
+
+.. doxygenfunction:: specificationToString
 
 The ``ValueType`` Enum Class
 ============================
@@ -26,7 +29,11 @@ The ``ValueType`` Enum Class
 .. index::
     !single: ValueType
 
-.. doxygenenum:: erbsland::qt::toml::ValueType
+.. doxygenenum:: ValueType
+
+.. doxygenfunction:: valueTypeToString
+
+.. doxygenfunction:: valueTypeToUnitTestString
 
 
 The ``ValueSource`` Enum Class
@@ -35,6 +42,7 @@ The ``ValueSource`` Enum Class
 .. index::
     !single: ValueSource
 
-.. doxygenenum:: erbsland::qt::toml::ValueSource
+.. doxygenenum:: ValueSource
 
+.. doxygenfunction:: valueSourceToString
 

@@ -29,23 +29,64 @@ Parser::~Parser() {
 }
 
 
-auto Parser::parseString(const QString &str) -> ValuePtr {
-    return parseStream(InputStream::createFromString(str));
+auto Parser::parseStringOrThrow(const QString &str) -> ValuePtr {
+    return parseStreamOrThrow(InputStream::createFromString(str));
 }
 
 
-auto Parser::parseData(const QByteArray &data) -> ValuePtr {
-    return parseStream(InputStream::createFromData(data));
+auto Parser::parseDataOrThrow(const QByteArray &data) -> ValuePtr {
+    return parseStreamOrThrow(InputStream::createFromData(data));
 }
 
 
-auto Parser::parseFile(const QString &path) -> ValuePtr {
-    return parseStream(InputStream::createFromFile(path));
+auto Parser::parseFileOrThrow(const QString &path) -> ValuePtr {
+    return parseStreamOrThrow(InputStream::createFromFileOrThrow(path));
 }
 
 
-auto Parser::parseStream(const InputStreamPtr &inputStream) -> ValuePtr {
+auto Parser::parseStreamOrThrow(const InputStreamPtr &inputStream) -> ValuePtr {
     return d->parseStream(inputStream);
+}
+
+
+auto Parser::parseString(const QString &str) noexcept -> ValuePtr {
+    try {
+        return parseStringOrThrow(str);
+    } catch (const Error &error) {
+        return {};
+    }
+}
+
+
+auto Parser::parseData(const QByteArray &data) noexcept -> ValuePtr {
+    try {
+        return parseDataOrThrow(data);
+    } catch (const Error &error) {
+        return {};
+    }
+}
+
+
+auto Parser::parseFile(const QString &path) noexcept -> ValuePtr {
+    try {
+        return parseFileOrThrow(path);
+    } catch (const Error &error) {
+        return {};
+    }
+}
+
+
+auto Parser::parseStream(const InputStreamPtr &inputStream) noexcept -> ValuePtr {
+    try {
+        return parseStreamOrThrow(inputStream);
+    } catch (const Error &error) {
+        return {};
+    }
+}
+
+
+auto Parser::lastError() const noexcept -> const Error& {
+    return d->lastError();
 }
 
 

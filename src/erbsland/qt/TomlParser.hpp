@@ -18,6 +18,7 @@
 
 
 namespace erbsland::qt {
+/// An alias for the parser class to have the namespace part in the class name.
 using TomlParser = ::erbsland::qt::toml::Parser;
 }
 

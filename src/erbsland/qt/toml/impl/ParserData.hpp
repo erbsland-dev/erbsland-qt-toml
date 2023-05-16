@@ -26,7 +26,7 @@
 namespace erbsland::qt::toml::impl {
 
 
-/// @internal
+/// @private
 /// The internal implementation of the parser.
 ///
 class ParserData {
@@ -167,12 +167,22 @@ public:
     ///
     [[noreturn]] void throwSyntaxError(const QString &message, std::optional<Token> token = {});
 
+    /// Access the last error from a parse method call.
+    ///
+    /// @return The last error from one of the parse method. When called after a successful call,
+    ///    or before parsing was done, the behaviour is save but undefined.
+    ///
+    [[nodiscard]] inline auto lastError() const noexcept -> const Error& {
+        return _lastError;
+    }
+
 private:
     Specification _specification{}; ///< The version of the specification to use
     Tokenizer _tokenizer; ///< The tokenizer used by this parser.
     Token _token{}; ///< The current token.
     ValuePtr _document{}; ///< The current document.
     ValuePtr _currentTable{}; ///< The current table.
+    Error _lastError{}; ///< The last error from one of the parse method calls.
 };
 
 

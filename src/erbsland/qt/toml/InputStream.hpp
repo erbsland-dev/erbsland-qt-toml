@@ -30,7 +30,7 @@ namespace erbsland::qt::toml {
 
 
 class InputStream;
-using InputStreamPtr = std::shared_ptr<InputStream>;
+using InputStreamPtr = std::shared_ptr<InputStream>; ///< A shared pointer for the input stream.
 
 
 /// A generic input stream to make this code more portable.
@@ -45,10 +45,10 @@ public:
     /// The type of this input stream.
     ///
     enum class Type {
-        String,
-        Data,
-        File,
-        Custom,
+        String, ///< Streaming from a string.
+        Data, ///< Streaming from a block of byte data.
+        File, ///< Streaming from a file.
+        Custom, ///< A user implemented stream.
     };
 
 public:
@@ -59,21 +59,21 @@ public:
 public:
     /// Get the type of this input stream.
     ///
-    inline auto type() -> Type { return _type; }
+    inline auto type() noexcept -> Type { return _type; }
 
 public:
     /// Test if we reached the end of the stream.
     ///
     /// @return `true` if the end of the stream is reached.
     ///
-    virtual auto atEnd() -> bool = 0;
+    virtual auto atEnd() noexcept -> bool = 0;
 
     /// Get the next unicode character from the stream
     ///
     /// @return The unicode character.
     /// @throws Error if there is an encoding error in the data or an IO error while reading the file.
     ///
-    virtual auto read() -> Char = 0;
+    virtual auto readOrThrow() -> Char = 0;
 
     /// Get a document string for an exception.
     ///
@@ -98,9 +98,9 @@ public:
     ///
     /// @param path The path to the file.
     /// @return The input stream.
-    /// @throws `Error` if the file does not exist or cannot be opened.
+    /// @throws Error if the file does not exist or cannot be opened.
     ///
-    static auto createFromFile(const QString &path) -> InputStreamPtr;
+    static auto createFromFileOrThrow(const QString &path) -> InputStreamPtr;
 
 protected:
     /// Create a new input stream of a given type.

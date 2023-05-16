@@ -36,10 +36,10 @@ public:
     /// The type of the error.
     ///
     enum class Type {
-        Generic,
-        Syntax,
-        Encoding,
-        IO,
+        Generic, ///< A generic error.
+        Syntax, ///< An error with the syntax of the document.
+        Encoding, ///< A low-level encoding error.
+        IO, ///< A IO error while reading from a device.
     };
 
 public:
@@ -72,7 +72,7 @@ public:
     ///
     /// @param document The document that caused the error (e.g. file path).
     /// @param ioDevice The QIODevice that caused the error. Error message is copied from this device.
-    /// @return A new `Error` instance with the specified properties.
+    /// @return A new instance with the specified properties.
     ///
     static auto createIO(const QString &document, const QIODevice &ioDevice) noexcept -> Error;
 
@@ -80,7 +80,7 @@ public:
     ///
     /// @param document The document that caused the error (e.g. file path).
     /// @param location The location of the error.
-    /// @return A new `Error` instance with the specified properties.
+    /// @return A new instance with the specified properties.
     ///
     static auto createEncoding(const QString &document, Location location) noexcept -> Error;
 
@@ -89,7 +89,7 @@ public:
     /// @param document The document that caused the error (e.g. file path).
     /// @param location The location of the error.
     /// @param message The message of this error.
-    /// @return A new `Error` instance with the specified properties.
+    /// @return A new instance with the specified properties.
     ///
     static auto createSyntax(const QString &document, Location location, const QString &message) noexcept -> Error;
 
@@ -112,6 +112,11 @@ public:
     [[nodiscard]] auto toString() const noexcept -> QString;
 
 public: // Implement std::exception
+    /// @private
+    /// Method for compatibility with the standard library.
+    ///
+    /// @return Pointer to a local buffer with the text in UTF-8 format.
+    ///
     [[nodiscard]] auto what() const noexcept -> const char* override;
 
 private:

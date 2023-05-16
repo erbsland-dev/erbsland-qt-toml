@@ -35,52 +35,85 @@ public:
     constexpr explicit Char(char32_t value) noexcept : _value{value} {}
 
     // defaults
-    Char() noexcept = default; // zero character.
+    /// Create a zero character.
+    Char() noexcept = default;
+    /// @private
+    /// dtor
     ~Char() = default;
+    /// @private
+    /// copy
     Char(const Char&) noexcept= default;
+    /// @private
+    /// assign
     auto operator=(const Char&) noexcept -> Char& = default;
 
 public: // Compare the char with itself.
+    /// Compare this character with another.
+    ///
+    /// @param other The other character for the comparison.
+    /// @return The result of the comparison.
+    ///
     constexpr auto operator==(Char other) const noexcept -> bool {
         return _value == other._value;
     }
+    /// @copydoc operator==(Char) const
     constexpr auto operator!=(Char other) const noexcept -> bool {
         return _value != other._value;
     }
+    /// @copydoc operator==(Char) const
     constexpr auto operator>(Char other) const noexcept -> bool {
         return _value > other._value;
     }
+    /// @copydoc operator==(Char) const
     constexpr auto operator>=(Char other) const noexcept -> bool {
         return _value >= other._value;
     }
+    /// @copydoc operator==(Char) const
     constexpr auto operator<(Char other) const noexcept -> bool {
         return _value < other._value;
     }
+    /// @copydoc operator==(Char) const
     constexpr auto operator<=(Char other) const noexcept -> bool {
         return _value <= other._value;
     }
 
 public: // Compare the unicode character with an ascii character.
+    /// Compare this character with an ascii character.
+    ///
+    /// @param asciiChar The ascii character.
+    /// @return The result of the comparison.
+    ///
     constexpr auto operator==(char asciiChar) const noexcept -> bool {
         return _value == static_cast<char32_t>(asciiChar);
     }
+    /// @copydoc operator==(char) const
     constexpr auto operator!=(char asciiChar) const noexcept -> bool {
         return _value != static_cast<char32_t>(asciiChar);
     }
+    /// @copydoc operator==(char) const
     constexpr auto operator<(char asciiChar) const noexcept -> bool {
         return _value < static_cast<char32_t>(asciiChar);
     }
+    /// @copydoc operator==(char) const
     constexpr auto operator<=(char asciiChar) const noexcept -> bool {
         return _value <= static_cast<char32_t>(asciiChar);
     }
+    /// @copydoc operator==(char) const
     constexpr auto operator>(char asciiChar) const noexcept -> bool {
         return _value > static_cast<char32_t>(asciiChar);
     }
+    /// @copydoc operator==(char) const
     constexpr auto operator>=(char asciiChar) const noexcept -> bool {
         return _value >= static_cast<char32_t>(asciiChar);
     }
 
 public: // Safely compare the unicode character with any other integer like type.
+    /// Compare this characters code point with an integer value.
+    ///
+    /// @tparam Int The integer type.
+    /// @param anyInteger The integer for the comparison.
+    /// @return The result of the comparison.
+    ///
     template<typename Int, std::enable_if_t<std::is_integral_v<Int>, bool> = true>
     constexpr auto operator==(Int anyInteger) const noexcept -> bool {
         if constexpr (std::is_signed_v<Int>) {
@@ -89,10 +122,12 @@ public: // Safely compare the unicode character with any other integer like type
             return _value == static_cast<char32_t>(anyInteger);
         }
     }
+    /// @copydoc operator==(Int) const
     template<typename Int, std::enable_if_t<std::is_integral_v<Int>, bool> = true>
     constexpr auto operator!=(Int anyInteger) const noexcept -> bool {
         return !operator==(anyInteger);
     }
+    /// @copydoc operator==(Int) const
     template<typename Int, std::enable_if_t<std::is_integral_v<Int>, bool> = true>
     constexpr auto operator>(Int anyInteger) const noexcept -> bool {
         if constexpr (std::is_signed_v<Int>) {
@@ -101,10 +136,12 @@ public: // Safely compare the unicode character with any other integer like type
             return _value > static_cast<char32_t>(anyInteger);
         }
     }
+    /// @copydoc operator==(Int) const
     template<typename Int, std::enable_if_t<std::is_integral_v<Int>, bool> = true>
     constexpr auto operator>=(Int anyInteger) const noexcept -> bool {
         return operator==(anyInteger) || operator>(anyInteger);
     }
+    /// @copydoc operator==(Int) const
     template<typename Int, std::enable_if_t<std::is_integral_v<Int>, bool> = true>
     constexpr auto operator<(Int anyInteger) const noexcept -> bool {
         if constexpr (std::is_signed_v<Int>) {
@@ -113,6 +150,7 @@ public: // Safely compare the unicode character with any other integer like type
             return _value < static_cast<uint32_t>(anyInteger);
         }
     }
+    /// @copydoc operator==(Int) const
     template<typename Int, std::enable_if_t<std::is_integral_v<Int>, bool> = true>
     constexpr auto operator<=(Int anyInteger) const noexcept -> bool {
         return operator==(anyInteger) || operator<(anyInteger);

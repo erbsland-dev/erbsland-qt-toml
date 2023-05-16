@@ -22,7 +22,7 @@
 namespace erbsland::qt::toml::impl {
 
 
-/// @internal
+/// @private
 /// The common input stream type that uses a QTextStream
 ///
 class TextStreamInputStream : public InputStream {
@@ -34,8 +34,8 @@ protected:
     explicit TextStreamInputStream(InputStream::Type type) noexcept;
 
 public: // implement InputStream
-    auto atEnd() -> bool override;
-    auto read() -> Char override;
+    auto atEnd() noexcept -> bool override;
+    auto readOrThrow() -> Char override;
 
 private:
     auto readByte() noexcept -> uint8_t;

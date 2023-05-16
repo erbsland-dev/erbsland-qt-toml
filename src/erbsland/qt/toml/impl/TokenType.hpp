@@ -20,7 +20,7 @@
 namespace erbsland::qt::toml::impl {
 
 
-/// @internal
+/// @private
 /// The type of a token.
 ///
 enum class TokenType {

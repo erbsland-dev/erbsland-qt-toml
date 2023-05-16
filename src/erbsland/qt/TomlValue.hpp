@@ -18,6 +18,7 @@
 
 
 namespace erbsland::qt {
+/// An alias for the value class to have the namespace part in the class name.
 using TomlValue = ::erbsland::qt::toml::Value;
 }
 

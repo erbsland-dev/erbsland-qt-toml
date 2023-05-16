@@ -26,7 +26,7 @@
 namespace erbsland::qt::toml::impl {
 
 
-/// @internal
+/// @private
 /// Represents a token read from the tokenizer.
 ///
 class Token final {

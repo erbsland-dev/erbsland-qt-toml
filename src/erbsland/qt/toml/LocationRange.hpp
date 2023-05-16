@@ -38,8 +38,13 @@ public:
     }
 
     // defaults
+    /// Create a location range 1:1(0)-1:1(0).
     constexpr LocationRange() noexcept = default;
+    /// @private
+    /// copy
     LocationRange(const LocationRange&) noexcept = default;
+    /// @private
+    /// assign
     auto operator=(const LocationRange&) noexcept -> LocationRange& = default;
 
 public: // access
@@ -60,10 +65,15 @@ public: // access
     }
 
 public: // comparisons
+    /// Compare two location ranges.
+    ///
+    /// @param other The other location range for comparison.
+    /// @return The result of the comparison.
+    ///
     constexpr auto operator==(const LocationRange& other) const noexcept -> bool {
         return _begin == other._begin && _end == other._end;
     }
-
+    /// @copydoc operator==(const LocationRange&) const
     constexpr auto operator!=(const LocationRange& other) const noexcept -> bool {
         return !operator==(other);
     }

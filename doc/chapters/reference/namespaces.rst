@@ -11,6 +11,7 @@
     single: Namespaces; erbsland::qt::toml
     single: Namespaces; el (Shortcut)
     single: Namespaces; elqt (Shortcut)
+    single: Namespace Shortcuts
 
 Namespaces
 ==========

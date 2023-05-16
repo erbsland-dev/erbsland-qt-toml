@@ -32,18 +32,23 @@ auto StringInputStream::document() const noexcept -> QString {
 }
 
 
-auto StringInputStream::atEnd() -> bool {
+auto StringInputStream::atEnd() noexcept -> bool {
     return _readPosition >= _textCopy.size();
 }
 
 
-auto StringInputStream::read() -> Char {
+auto StringInputStream::readOrThrow() -> Char {
     if (atEnd()) {
         return {};
     }
     auto character1 = _textCopy.at(_readPosition++);
+    Char readChar;
     if (!character1.isHighSurrogate()) {
-        return Char(static_cast<uint32_t>(character1.unicode()));
+        readChar = Char{static_cast<uint32_t>(character1.unicode())};
+        if (!readChar.isValidUnicode()) {
+            throw Error::createEncoding(document(), {});
+        }
+        return readChar;
     }
     if (character1.isLowSurrogate()) {
         throw Error::createEncoding(document(), {});
@@ -55,7 +60,11 @@ auto StringInputStream::read() -> Char {
     if (character2.isHighSurrogate()) {
         throw Error::createEncoding(document(), {});
     }
-    return Char(static_cast<uint32_t>(QChar::surrogateToUcs4(character1, character2)));
+    readChar = Char(static_cast<uint32_t>(QChar::surrogateToUcs4(character1, character2)));
+    if (!readChar.isValidUnicode()) {
+        throw Error::createEncoding(document(), {});
+    }
+    return readChar;
 }
 
 

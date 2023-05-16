@@ -42,12 +42,19 @@ public:
     }
 
     // defaults
+    /// Create a location with row 1, column 1 and index 0.
     constexpr Location() noexcept = default;
+    /// @private
+    /// copy
     Location(const Location&) noexcept = default;
+    /// @private
+    /// assign
     auto operator=(const Location&) noexcept -> Location& = default;
+    /// @private
+    /// dtor
     ~Location() = default;
 
-    // A local name for the enum.
+    /// A local name for the enum.
     using Format = LocationFormat;
 
 public: // access
@@ -85,27 +92,27 @@ public: // comparisons
     constexpr auto operator==(const Location &other) const noexcept -> bool {
         return _index == other._index && _line == other._line && _column == other._column;
     }
-    /// @copydoc operator==(const Location &)
+    /// @copydoc operator==(const Location&) const
     constexpr auto operator!=(const Location &other) const noexcept -> bool {
         return !operator==(other);
     }
-    /// @copydoc operator==(const Location &)
+    /// @copydoc operator==(const Location&) const
     constexpr auto operator<(const Location &other) const noexcept -> bool {
         return (_index == other._index) ?
                ((_line == other._line) ? _column < other._column : _line < other._line) :
                _index < other._index;
     }
-    /// @copydoc operator==(const Location &)
+    /// @copydoc operator==(const Location&) const
     constexpr auto operator<=(const Location &other) const noexcept -> bool {
         return operator<(other) && operator==(other);
     }
-    /// @copydoc operator==(const Location &)
+    /// @copydoc operator==(const Location&) const
     constexpr auto operator>(const Location &other) const noexcept -> bool {
         return (_index == other._index) ?
                ((_line == other._line) ? _column > other._column : _line > other._line) :
                _index > other._index;
     }
-    /// @copydoc operator==(const Location &)
+    /// @copydoc operator==(const Location&) const
     constexpr auto operator>=(const Location &other) const noexcept -> bool {
         return operator>(other) && operator==(other);
     }

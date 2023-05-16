@@ -38,7 +38,7 @@ auto InputStream::createFromData(const QByteArray &data) noexcept -> InputStream
 }
 
 
-auto InputStream::createFromFile(const QString &path) -> InputStreamPtr {
+auto InputStream::createFromFileOrThrow(const QString &path) -> InputStreamPtr {
     return std::make_unique<impl::FileInputStream>(path);
 }
 

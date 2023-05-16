@@ -24,7 +24,7 @@
 namespace erbsland::qt::toml::impl {
 
 
-/// @internal
+/// @private
 /// A class specialized to detect and read tokens from the stream.
 ///
 class Tokenizer final {
@@ -88,7 +88,7 @@ public: // high-level interface.
     /// Read the next token from the stream.
     ///
     /// @return The next token.
-    /// @throws `Error` for IO and syntax errors.
+    /// @throws Error for IO and syntax errors.
     ///
     auto read() -> Token;
 

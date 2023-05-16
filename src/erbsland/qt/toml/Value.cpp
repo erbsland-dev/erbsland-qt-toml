@@ -29,10 +29,10 @@ auto Value::size() const noexcept -> std::size_t {
     if (!isTable() && !isArray()) {
         return 0;
     }
-    if (auto ptr = std::get_if<typeToStorageIndex(Type::Table)>(&_storage); ptr != nullptr) {
+    if (auto ptr = std::get_if<TableValue>(&_storage); ptr != nullptr) {
         return ptr->size();
     }
-    if (auto ptr = std::get_if<typeToStorageIndex(Type::Array)>(&_storage); ptr != nullptr) {
+    if (auto ptr = std::get_if<ArrayValue>(&_storage); ptr != nullptr) {
         return ptr->size();
     }
     return 0;
@@ -43,7 +43,7 @@ auto Value::value(std::size_t index) const noexcept -> ValuePtr {
     if (!isArray()) {
         return {};
     }
-    if (auto ptr = std::get_if<typeToStorageIndex(Type::Array)>(&_storage); ptr != nullptr) {
+    if (auto ptr = std::get_if<ArrayValue>(&_storage); ptr != nullptr) {
         if (index < ptr->size()) {
             return ptr->at(index);
         }
@@ -52,22 +52,35 @@ auto Value::value(std::size_t index) const noexcept -> ValuePtr {
 }
 
 
-auto Value::hasValue(const QString &key) const noexcept -> bool {
-    if (!isTable()) {
-        return false;
-    }
-    if (auto ptr = std::get_if<typeToStorageIndex(Type::Table)>(&_storage); ptr != nullptr) {
-        return ptr->find(key) != ptr->end();
-    }
-    return false;
+auto Value::hasValue(const QString &keyPath) const noexcept -> bool {
+    return value(keyPath) != nullptr;
 }
 
 
-auto Value::value(const QString &key) const noexcept -> ValuePtr {
+auto Value::value(const QString &keyPath) const noexcept -> ValuePtr {
     if (!isTable()) {
         return {};
     }
-    if (auto ptr = std::get_if<typeToStorageIndex(Type::Table)>(&_storage); ptr != nullptr) {
+    if (!keyPath.contains('.')) { // single key?
+        return valueFromKey(keyPath);
+    }
+    auto frontKey = keyPath.section('.', 0, 1);
+    auto backKeys = keyPath.section('.', 1);
+    if (auto ptr = std::get_if<TableValue>(&_storage); ptr != nullptr) {
+        auto it = ptr->find(frontKey);
+        if (it != ptr->end()) {
+            return it->second->value(backKeys);
+        }
+    }
+    return {};
+}
+
+
+auto Value::valueFromKey(const QString &key) const noexcept -> ValuePtr {
+    if (!isTable()) {
+        return {};
+    }
+    if (auto ptr = std::get_if<TableValue>(&_storage); ptr != nullptr) {
         auto it = ptr->find(key);
         if (it != ptr->end()) {
             return it->second;
@@ -84,7 +97,7 @@ void Value::addValue(const ValuePtr &value) noexcept {
     if (_source == Source::ExplicitTable && !value->isTable()) {
         return;
     }
-    if (auto ptr = std::get_if<typeToStorageIndex(Type::Array)>(&_storage); ptr != nullptr) {
+    if (auto ptr = std::get_if<ArrayValue>(&_storage); ptr != nullptr) {
         ptr->emplace_back(value);
     }
 }
@@ -94,63 +107,77 @@ void Value::setValue(const QString &key, const ValuePtr &value) noexcept {
     if (!isTable()) {
         return;
     }
-    if (auto ptr = std::get_if<typeToStorageIndex(Type::Table)>(&_storage); ptr != nullptr) {
+    if (auto ptr = std::get_if<TableValue>(&_storage); ptr != nullptr) {
         ptr->insert_or_assign(key, value);
     }
 }
 
 
-template<std::size_t typeIndex>
-auto Value::toValue() const noexcept -> std::variant_alternative_t<typeIndex, Storage> {
-    if (_storage.index() == typeIndex) {
-        return std::get<typeIndex>(_storage);
+auto Value::tableKeys() const noexcept -> QStringList {
+    if (!isTable()) {
+        return {};
     }
-    return std::variant_alternative_t<typeIndex, Storage>{};
+    QStringList result;
+    if (auto ptr = std::get_if<TableValue>(&_storage); ptr != nullptr) {
+        for (const auto &entry : *ptr) {
+            result.append(entry.first);
+        }
+    }
+    return result;
+}
+
+
+template<typename T>
+auto Value::toValue(Type type) const noexcept -> T {
+    if (_type != type) {
+        return {};
+    }
+    return std::get<T>(_storage);
 }
 
 
 auto Value::toInteger() const noexcept -> int64_t {
-    return toValue<typeToStorageIndex(Type::Integer)>();
+    return toValue<int64_t>(Type::Integer);
 }
 
 
 auto Value::toFloat() const noexcept -> double {
-    return toValue<typeToStorageIndex(Type::Float)>();
+    return toValue<double>(Type::Float);
 }
 
 
 auto Value::toBoolean() const noexcept -> bool {
-    return toValue<typeToStorageIndex(Type::Boolean)>();
+    return toValue<bool>(Type::Boolean);
 }
 
 
 auto Value::toString() const noexcept -> QString {
-    return toValue<typeToStorageIndex(Type::String)>();
+    return toValue<QString>(Type::String);
 }
 
 
 auto Value::toTime() const noexcept -> QTime {
-    return toValue<typeToStorageIndex(Type::Time)>();
+    return toValue<QTime>(Type::Time);
 }
 
 
 auto Value::toDate() const noexcept -> QDate {
-    return toValue<typeToStorageIndex(Type::Date)>();
+    return toValue<QDate>(Type::Date);
 }
 
 
 auto Value::toDateTime() const noexcept -> QDateTime {
-    return toValue<typeToStorageIndex(Type::DateTime)>();
+    return toValue<QDateTime>(Type::DateTime);
 }
 
 
-auto Value::toTable() const noexcept -> std::unordered_map<QString, ValuePtr> {
-    return toValue<typeToStorageIndex(Type::Table)>();
+auto Value::toTable() const noexcept -> TableValue {
+    return toValue<TableValue>(Type::Table);
 }
 
 
-auto Value::toArray() const noexcept -> std::vector<ValuePtr> {
-    return toValue<typeToStorageIndex(Type::Array)>();
+auto Value::toArray() const noexcept -> ArrayValue {
+    return toValue<ArrayValue>(Type::Array);
 }
 
 
@@ -190,12 +217,12 @@ auto Value::createDateTime(QDateTime value) noexcept -> ValuePtr {
 
 
 auto Value::createTable(Source source) noexcept -> ValuePtr {
-    return std::make_shared<Value>(Type::Table, source, Storage{std::unordered_map<QString, ValuePtr>{}}, PrivateTag{});
+    return std::make_shared<Value>(Type::Table, source, Storage{TableValue{}}, PrivateTag{});
 }
 
 
 auto Value::createArray(Source source) noexcept -> ValuePtr {
-    return std::make_shared<Value>(Type::Array, source, Storage{std::vector<ValuePtr>{}}, PrivateTag{});
+    return std::make_shared<Value>(Type::Array, source, Storage{ArrayValue{}}, PrivateTag{});
 }
 
 
@@ -337,6 +364,89 @@ auto Value::toUnitTestJson() const noexcept -> QJsonValue {
     valueObj["type"] = typeStr;
     valueObj["value"] = valueStr;
     return valueObj;
+}
+
+
+template<typename T>
+auto Value::typeValue(ValueType type, const QString &keyPath, const T &defaultValue) const noexcept -> T {
+    auto tableValue = value(keyPath);
+    if (tableValue == nullptr || tableValue->type() != type) {
+        return defaultValue;
+    }
+    return std::get<T>(tableValue->_storage);
+}
+
+
+auto Value::stringValue(const QString &keyPath, const QString &defaultValue) const noexcept -> QString {
+    return typeValue<QString>(Type::String, keyPath, defaultValue);
+}
+
+
+auto Value::integerValue(const QString &keyPath, int64_t defaultValue) const noexcept -> int64_t {
+    return typeValue<int64_t>(Type::Integer, keyPath, defaultValue);
+}
+
+
+auto Value::floatValue(const QString &keyPath, double defaultValue) const noexcept -> double {
+    return typeValue<double>(Type::Float, keyPath, defaultValue);
+}
+
+
+auto Value::booleanValue(const QString &keyPath, bool defaultValue) const noexcept -> bool {
+    return typeValue<bool>(Type::Boolean, keyPath, defaultValue);
+}
+
+
+auto Value::timeValue(const QString &keyPath, QTime defaultValue) const noexcept -> QTime {
+    return typeValue<QTime>(Type::Time, keyPath, defaultValue);
+}
+
+
+auto Value::dateValue(const QString &keyPath, QDate defaultValue) const noexcept -> QDate {
+    return typeValue<QDate>(Type::Date, keyPath, defaultValue);
+}
+
+
+auto Value::dateTimeValue(const QString &keyPath, const QDateTime& defaultValue) const noexcept -> QDateTime {
+    return typeValue<QDateTime>(Type::DateTime, keyPath, defaultValue);
+}
+
+
+auto Value::tableValue(const QString &keyPath) const noexcept -> ValuePtr {
+    auto value = this->value(keyPath);
+    if (!value->isTable()) {
+        return createTable(Source::Value);
+    }
+    return value;
+}
+
+
+auto Value::arrayValue(const QString &keyPath) const noexcept -> ValuePtr {
+    auto value = this->value(keyPath);
+    if (!value->isArray()) {
+        return createArray(Source::Value);
+    }
+    return value;
+}
+
+
+auto Value::clone() const noexcept -> ValuePtr {
+    ValuePtr newValue;
+    if (isTable()) {
+        newValue = createTable(source());
+        for (const auto &[key, value] : toTable()) {
+            newValue->setValue(key, value->clone());
+        }
+    } else if (isArray()) {
+        newValue = createArray(source());
+        for (const auto &value : toArray()) {
+            newValue->addValue(value->clone());
+        }
+    } else {
+        newValue = std::make_shared<Value>(_type, _source, _storage, PrivateTag{});
+    }
+    newValue->setLocationRange(_locationRange);
+    return newValue;
 }
 
 

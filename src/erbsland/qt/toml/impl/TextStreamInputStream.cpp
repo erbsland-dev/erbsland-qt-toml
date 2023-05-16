@@ -25,12 +25,12 @@ TextStreamInputStream::TextStreamInputStream(InputStream::Type type) noexcept
 }
 
 
-auto TextStreamInputStream::atEnd() -> bool {
+auto TextStreamInputStream::atEnd() noexcept -> bool {
     return _dataStream->atEnd();
 }
 
 
-auto TextStreamInputStream::read() -> Char {
+auto TextStreamInputStream::readOrThrow() -> Char {
     if (atEnd()) {
         return {};
     }

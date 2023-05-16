@@ -20,7 +20,7 @@
 namespace erbsland::qt::toml::impl {
 
 
-/// @internal
+/// @private
 /// An input stream bases on byte data.
 ///
 class DataInputStream final : public TextStreamInputStream {

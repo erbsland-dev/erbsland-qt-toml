@@ -16,6 +16,7 @@
 
 #include "Namespace.hpp"
 #include "LocationRange.hpp"
+#include "ValueIterator.hpp"
 #include "ValueSource.hpp"
 #include "ValueType.hpp"
 
@@ -38,7 +39,7 @@ namespace erbsland::qt::toml {
 
 
 class Value;
-using ValuePtr = std::shared_ptr<Value>;
+using ValuePtr = std::shared_ptr<Value>; ///< A shared pointer for the `Value` class.
 
 
 /// A value handled by the TOML parser or serializer.
@@ -46,8 +47,13 @@ using ValuePtr = std::shared_ptr<Value>;
 /// @note This value type is not protected against infinite recursion. The parser will always produce valid results,
 /// if a user is creating own value structure, they have to pay attention to this possibility.
 ///
-class Value final {
+class Value final : public std::enable_shared_from_this<Value> {
     // fwd-entry: class Value
+    friend class ValueIterator;
+
+public:
+    using TableValue = std::unordered_map<QString, ValuePtr>; ///< The storage type used for table values.
+    using ArrayValue = std::vector<ValuePtr>; ///< The storage type used for arrays.
 
 private:
     /// The variant used to store the values.
@@ -60,12 +66,12 @@ private:
         QTime,       // 4, Time
         QDate,       // 5, Date
         QDateTime,   // 6, DateTime
-        std::unordered_map<QString, ValuePtr>, // 7, Table
-        std::vector<ValuePtr>>;                // 8, Array
+        TableValue,  // 7, Table
+        ArrayValue>; // 8, Array
 
 public: // local enum names.
-    using Type = ValueType;
-    using Source = ValueSource;
+    using Type = ValueType; ///< A local name for the value type enumeration.
+    using Source = ValueSource; ///< A local name for the value source enumeration.
 
 public: // access
     /// Get the type of this value.
@@ -101,17 +107,117 @@ public: // access
 
     /// Test if the value with a given key exists in a table.
     ///
-    /// @param key The key to test.
-    /// @return `true` if a value with that key exists, `false` otherwise.
+    /// @param keyPath The key, or a key path in the form `key.key.key`.
+    /// @return `true` if a value with that key or key path exists, `false` otherwise.
     ///
-    [[nodiscard]] auto hasValue(const QString &key) const noexcept -> bool;
+    [[nodiscard]] auto hasValue(const QString &keyPath) const noexcept -> bool;
 
-    /// Access an value of a table.
+    /// Access a value of a table.
     ///
-    /// @param key The key.
+    /// @param keyPath The key, or a key path in the form `key.key.key`.
     /// @return The value for the value, or a `nullptr` if the key does not exist.
     ///
-    [[nodiscard]] auto value(const QString &key) const noexcept -> ValuePtr;
+    [[nodiscard]] auto value(const QString &keyPath) const noexcept -> ValuePtr;
+
+    /// Access a value of this table, using a single key.
+    ///
+    /// This method exists, if you have to work with keys that contain a dot so you can't use
+    /// the `value()` methods with key paths.
+    ///
+    /// @param key A single key, that can contain the dot character.
+    /// @return The value for the value, or a `nullptr` if the key does not exist.
+    ///
+    [[nodiscard]] auto valueFromKey(const QString &key) const noexcept -> ValuePtr;
+
+public: // convenience access
+    /// Access a string value using a key path.
+    ///
+    /// @param keyPath The key path to the value, each key seperated with a dot. Like `key.key.key`.
+    /// @param defaultValue The default value that is used if the key does not exist or is no string.
+    /// @return The string at the given key path, or the `defaultValue`.
+    ///
+    [[nodiscard]] auto stringValue(const QString &keyPath, const QString &defaultValue = {}) const noexcept -> QString;
+
+    /// Access an integer value using a key path.
+    ///
+    /// @param keyPath The key path to the value, each key separated with a dot. Like `key.key.key`.
+    /// @param defaultValue The default value that is used if the key does not exist or is no integer.
+    /// @return The integer at the given key path, or the `defaultValue`.
+    ///
+    [[nodiscard]] auto integerValue(const QString &keyPath, int64_t defaultValue = {}) const noexcept -> int64_t;
+
+    /// Access a float value using a key path.
+    ///
+    /// @param keyPath The key path to the value, each key separated with a dot. Like `key.key.key`.
+    /// @param defaultValue The default value that is used if the key does not exist or is no float.
+    /// @return The float at the given key path, or the `defaultValue`.
+    ///
+    [[nodiscard]] auto floatValue(const QString &keyPath, double defaultValue = {}) const noexcept -> double;
+
+    /// Access a boolean value using a key path.
+    ///
+    /// @param keyPath The key path to the value, each key separated with a dot. Like `key.key.key`.
+    /// @param defaultValue The default value that is used if the key does not exist or is no boolean.
+    /// @return The boolean at the given key path, or the `defaultValue`.
+    ///
+    [[nodiscard]] auto booleanValue(const QString &keyPath, bool defaultValue = {}) const noexcept -> bool;
+
+    /// Access a time value using a key path.
+    ///
+    /// @param keyPath The key path to the value, each key separated with a dot. Like `key.key.key`.
+    /// @param defaultValue The default value that is used if the key does not exist or is no time value.
+    /// @return The time value at the given key path, or the `defaultValue`.
+    ///
+    [[nodiscard]] auto timeValue(const QString &keyPath, QTime defaultValue = {}) const noexcept -> QTime;
+
+    /// Access a date value using a key path.
+    ///
+    /// @param keyPath The key path to the value, each key separated with a dot. Like `key.key.key`.
+    /// @param defaultValue The default value that is used if the key does not exist or is no date value.
+    /// @return The date value at the given key path, or the `defaultValue`.
+    ///
+    [[nodiscard]] auto dateValue(const QString &keyPath, QDate defaultValue = {}) const noexcept -> QDate;
+
+    /// Access an date/time value using a key path.
+    ///
+    /// @param keyPath The key path to the value, each key separated with a dot. Like `key.key.key`.
+    /// @param defaultValue The default value that is used if the key does not exist or is no date/time.
+    /// @return The date/time at the given key path, or the `defaultValue`.
+    ///
+    [[nodiscard]] auto dateTimeValue(const QString &keyPath, const QDateTime& defaultValue = {}) const noexcept -> QDateTime;
+
+    /// Access a table value using a key path.
+    ///
+    /// @param keyPath The key path to the value, each key separated with a dot. Like `key.key.key`.
+    /// @return The table value at the given key path, or an empty unconnected table value.
+    ///
+    [[nodiscard]] auto tableValue(const QString &keyPath) const noexcept -> ValuePtr;
+
+    /// Access an array value using a key path.
+    ///
+    /// @param keyPath The key path to the value, each key separated with a dot. Like `key.key.key`.
+    /// @return The array value at the given key path, or an empty unconnected array value.
+    ///
+    [[nodiscard]] auto arrayValue(const QString &keyPath) const noexcept -> ValuePtr;
+
+    /// Get a list with all keys of a table.
+    ///
+    /// @return An unsorted list with all keys in this table, or an empty list if this table is empty or
+    ///    this value is no table.
+    ///
+    [[nodiscard]] auto tableKeys() const noexcept -> QStringList;
+
+    /// Iterator over elements of an array.
+    ///
+    [[nodiscard]] auto begin() noexcept -> ValueIterator {
+        return {shared_from_this(), 0};
+    }
+
+    /// Iterator over elements of an array.
+    ///
+    [[nodiscard]] auto end() noexcept -> ValueIterator {
+        return {shared_from_this(), size()};
+    }
 
 public: // modification
     /// Set the location range.
@@ -139,14 +245,20 @@ public: // modification
     ///
     void makeExplicit() noexcept;
 
+    /// Deep-clone this value.
+    ///
+    /// @return A deep clone of this value and value structure if there is any.
+    ///
+    auto clone() const noexcept -> ValuePtr;
+
 public: // tests
-    /// Test if this is a table (`Table` or `InlineTable`).
+    /// Test if this is a table (`ValueType::Table`).
     ///
     [[nodiscard]] inline auto isTable() const noexcept -> bool {
         return _type == Type::Table;
     }
 
-    /// Test if this is an array (`Array` or `ArrayOfTables`).
+    /// Test if this is an array (`ValueType::Array`).
     ///
     [[nodiscard]] inline auto isArray() const noexcept -> bool {
         return _type == Type::Array;
@@ -199,13 +311,13 @@ public: // conversion
     ///
     /// @return An unordered map if this value is `Type::Table`, otherwise an empty map.
     ///
-    [[nodiscard]] auto toTable() const noexcept -> std::unordered_map<QString, ValuePtr>;
+    [[nodiscard]] auto toTable() const noexcept -> TableValue;
 
     /// Get an vector from this value.
     ///
     /// @return A vector if this value is `Type::Array`, otherwise an empty vector.
     ///
-    [[nodiscard]] auto toArray() const noexcept -> std::vector<ValuePtr>;
+    [[nodiscard]] auto toArray() const noexcept -> ArrayValue;
 
     /// Convert this value to a matching QJsonValue
     ///
@@ -309,7 +421,7 @@ private:
     struct PrivateTag {};
 
 public:
-    /// @internal
+    /// @private
     /// The private constructor.
     ///
     /// @param type The value type
@@ -323,42 +435,19 @@ public:
 private:
     /// Get the given type or the default value.
     ///
-    template<std::size_t typeIndex>
-    auto toValue() const noexcept -> std::variant_alternative_t<typeIndex, Storage>;
+    template<typename T>
+    auto toValue(Type type) const noexcept -> T;
 
-    /// A function that converts the type into the correct index for the storage.
+    /// Return the value at the given key path if it exists and if it matches the type.
     ///
-    /// @note The compiler will optimize this function away and reduce it to a cast and check. It is safer than
-    /// having an enum with integer type and do casts, as it never exceeds the valid range and causes compiler
-    /// errors or warnings when the enum changes.
+    /// @tparam Type The expected type.
+    /// @param type The expected type enum.
+    /// @param keyPath The key path in the form `key.key.key`
+    /// @param defaultValue The default value returned if the key is not found or the type does not match.
+    /// @return The value or `defaultValue`.
     ///
-    /// @param type The type.
-    /// @return The storage index.
-    ///
-    static constexpr auto typeToStorageIndex(Type type) noexcept -> std::size_t {
-        switch (type) {
-        case Type::Integer:
-            return 0;
-        case Type::Float:
-            return 1;
-        case Type::Boolean:
-            return 2;
-        case Type::String:
-            return 3;
-        case Type::Time:
-            return 4;
-        case Type::Date:
-            return 5;
-        case Type::DateTime:
-            return 6;
-        case Type::Table:
-            return 7;
-        case Type::Array:
-            return 8;
-        default:
-            return 0;
-        }
-    }
+    template<typename T>
+    auto typeValue(Type type, const QString &keyPath, const T &defaultValue) const noexcept -> T;
 
 private:
     Type _type; ///< The type for this value.

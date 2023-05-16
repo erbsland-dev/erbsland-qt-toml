@@ -17,7 +17,7 @@
 namespace erbsland::qt::toml {
 
 
-auto valueSourceToString(Specification specification) noexcept -> QString {
+auto specificationToString(Specification specification) noexcept -> QString {
     switch (specification) {
         case Specification::Version_1_0:
             return QStringLiteral("TOML 1.0");

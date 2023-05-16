@@ -20,7 +20,7 @@
 namespace erbsland::qt::toml::impl {
 
 
-/// @internal
+/// @private
 /// A input stream that reads from a QString
 ///
 class StringInputStream final : public InputStream {
@@ -35,8 +35,8 @@ public:
     ~StringInputStream() override = default;
 
 public: // implement InputStream
-    [[nodiscard]] auto atEnd() -> bool override;
-    [[nodiscard]] auto read() -> Char override;
+    [[nodiscard]] auto atEnd() noexcept -> bool override;
+    [[nodiscard]] auto readOrThrow() -> Char override;
     [[nodiscard]] auto document() const noexcept -> QString override;
 
 private:

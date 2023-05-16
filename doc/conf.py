@@ -27,3 +27,4 @@ breathe_doxygen_config_options = {
     'STRIP_FROM_PATH': str(_src_dir),
     'STRIP_FROM_INC_PATH': str(_src_dir),
 }
+

@@ -23,12 +23,16 @@ Here's a quick peek at how you can use it:
 ```cpp
 #include <erbsland/qt/toml/Parser.hpp>
 
-using elqt::toml::Parser;
+using elqt::toml;
 
 void readConfiguration() {
     Parser parser{};
-    auto toml = parser.parseFile(QStringLiteral("config.toml"));
-    // ...
+    try {
+        auto toml = parser.parseFileOrThrow(QStringLiteral("config.toml"));
+        // ...
+    } catch (const Error &error) {
+        // ...
+    }
 }
 ```
 

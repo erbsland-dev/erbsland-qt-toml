@@ -53,7 +53,7 @@ class WorkingSet:
         self.file_map: dict[str, Path] = {}        # A map with all header file names and their paths
         self.fwd_entry_map: dict[str, list[str]] = {}  # A map with all collected fwd entries.
 
-    def write_all_header(self, header_dir, header_files):
+    def write_all_header(self, header_dir: str, header_files: list[str]):
         """
         Write a single 'in source' header file.
 
@@ -86,7 +86,7 @@ class WorkingSet:
         rel_target_path = Path(('../' * up_count) + 'src/erbsland') / target_path.relative_to(self.src_dir)
         if self.verbose:
             print(f'  writing "{source_path}" -> "{rel_target_path}"')
-        text = f'#include "{rel_target_path}"\n'
+        text = f'#include "{rel_target_path.as_posix()}"\n'
         if not source_path.parent.is_dir():
             source_path.parent.mkdir(parents=True, exist_ok=True)
         source_path.write_text(text, encoding='utf-8')
@@ -129,7 +129,7 @@ class WorkingSet:
         if self.verbose:
             print('Scanning for fwd entries')
         for header_path in self.file_map.values():
-            header_dir = str(header_path.parent.relative_to(self.src_dir))
+            header_dir = str(header_path.parent.relative_to(self.src_dir).as_posix())
             text = header_path.read_text(encoding='utf-8')
             entries = self.RE_FWD_ENTRIES.findall(text)
             if entries:

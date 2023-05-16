@@ -35,6 +35,8 @@ target_sources(erbsland-qt-toml PRIVATE
         Specification.hpp
         Value.cpp
         Value.hpp
+        ValueIterator.cpp
+        ValueIterator.hpp
         ValueSource.cpp
         ValueSource.hpp
         ValueType.cpp

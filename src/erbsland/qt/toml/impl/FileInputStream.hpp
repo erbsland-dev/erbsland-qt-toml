@@ -20,7 +20,7 @@
 namespace erbsland::qt::toml::impl {
 
 
-/// @internal
+/// @private
 /// A input stream reading UTF-8 data from a file.
 ///
 class FileInputStream final : public TextStreamInputStream {

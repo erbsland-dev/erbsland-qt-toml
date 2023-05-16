@@ -105,7 +105,7 @@ Now that we have our directory structure ready, let's create the required source
            auto path = QCoreApplication::applicationDirPath() + "/config.toml";
            Parser parser{};
            std::cout << "Reading configuration from: " << path.toStdString() << "\n";
-           toml = parser.parseFile(path);
+           toml = parser.parseFileOrThrow(path);
        } catch (const Error &err) {
            std::cerr << err.toString().toStdString() << std::endl;
           return 1;

@@ -29,7 +29,7 @@
 namespace erbsland::qt::toml::impl {
 
 
-/// @internal
+/// @private
 /// A class specialized reading characters from the stream, classify them and assemble tokens.
 ///
 /// This class provides all the low-level functionality of the tokenizer, without the

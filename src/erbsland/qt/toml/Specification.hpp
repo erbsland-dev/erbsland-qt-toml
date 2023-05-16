@@ -35,7 +35,7 @@ enum class Specification : int {
 /// @param specification The specification.
 /// @return A string for the specification in the format `TOML 1.0`.
 ///
-auto valueSourceToString(Specification specification) noexcept -> QString;
+auto specificationToString(Specification specification) noexcept -> QString;
 
 
 }
