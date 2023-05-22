@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_32ed51ae9d303ec68ea944d5f47e3441" kind="dir">
+    <compoundname>erbsland/qt/toml</compoundname>
+    <innerfile refid="all_8hpp">all.hpp</innerfile>
+    <innerfile refid="_char_8hpp">Char.hpp</innerfile>
+    <innerfile refid="_error_8cpp">Error.cpp</innerfile>
+    <innerfile refid="_error_8hpp">Error.hpp</innerfile>
+    <innerfile refid="fwd_8hpp">fwd.hpp</innerfile>
+    <innerfile refid="_input_stream_8cpp">InputStream.cpp</innerfile>
+    <innerfile refid="_input_stream_8hpp">InputStream.hpp</innerfile>
+    <innerfile refid="_location_8cpp">Location.cpp</innerfile>
+    <innerfile refid="_location_8hpp">Location.hpp</innerfile>
+    <innerfile refid="_location_format_8hpp">LocationFormat.hpp</innerfile>
+    <innerfile refid="_location_range_8cpp">LocationRange.cpp</innerfile>
+    <innerfile refid="_location_range_8hpp">LocationRange.hpp</innerfile>
+    <innerfile refid="_namespace_8hpp">Namespace.hpp</innerfile>
+    <innerfile refid="_parser_8cpp">Parser.cpp</innerfile>
+    <innerfile refid="_parser_8hpp">Parser.hpp</innerfile>
+    <innerfile refid="_specification_8cpp">Specification.cpp</innerfile>
+    <innerfile refid="_specification_8hpp">Specification.hpp</innerfile>
+    <innerfile refid="_value_8cpp">Value.cpp</innerfile>
+    <innerfile refid="_value_8hpp">Value.hpp</innerfile>
+    <innerfile refid="_value_iterator_8cpp">ValueIterator.cpp</innerfile>
+    <innerfile refid="_value_iterator_8hpp">ValueIterator.hpp</innerfile>
+    <innerfile refid="_value_source_8cpp">ValueSource.cpp</innerfile>
+    <innerfile refid="_value_source_8hpp">ValueSource.hpp</innerfile>
+    <innerfile refid="_value_type_8cpp">ValueType.cpp</innerfile>
+    <innerfile refid="_value_type_8hpp">ValueType.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="erbsland/qt/toml/"/>
+  </compounddef>
+</doxygen>

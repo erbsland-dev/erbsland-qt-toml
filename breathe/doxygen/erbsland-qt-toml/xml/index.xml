@@ -1,0 +1,316 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.1" xml:lang="en-US">
+  <compound refid="classerbsland_1_1qt_1_1toml_1_1_char" kind="class"><name>erbsland::qt::toml::Char</name>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1a0298d2c2f266c6712f0ec0d2cc17295d" kind="variable"><name>_value</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1a602e5154f13bdd585b9c9419f82deaac" kind="function"><name>Char</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1a0ba5407ed5bebf8f9fe03afdb4efe102" kind="function"><name>Char</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1a0299d3e22c6c26e4fcf74b5cd18d1322" kind="function"><name>operator==</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1afb1a6ca0d50d33c7bc9a251f6f045252" kind="function"><name>operator!=</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1ac40412db2d983d494da624deb6c0a043" kind="function"><name>operator&gt;</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1a1776bcf210ffcf4ff03fef8f78c0633a" kind="function"><name>operator&gt;=</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1ab5eb5ad4f69c6520c4ef2d567f5d2871" kind="function"><name>operator&lt;</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1a099ace9f1b660946b9c9c3bcc149fdf1" kind="function"><name>operator&lt;=</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1a399e8bd5746e8513f77ff9750b86de55" kind="function"><name>operator==</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1a9d5d7de6ff34de6a495ea49af33e2ee4" kind="function"><name>operator!=</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1a3d1b27e2d1a68c488d3ab08c1b9460f1" kind="function"><name>operator&lt;</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1a534caca43c4a7e6965459af46df70080" kind="function"><name>operator&lt;=</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1ab99ac2994fc845942f538d9273d6d592" kind="function"><name>operator&gt;</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1ad989357f369a01c798648c493bbc321f" kind="function"><name>operator&gt;=</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1af4d8b4ecab4c98f5e92ba76bec9b14dd" kind="function"><name>operator==</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1a8ae6f0cf31f4c555c53d1d1549616ff9" kind="function"><name>operator!=</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1a5e8df890533e5a9881ec9851752596ca" kind="function"><name>operator&gt;</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1a8ff06e4a0411b4a698d83b9bf921107f" kind="function"><name>operator&gt;=</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1a60d05374c740f4728b9a4525ae964fc6" kind="function"><name>operator&lt;</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1a80a173f02a3cc636b7f453d53261c941" kind="function"><name>operator&lt;=</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1a800dbc7ccc67a589d93d0907a1a07b19" kind="function"><name>isNull</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1a07998471b93f1da8ca021797e6711d48" kind="function"><name>isValidUnicode</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1aabf9fa38942d32dba776068c43b51107" kind="function"><name>toAscii</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1a292a4dbd6b081b5cddc4da3f5e4047d8" kind="function"><name>appendToString</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1a41b2c789108bd80ceb14385648d33299" kind="function"><name>~Char</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1a8a980119fcf4ef1a0477d11c487e984b" kind="function"><name>Char</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1a7e35415e07ed5e3d3e3d782634395028" kind="function"><name>operator=</name></member>
+  </compound>
+  <compound refid="classerbsland_1_1qt_1_1toml_1_1_error" kind="class"><name>erbsland::qt::toml::Error</name>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_error_1a64aab71412e0105574e8c5699f698e9e" kind="enum"><name>Type</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_error_1a64aab71412e0105574e8c5699f698e9ea8045a0a6c688b0635e3caccc408a1446" kind="enumvalue"><name>Generic</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_error_1a64aab71412e0105574e8c5699f698e9ea92e9d6227d5534e7afc27a11179c808e" kind="enumvalue"><name>Syntax</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_error_1a64aab71412e0105574e8c5699f698e9ea169a6f6b44766410bffebf76ff3dcf17" kind="enumvalue"><name>Encoding</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_error_1a64aab71412e0105574e8c5699f698e9eacf3882f1c43ab22bff0bd9d82d83251b" kind="enumvalue"><name>IO</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_error_1a908c4dfb8f96fe7a8fcdaf1034e4cd77" kind="variable"><name>_type</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_error_1aeb3cbd3a16b9c6ee6a820a0fe5b8e393" kind="variable"><name>_document</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_error_1acbc5196d869da5ff7d38ee04f04ac8a5" kind="variable"><name>_location</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_error_1a1c1950c5efbab2790b772f82f42be45e" kind="variable"><name>_message</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_error_1aa9531a223bcc5c6bdde083af3ab9aa72" kind="variable"><name>_whatCache</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_error_1ae82af59421973c194014ac71930d901e" kind="function"><name>Error</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_error_1a349165723194800473bc2d3151eeafdf" kind="function"><name>Error</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_error_1a5dd34081c0744974f819616f9d684a45" kind="function"><name>document</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_error_1aa1224a1c443fec91cd5b2f46a17d841c" kind="function"><name>toString</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_error_1a9792cf78b63d123d8c80a3169dcc5a74" kind="function"><name>Error</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_error_1afd3dcb25c84197b3ca085828136d1df4" kind="function"><name>what</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_error_1a2e39470c997a91ba7bf196f8d5cfbf73" kind="function"><name>createIO</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_error_1a2d972ea2cdd1c8a6e3307a5edac90c44" kind="function"><name>createEncoding</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_error_1a7ee8a05450f23b1655df64bd5cec756c" kind="function"><name>createSyntax</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_error_1a27e0e1eea9cb0ed109e67e1967954705" kind="function"><name>typeToString</name></member>
+  </compound>
+  <compound refid="classerbsland_1_1qt_1_1toml_1_1_input_stream" kind="class"><name>erbsland::qt::toml::InputStream</name>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1af210719b529740e6d8d5e596fe896611" kind="enum"><name>Type</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1af210719b529740e6d8d5e596fe896611a27118326006d3829667a400ad23d5d98" kind="enumvalue"><name>String</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1af210719b529740e6d8d5e596fe896611af6068daa29dbb05a7ead1e3b5a48bbee" kind="enumvalue"><name>Data</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1af210719b529740e6d8d5e596fe896611a0b27918290ff5323bea1e3b78a9cf04e" kind="enumvalue"><name>File</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1af210719b529740e6d8d5e596fe896611a90589c47f06eb971d548591f23c285af" kind="enumvalue"><name>Custom</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1a7aaa324332f6ddd508fd1c5002029ba9" kind="variable"><name>_type</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1a0110d02b0d852a5f45e99253e3d752e7" kind="function"><name>~InputStream</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1a908fd927b3603d76292efc4f67c1cb1d" kind="function"><name>type</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1aeb0026095dcf47b9c380b39e7ce71751" kind="function"><name>atEnd</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1a5438e4946a3c46e4e5ba1ea947f7b579" kind="function"><name>readOrThrow</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1af0b947a819e772b7f6a857d7e6dbbd95" kind="function"><name>document</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1a02b07d21fc894b1e433a48eac436746a" kind="function"><name>createFromString</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1a2f85aff2459ca789e0789f7148e55dae" kind="function"><name>createFromData</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1afc2d3a7fe1badef08b86e8fa7ffe8668" kind="function"><name>createFromFileOrThrow</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1ab1c8bc144fc11c5d34cd0640b155b5cb" kind="function"><name>InputStream</name></member>
+  </compound>
+  <compound refid="classerbsland_1_1qt_1_1toml_1_1_location" kind="class"><name>erbsland::qt::toml::Location</name>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_location_1a045f5dacf396bd67ac543581232a6a3b" kind="typedef"><name>Format</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_location_1a2fa3cded2216e73ee3094e461605eb7a" kind="variable"><name>_index</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_location_1a54991f405dca8479d652163d2adea075" kind="variable"><name>_line</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_location_1a2bf20a8e4642ccd3499602db16e5bf0c" kind="variable"><name>_column</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_location_1ac8adf118b5df44836765c09aba1b6845" kind="function"><name>Location</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_location_1aac109f0557894ff4ee1e199022effcc0" kind="function"><name>Location</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_location_1abaf64f448317d9320ae9336be6912fce" kind="function"><name>index</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_location_1a9b39e51b8ba2e92d061dde56952b84d7" kind="function"><name>line</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_location_1a8428d36c60db2fb706fea73ddbaee862" kind="function"><name>column</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_location_1a4fddce091b99b19694e1fc37a9f5fbae" kind="function"><name>operator==</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_location_1a2954cffec2ba0a2a4c10fffbfcce6bda" kind="function"><name>operator!=</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_location_1ab6f7c10243e6bf4c0819828073f880c6" kind="function"><name>operator&lt;</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_location_1a6b9dc53bedec9f47fcac6302534f5f7f" kind="function"><name>operator&lt;=</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_location_1ab8e6072d19130aa6319bc51738e1c233" kind="function"><name>operator&gt;</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_location_1a5fb0c954883128d4d19b74e1e7fa0969" kind="function"><name>operator&gt;=</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_location_1ae4230841b61238e52e9e2409384e06f8" kind="function"><name>isNotSet</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_location_1a264ace2329d864f23d111e8d8ea95899" kind="function"><name>increment</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_location_1a7adf22587bb80f24b5b9d15b0e127d35" kind="function"><name>toString</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_location_1abeedaeff9977c9165433d45a5a196293" kind="function"><name>Location</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_location_1afdd2c27b679c44c737817dd5b2de3e4d" kind="function"><name>operator=</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_location_1a2f4e59b2970405b612374be62d3bdb06" kind="function"><name>~Location</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_location_1a4387ce0b9659dfa0cbaf0c2171ddde73" kind="function"><name>createNotSet</name></member>
+  </compound>
+  <compound refid="classerbsland_1_1qt_1_1toml_1_1_location_range" kind="class"><name>erbsland::qt::toml::LocationRange</name>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_location_range_1a7d9dc4950fbbc545e4f2e518d81529d1" kind="variable"><name>_begin</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_location_range_1a00020ec8a4c31e44b4ae7ebe03e12688" kind="variable"><name>_end</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_location_range_1a9feebf255da8031ceeb0b7938c1c7893" kind="function"><name>LocationRange</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_location_range_1af5b77f432ccffd0613b69a4f7b9deac1" kind="function"><name>LocationRange</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_location_range_1ae88943d37a2152ead5db7d98a1fea435" kind="function"><name>begin</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_location_range_1a7d2eb53c697a65d3a616b935c4cf060c" kind="function"><name>end</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_location_range_1a605b4c1172ea514d3423c5fd4c5da6eb" kind="function"><name>operator==</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_location_range_1aef2734d39c922950f62f76a6986622c7" kind="function"><name>operator!=</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_location_range_1afd518c7f2a6479ac2f120e4751c0d122" kind="function"><name>extend</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_location_range_1a6ae12608e7a4b6b43f3c1267a44c7bea" kind="function"><name>extend</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_location_range_1a9e71ca804da52321eac325135da24861" kind="function"><name>toString</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_location_range_1a1ec1e4971fb89e891bb7f22d0a50431a" kind="function"><name>LocationRange</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_location_range_1a97fe08f8f285c1a56d289b02f9522073" kind="function"><name>operator=</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_location_range_1a13815ae973cb65434d13c94c8a835dff" kind="function"><name>createNotSet</name></member>
+  </compound>
+  <compound refid="classerbsland_1_1qt_1_1toml_1_1_parser" kind="class"><name>erbsland::qt::toml::Parser</name>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_parser_1a3e7426890c504f47b0ce548b1e523fdb" kind="variable"><name>d</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_parser_1a959ff575183e59319468c13bb905a75f" kind="function"><name>Parser</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_parser_1a4a35eae548b7416876223e636a351212" kind="function"><name>~Parser</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_parser_1adb6e3dfd12621ae86ccccfdc162b3ebb" kind="function"><name>Parser</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_parser_1a794c82f9cffa15c675dcb6306a1dc34c" kind="function"><name>operator=</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_parser_1a495cc10e50db91f2f8e452630f8c02ca" kind="function"><name>parseStringOrThrow</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_parser_1a487a753faa1e3f809b729e0d9b2046ac" kind="function"><name>parseDataOrThrow</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_parser_1ad0090edf3dea3ce47288e94a44139665" kind="function"><name>parseFileOrThrow</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_parser_1ab728e20892fc8831d36edc23ee338151" kind="function"><name>parseStreamOrThrow</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_parser_1a8edafdaa2c6712881adf2cad392067c8" kind="function"><name>parseString</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_parser_1a890f6a2ed27028a0e3d434f4982efb3a" kind="function"><name>parseData</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_parser_1a6e2bb4ec7ccae577b776ec9c928bd218" kind="function"><name>parseFile</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_parser_1a840d3d370f63909cf14a2912b08a10c6" kind="function"><name>parseStream</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_parser_1aa5a445f85f9a0fddb7c95c75b1b8b220" kind="function"><name>lastError</name></member>
+  </compound>
+  <compound refid="structerbsland_1_1qt_1_1toml_1_1_value_1_1_private_tag" kind="struct"><name>erbsland::qt::toml::Value::PrivateTag</name>
+  </compound>
+  <compound refid="classerbsland_1_1qt_1_1toml_1_1_value" kind="class"><name>erbsland::qt::toml::Value</name>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1ad50945c35c852ab36898a1de54faf6ef" kind="typedef"><name>TableValue</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1ab035c7bc474995efa7bc25c0f3cd9f57" kind="typedef"><name>ArrayValue</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1ad46471df6d41852c99e8a479587fa807" kind="typedef"><name>Type</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a951281c180ba37bc2f2e7ef221d53cb4" kind="typedef"><name>Source</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1ab579d06db329aefd13dec4864119863a" kind="typedef"><name>Storage</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1af664ab3dc7e92649c0dc7631344894d8" kind="friend"><name>ValueIterator</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1ac9b3a3b009f4a3c243437a60606b7649" kind="variable"><name>_type</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1af9ff305180b8bcfcbb80dfbb53d3fcb3" kind="variable"><name>_source</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a83f8f5fb8e2cabc38be8d56d9ec8b43f" kind="variable"><name>_locationRange</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a2ded3db02b1deeceb8e84d39078ada50" kind="variable"><name>_storage</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a2671665d49e9552bca83b3c6f4abb169" kind="function"><name>type</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a08bc72e19c2e49443a651d08972982ad" kind="function"><name>source</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a6942871bd7bfe568b28b9e34cc1d0aad" kind="function"><name>locationRange</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a17b61c4da1dc161c24c534ceba615daa" kind="function"><name>size</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1acea38a91de97def5a47c4c4170a60641" kind="function"><name>value</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a3a7523e1229bb15b3ead47cb6b5166c0" kind="function"><name>hasValue</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1adf913926633b7aa07e506a8a3935b453" kind="function"><name>value</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a3e5619f5abc331f605b675394205bba8" kind="function"><name>hasKey</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a910415414eacbb26fe0c723c0d4acb34" kind="function"><name>valueFromKey</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1adfbd9763f91ec0e2a7fd30303b34eda3" kind="function"><name>stringValue</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a6415259681abd94a83257042397e655a" kind="function"><name>integerValue</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a7896164c5d20f127eb913b0048ad058d" kind="function"><name>floatValue</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1aa0a5107ccf285f1323a8741e73e430d2" kind="function"><name>booleanValue</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1abe6a52f09f86069a140057d2fde32cf0" kind="function"><name>timeValue</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a9973af66099dcf5642d7e79abc08814f" kind="function"><name>dateValue</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a2ef8499b9cf0c5a46521efed974d81c6" kind="function"><name>dateTimeValue</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a803063cb7b0b30d8a21549671e8757ba" kind="function"><name>tableValue</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a6848e526f1f053832b62b59f732c7e45" kind="function"><name>arrayValue</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a4849e01ef862f08911cb401f0da968d2" kind="function"><name>tableKeys</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a9552862957c8b00760d80f1a867229d9" kind="function"><name>begin</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1afffcfb6f24ba440a9cf68d909858400f" kind="function"><name>end</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a2e4091a9eb5f942304b69781f0d1f80c" kind="function"><name>setLocationRange</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a656e2087f6ba6833c5aad2f2e30d15a9" kind="function"><name>setValue</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1ac3b9adff7476f13f2ead0d3167948100" kind="function"><name>addValue</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1afd52778da85d49f4e5e3c0c2dd2458bd" kind="function"><name>makeExplicit</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1aeabcdd605bd36a971706b21fb6e94f09" kind="function"><name>clone</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1acaed63cf54ee1bd10c8f6dc5f40ebc63" kind="function"><name>isTable</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a154e80451dec86cd9776c4efca5e2fa3" kind="function"><name>isArray</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1aa748214c11c12fee01c800b4c99e0833" kind="function"><name>toInteger</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1ae9ac47aac949dbabd10ec7cf4e8f6ff7" kind="function"><name>toFloat</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1abe66b64a42cdafbb24f3d2c9630df6e2" kind="function"><name>toBoolean</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1ab9b40f8f018c6c351502f40326ff307d" kind="function"><name>toString</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a2601d306034a0fff9cd57884e1607ff7" kind="function"><name>toTime</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a73f11b0e44ad391bf1e74d154268f024" kind="function"><name>toDate</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1af86f6d24d564af7e173ba7d420fc655b" kind="function"><name>toDateTime</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a7b1ab0789171dcb45a8f11ca1e2cff31" kind="function"><name>toTable</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a63ad97fe8e6c0734ea4474dddce71dd7" kind="function"><name>toArray</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a18cd485411fbffc410cbc251379f9f50" kind="function"><name>toJson</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1aec175681da2fabb90e8a703683b78b0c" kind="function"><name>toVariant</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a572d1cb8af6a404424f2c8c88ca36386" kind="function"><name>toUnitTestJson</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a8c209c7a538e71a72b9da3e746a96585" kind="function"><name>createInteger</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1abdeef5d1c910041a70dce323c270e44a" kind="function"><name>createFloat</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a7ae743ed89b09121f7239d3dfdefa3e2" kind="function"><name>createBoolean</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a7a99b0c76f4d2241f62d6041bef6afb8" kind="function"><name>createString</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1ae6ba4fae07632a653a4a043e207e1b95" kind="function"><name>createTime</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1afbe2a4fc81db05e44634c62bc15a07db" kind="function"><name>createDate</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a7f97c5a489c8eeb607614800221f9440" kind="function"><name>createDateTime</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1ad6396a30692e4b655940f6712d29872b" kind="function"><name>createTable</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1aab685561423149889894c1f3108f2183" kind="function"><name>createArray</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1ae8510e31cc3eaa44afc6a4a9b9200dea" kind="function"><name>Value</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a2de4e1c310c9bb31e84cc463e48b517f" kind="function"><name>toValue</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a6b0e35a7f724829cb9df481886565908" kind="function"><name>typeValue</name></member>
+  </compound>
+  <compound refid="classerbsland_1_1qt_1_1toml_1_1_value_iterator" kind="class"><name>erbsland::qt::toml::ValueIterator</name>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_iterator_1a6af703b05c1b2ad892779f1d5adb26ff" kind="typedef"><name>iterator_category</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_iterator_1ad730e09c48378d7af866d70e37e8c0b4" kind="typedef"><name>value_type</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_iterator_1a20e47a8d0f2b22bb2dfb739fa4fca91a" kind="typedef"><name>difference_type</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_iterator_1a65a827fc54219c88df6acaa100aa234c" kind="typedef"><name>pointer</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_iterator_1ad74ab742b3eb7bc904711e976d6da2fb" kind="typedef"><name>reference</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_iterator_1aeceedf6e1a7d48a588516ce2b1983d6f" kind="friend"><name>Value</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_iterator_1a61036b4ccfc4a9cadc2201b94625e86f" kind="friend"><name>operator==</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_iterator_1a5be9a12809a3b72f9d516eabad5e851b" kind="friend"><name>operator!=</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_iterator_1a834de40321c14fb933b3cfb09a27591d" kind="variable"><name>_index</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_iterator_1ae9cf61ccdb087243a52cc1cd6b428f92" kind="variable"><name>_value</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_iterator_1a611c1f8479d6b92db361d70f6913a096" kind="function"><name>ValueIterator</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_iterator_1aaa58e3158d0bbaf9f8654083584748cd" kind="function"><name>operator*</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_iterator_1a1dfece46ce534a4e7d03b346a75a07b3" kind="function"><name>operator-&gt;</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_iterator_1ace3ddf157c05a3dce459ab341eb66133" kind="function"><name>operator++</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_iterator_1ad84561f0544f0857dde3b00706815494" kind="function"><name>operator++</name></member>
+    <member refid="classerbsland_1_1qt_1_1toml_1_1_value_iterator_1aacd22b495776cf6aef013943fec8b5de" kind="function"><name>ValueIterator</name></member>
+  </compound>
+  <compound refid="namespaceerbsland" kind="namespace"><name>erbsland</name>
+  </compound>
+  <compound refid="namespaceerbsland_1_1qt" kind="namespace"><name>erbsland::qt</name>
+    <member refid="namespaceerbsland_1_1qt_1a63e6c0fcbc2ddebc1a52950792f8fae2" kind="typedef"><name>TomlParser</name></member>
+    <member refid="namespaceerbsland_1_1qt_1a61b70c93a03b16fa31140959cfbdee09" kind="typedef"><name>TomlValue</name></member>
+  </compound>
+  <compound refid="namespaceerbsland_1_1qt_1_1toml" kind="namespace"><name>erbsland::qt::toml</name>
+    <member refid="namespaceerbsland_1_1qt_1_1toml_1a06a315dbcc1a56376b3d1a00650e177a" kind="enum"><name>LocationFormat</name></member>
+    <member refid="namespaceerbsland_1_1qt_1_1toml_1a06a315dbcc1a56376b3d1a00650e177aab1fe2c2a59e883740e7ea87667e44a24" kind="enumvalue"><name>Compact</name></member>
+    <member refid="namespaceerbsland_1_1qt_1_1toml_1a06a315dbcc1a56376b3d1a00650e177aa197732de835a64962e6e06d060a7208c" kind="enumvalue"><name>CompactWithIndex</name></member>
+    <member refid="namespaceerbsland_1_1qt_1_1toml_1a06a315dbcc1a56376b3d1a00650e177aa8394f0347c184cf156ac5924dccb773b" kind="enumvalue"><name>Long</name></member>
+    <member refid="namespaceerbsland_1_1qt_1_1toml_1a06a315dbcc1a56376b3d1a00650e177aa63abd19a5803918223058a01cc8abe29" kind="enumvalue"><name>LongWithIndex</name></member>
+    <member refid="namespaceerbsland_1_1qt_1_1toml_1a5d994656f551138656a92c8e822a70b6" kind="enum"><name>Specification</name></member>
+    <member refid="namespaceerbsland_1_1qt_1_1toml_1a5d994656f551138656a92c8e822a70b6ae9914d03abe9cb6381eba59283eb96e7" kind="enumvalue"><name>Version_1_0</name></member>
+    <member refid="namespaceerbsland_1_1qt_1_1toml_1a5d994656f551138656a92c8e822a70b6af54b79d05609d8eaca32c34874d779b5" kind="enumvalue"><name>Version_1_1</name></member>
+    <member refid="namespaceerbsland_1_1qt_1_1toml_1a51e4748f2f9f18dd439906cfb8cf01a3" kind="enum"><name>ValueSource</name></member>
+    <member refid="namespaceerbsland_1_1qt_1_1toml_1a51e4748f2f9f18dd439906cfb8cf01a3a48fbc207f7a61fcca264a195260a47b8" kind="enumvalue"><name>ImplicitTable</name></member>
+    <member refid="namespaceerbsland_1_1qt_1_1toml_1a51e4748f2f9f18dd439906cfb8cf01a3af28b515f29d1fcd6097b14a2d099453e" kind="enumvalue"><name>ExplicitTable</name></member>
+    <member refid="namespaceerbsland_1_1qt_1_1toml_1a51e4748f2f9f18dd439906cfb8cf01a3aad99b7772a0fd5c664efa2a2d9236f5e" kind="enumvalue"><name>ImplicitValue</name></member>
+    <member refid="namespaceerbsland_1_1qt_1_1toml_1a51e4748f2f9f18dd439906cfb8cf01a3afde0e6ca7326a18e631731f3fb185fc0" kind="enumvalue"><name>ExplicitValue</name></member>
+    <member refid="namespaceerbsland_1_1qt_1_1toml_1a51e4748f2f9f18dd439906cfb8cf01a3a689202409e48743b914713f96d93947c" kind="enumvalue"><name>Value</name></member>
+    <member refid="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24ae" kind="enum"><name>ValueType</name></member>
+    <member refid="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aeaa0faef0851b4294c06f2b94bb1cb2044" kind="enumvalue"><name>Integer</name></member>
+    <member refid="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aea22ae0e2b89e5e3d477f988cc36d3272b" kind="enumvalue"><name>Float</name></member>
+    <member refid="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aea27226c864bac7454a8504f8edb15d95b" kind="enumvalue"><name>Boolean</name></member>
+    <member refid="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aea27118326006d3829667a400ad23d5d98" kind="enumvalue"><name>String</name></member>
+    <member refid="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aeaa76d4ef5f3f6a672bbfab2865563e530" kind="enumvalue"><name>Time</name></member>
+    <member refid="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aea44749712dbec183e983dcd78a7736c41" kind="enumvalue"><name>Date</name></member>
+    <member refid="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aea8cf10d2341ed01492506085688270c1e" kind="enumvalue"><name>DateTime</name></member>
+    <member refid="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aea51c45b795d5d18a3e4e0c37e8b20a141" kind="enumvalue"><name>Table</name></member>
+    <member refid="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aea4410ec34d9e6c1a68100ca0ce033fb17" kind="enumvalue"><name>Array</name></member>
+    <member refid="namespaceerbsland_1_1qt_1_1toml_1af3fbda439ad741c0de4de24b54fb1f8e" kind="typedef"><name>InputStreamPtr</name></member>
+    <member refid="namespaceerbsland_1_1qt_1_1toml_1aab3cc5b714cc77d2d409a7ffd098c2e5" kind="typedef"><name>ValuePtr</name></member>
+    <member refid="namespaceerbsland_1_1qt_1_1toml_1af137e14a5640c17e6e500b68c8025a3d" kind="function"><name>specificationToString</name></member>
+    <member refid="namespaceerbsland_1_1qt_1_1toml_1af3ac17bb78b24e05fef7d808c63c2910" kind="function"><name>operator==</name></member>
+    <member refid="namespaceerbsland_1_1qt_1_1toml_1a6bd399f8aeba098f99061e2878be3d30" kind="function"><name>operator!=</name></member>
+    <member refid="namespaceerbsland_1_1qt_1_1toml_1a125c106f9ae5a087edf5894cdf59d0a4" kind="function"><name>valueSourceToString</name></member>
+    <member refid="namespaceerbsland_1_1qt_1_1toml_1a8763f4e6183a5db29ed289e05ff2ffee" kind="function"><name>valueTypeToString</name></member>
+    <member refid="namespaceerbsland_1_1qt_1_1toml_1a4cd37b7400e8ddc13f4b20d749d9777e" kind="function"><name>valueTypeToUnitTestString</name></member>
+  </compound>
+  <compound refid="namespaceerbsland_1_1qt_1_1toml_1_1impl" kind="namespace"><name>erbsland::qt::toml::impl</name>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="all_8hpp" kind="file"><name>all.hpp</name>
+  </compound>
+  <compound refid="_char_8hpp" kind="file"><name>Char.hpp</name>
+  </compound>
+  <compound refid="_error_8cpp" kind="file"><name>Error.cpp</name>
+  </compound>
+  <compound refid="_error_8hpp" kind="file"><name>Error.hpp</name>
+  </compound>
+  <compound refid="fwd_8hpp" kind="file"><name>fwd.hpp</name>
+  </compound>
+  <compound refid="_input_stream_8cpp" kind="file"><name>InputStream.cpp</name>
+  </compound>
+  <compound refid="_input_stream_8hpp" kind="file"><name>InputStream.hpp</name>
+  </compound>
+  <compound refid="_location_8cpp" kind="file"><name>Location.cpp</name>
+  </compound>
+  <compound refid="_location_8hpp" kind="file"><name>Location.hpp</name>
+  </compound>
+  <compound refid="_location_format_8hpp" kind="file"><name>LocationFormat.hpp</name>
+  </compound>
+  <compound refid="_location_range_8cpp" kind="file"><name>LocationRange.cpp</name>
+  </compound>
+  <compound refid="_location_range_8hpp" kind="file"><name>LocationRange.hpp</name>
+  </compound>
+  <compound refid="_namespace_8hpp" kind="file"><name>Namespace.hpp</name>
+  </compound>
+  <compound refid="_parser_8cpp" kind="file"><name>Parser.cpp</name>
+  </compound>
+  <compound refid="_parser_8hpp" kind="file"><name>Parser.hpp</name>
+  </compound>
+  <compound refid="_specification_8cpp" kind="file"><name>Specification.cpp</name>
+  </compound>
+  <compound refid="_specification_8hpp" kind="file"><name>Specification.hpp</name>
+  </compound>
+  <compound refid="_value_8cpp" kind="file"><name>Value.cpp</name>
+  </compound>
+  <compound refid="_value_8hpp" kind="file"><name>Value.hpp</name>
+  </compound>
+  <compound refid="_value_iterator_8cpp" kind="file"><name>ValueIterator.cpp</name>
+  </compound>
+  <compound refid="_value_iterator_8hpp" kind="file"><name>ValueIterator.hpp</name>
+  </compound>
+  <compound refid="_value_source_8cpp" kind="file"><name>ValueSource.cpp</name>
+  </compound>
+  <compound refid="_value_source_8hpp" kind="file"><name>ValueSource.hpp</name>
+  </compound>
+  <compound refid="_value_type_8cpp" kind="file"><name>ValueType.cpp</name>
+  </compound>
+  <compound refid="_value_type_8hpp" kind="file"><name>ValueType.hpp</name>
+  </compound>
+  <compound refid="_toml_parser_8hpp" kind="file"><name>TomlParser.hpp</name>
+  </compound>
+  <compound refid="_toml_value_8hpp" kind="file"><name>TomlValue.hpp</name>
+  </compound>
+  <compound refid="dir_b1ace6ee297760975ab9205cfa76456c" kind="dir"><name>erbsland</name>
+  </compound>
+  <compound refid="dir_1036c2fc19e0356876488e1679c06456" kind="dir"><name>erbsland/qt</name>
+  </compound>
+  <compound refid="dir_32ed51ae9d303ec68ea944d5f47e3441" kind="dir"><name>erbsland/qt/toml</name>
+  </compound>
+</doxygenindex>
