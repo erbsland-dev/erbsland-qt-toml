@@ -64,7 +64,7 @@ auto Value::value(const QString &keyPath) const noexcept -> ValuePtr {
     if (!keyPath.contains('.')) { // single key?
         return valueFromKey(keyPath);
     }
-    auto frontKey = keyPath.section('.', 0, 1);
+    auto frontKey = keyPath.section('.', 0, 0);
     auto backKeys = keyPath.section('.', 1);
     if (auto ptr = std::get_if<TableValue>(&_storage); ptr != nullptr) {
         auto it = ptr->find(frontKey);
