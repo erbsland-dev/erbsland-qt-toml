@@ -160,8 +160,8 @@ void ParserData::createTable(std::vector<Token> keys) {
     auto key = keys.back();
     keys.pop_back();
     auto table = createIntermediateNameElements(keys, _document, false);
-    if (table->hasValue(key.text())) {
-        auto value = table->value(key.text());
+    if (table->hasKey(key.text())) {
+        auto value = table->valueFromKey(key.text());
         if (!value->isTable()) {
             throwSyntaxError(QStringLiteral("The key already exists and is no table."), key);
         }
@@ -190,8 +190,8 @@ void ParserData::createArrayOfTables(std::vector<Token> keys) {
     auto key = keys.back();
     keys.pop_back();
     auto table = createIntermediateNameElements(keys, _document, false);
-    if (table->hasValue(key.text())) {
-        auto value = table->value(key.text());
+    if (table->hasKey(key.text())) {
+        auto value = table->valueFromKey(key.text());
         if (!value->isArray()) {
             throwSyntaxError(QStringLiteral("The key exists, but is no array."), key);
         }
@@ -222,8 +222,8 @@ auto ParserData::createIntermediateNameElements(
 
     auto result = baseTable;
     for (const auto &key : keys) {
-        if (result->hasValue(key.text())) {
-            result = result->value(key.text());
+        if (result->hasKey(key.text())) {
+            result = result->valueFromKey(key.text());
             if (result->source() == Value::Source::Value) {
                 throwSyntaxError(QStringLiteral("A dotted key must not point to an existing value."));
             }
@@ -475,7 +475,7 @@ auto ParserData::parseInlineTableValue() -> ValuePtr {
         auto key = keys.back();
         keys.pop_back();
         auto tableInContext = createIntermediateNameElements(keys, table, true);
-        if (tableInContext->hasValue(key.text())) {
+        if (tableInContext->hasKey(key.text())) {
             throwSyntaxError(QStringLiteral("A key with this name already exists in this inline table."));
         }
         tableInContext->setValue(key.text(), value);
@@ -503,7 +503,7 @@ void ParserData::assignValue(std::vector<Token> keys, const ValuePtr &value) {
     auto key = keys.back();
     keys.pop_back();
     auto table = createIntermediateNameElements(keys, _currentTable, true);
-    if (table->hasValue(key.text())) {
+    if (table->hasKey(key.text())) {
         throwSyntaxError(QStringLiteral("A value with the given name already exists."), key);
     }
     table->setValue(key.text(), value);

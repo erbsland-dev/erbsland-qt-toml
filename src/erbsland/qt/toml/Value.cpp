@@ -57,6 +57,11 @@ auto Value::hasValue(const QString &keyPath) const noexcept -> bool {
 }
 
 
+auto Value::hasKey(const QString &key) const noexcept -> bool {
+    return valueFromKey(key) != nullptr;
+}
+
+
 auto Value::value(const QString &keyPath) const noexcept -> ValuePtr {
     if (!isTable()) {
         return {};
@@ -414,7 +419,7 @@ auto Value::dateTimeValue(const QString &keyPath, const QDateTime& defaultValue)
 
 auto Value::tableValue(const QString &keyPath) const noexcept -> ValuePtr {
     auto value = this->value(keyPath);
-    if (!value->isTable()) {
+    if (value == nullptr || !value->isTable()) {
         return createTable(Source::Value);
     }
     return value;
@@ -423,7 +428,7 @@ auto Value::tableValue(const QString &keyPath) const noexcept -> ValuePtr {
 
 auto Value::arrayValue(const QString &keyPath) const noexcept -> ValuePtr {
     auto value = this->value(keyPath);
-    if (!value->isArray()) {
+    if (value == nullptr || !value->isArray()) {
         return createArray(Source::Value);
     }
     return value;
@@ -447,6 +452,27 @@ auto Value::clone() const noexcept -> ValuePtr {
     }
     newValue->setLocationRange(_locationRange);
     return newValue;
+}
+
+
+auto Value::begin() noexcept -> ValueIterator {
+    if (!isArray()) {
+        return {};
+    }
+    return {shared_from_this(), 0};
+}
+
+
+auto Value::end() noexcept -> ValueIterator {
+    if (!isArray()) {
+        return {};
+    }
+    return {shared_from_this(), size()};
+}
+
+
+void Value::setLocationRange(const LocationRange &locationRange) noexcept {
+    _locationRange = locationRange;
 }
 
 

@@ -105,19 +105,26 @@ public: // access
     ///
     [[nodiscard]] auto value(std::size_t index) const noexcept -> ValuePtr;
 
-    /// Test if the value with a given key exists in a table.
+    /// Test if the value with a given key or key path exists in a table.
     ///
     /// @param keyPath The key, or a key path in the form `key.key.key`.
     /// @return `true` if a value with that key or key path exists, `false` otherwise.
     ///
     [[nodiscard]] auto hasValue(const QString &keyPath) const noexcept -> bool;
 
-    /// Access a value of a table.
+    /// Access a value of a table using a key or key path.
     ///
     /// @param keyPath The key, or a key path in the form `key.key.key`.
     /// @return The value for the value, or a `nullptr` if the key does not exist.
     ///
     [[nodiscard]] auto value(const QString &keyPath) const noexcept -> ValuePtr;
+
+    /// Test if this table has a given key.
+    ///
+    /// This method exists, if you have to work with keys that contain a dot so you can't use
+    /// the `hasValue()` methods with key paths.
+    ///
+    [[nodiscard]] auto hasKey(const QString &key) const noexcept -> bool;
 
     /// Access a value of this table, using a single key.
     ///
@@ -209,22 +216,16 @@ public: // convenience access
 
     /// Iterator over elements of an array.
     ///
-    [[nodiscard]] auto begin() noexcept -> ValueIterator {
-        return {shared_from_this(), 0};
-    }
+    [[nodiscard]] auto begin() noexcept -> ValueIterator;
 
     /// Iterator over elements of an array.
     ///
-    [[nodiscard]] auto end() noexcept -> ValueIterator {
-        return {shared_from_this(), size()};
-    }
+    [[nodiscard]] auto end() noexcept -> ValueIterator;
 
 public: // modification
     /// Set the location range.
     ///
-    inline void setLocationRange(const LocationRange &locationRange) noexcept {
-        _locationRange = locationRange;
-    }
+    void setLocationRange(const LocationRange &locationRange) noexcept;
 
     /// Set or overwrite the value in a table.
     ///
