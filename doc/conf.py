@@ -2,7 +2,7 @@
 from pathlib import Path
 
 project = 'Erbsland Qt TOML'
-copyright = '2023, Erbsland DEV'
+copyright = '2023-2024, Erbsland DEV'
 author = 'Erbsland DEV'
 release = '1.2'
 

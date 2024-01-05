@@ -52,8 +52,10 @@ We greatly value your feedback and suggestions. Please use the GitHub issue trac
 
 ## License
 
-Copyright © 2023 Tobias Erbsland. Web: https://erbsland.dev/
-Copyright © 2023 EducateIT GmbH. Web: https://educateit.ch/
+Copyright © 2023 Tobias Erbsland https://erbsland.dev/ and EducateIT GmbH https://educateit.ch/
+According to the copyright terms specified in the file "COPYRIGHT.md".
+
+SPDX-License-Identifier: LGPL-3.0-or-later
 
 This program is free software: you can redistribute it and/or modify it under the terms of the
 GNU Lesser General Public License as published by the Free Software Foundation, either
