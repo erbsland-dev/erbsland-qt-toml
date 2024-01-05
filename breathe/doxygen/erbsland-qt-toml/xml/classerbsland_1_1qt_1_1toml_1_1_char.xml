@@ -1,0 +1,875 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classerbsland_1_1qt_1_1toml_1_1_char" kind="class" language="C++" prot="public">
+    <compoundname>erbsland::qt::toml::Char</compoundname>
+    <includes refid="_char_8hpp" local="no">erbsland/qt/toml/Char.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classerbsland_1_1qt_1_1toml_1_1_char_1a0298d2c2f266c6712f0ec0d2cc17295d" prot="private" static="no" mutable="no">
+        <type>char32_t</type>
+        <definition>char32_t erbsland::qt::toml::Char::_value</definition>
+        <argsstring></argsstring>
+        <name>_value</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+<para>The value of this unicode character. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Char.hpp" line="184" column="14" bodyfile="erbsland/qt/toml/Char.hpp" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_char_1a602e5154f13bdd585b9c9419f82deaac" prot="public" static="no" constexpr="yes" const="no" explicit="yes" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr erbsland::qt::toml::Char::Char</definition>
+        <argsstring>(char32_t value) noexcept</argsstring>
+        <name>Char</name>
+        <param>
+          <type>char32_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new char from its unicode code point.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unicode value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Char.hpp" line="25" column="24" bodyfile="erbsland/qt/toml/Char.hpp" bodystart="25" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_char_1a0ba5407ed5bebf8f9fe03afdb4efe102" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::qt::toml::Char::Char</definition>
+        <argsstring>() noexcept=default</argsstring>
+        <name>Char</name>
+        <briefdescription>
+<para>Create a zero character. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Char.hpp" line="29" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_char_1a0299d3e22c6c26e4fcf74b5cd18d1322" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr auto</type>
+        <definition>constexpr auto erbsland::qt::toml::Char::operator==</definition>
+        <argsstring>(Char other) const noexcept -&gt; bool</argsstring>
+        <name>operator==</name>
+        <param>
+          <type><ref refid="classerbsland_1_1qt_1_1toml_1_1_char" kindref="compound">Char</ref></type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compare this character with another.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The other character for the comparison. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of the comparison. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Char.hpp" line="46" column="20" bodyfile="erbsland/qt/toml/Char.hpp" bodystart="46" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_char_1afb1a6ca0d50d33c7bc9a251f6f045252" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr auto</type>
+        <definition>constexpr auto erbsland::qt::toml::Char::operator!=</definition>
+        <argsstring>(Char other) const noexcept -&gt; bool</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type><ref refid="classerbsland_1_1qt_1_1toml_1_1_char" kindref="compound">Char</ref></type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compare this character with another.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The other character for the comparison. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of the comparison. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Char.hpp" line="50" column="20" bodyfile="erbsland/qt/toml/Char.hpp" bodystart="50" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_char_1ac40412db2d983d494da624deb6c0a043" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr auto</type>
+        <definition>constexpr auto erbsland::qt::toml::Char::operator&gt;</definition>
+        <argsstring>(Char other) const noexcept -&gt; bool</argsstring>
+        <name>operator&gt;</name>
+        <param>
+          <type><ref refid="classerbsland_1_1qt_1_1toml_1_1_char" kindref="compound">Char</ref></type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compare this character with another.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The other character for the comparison. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of the comparison. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Char.hpp" line="54" column="20" bodyfile="erbsland/qt/toml/Char.hpp" bodystart="54" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_char_1a1776bcf210ffcf4ff03fef8f78c0633a" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr auto</type>
+        <definition>constexpr auto erbsland::qt::toml::Char::operator&gt;=</definition>
+        <argsstring>(Char other) const noexcept -&gt; bool</argsstring>
+        <name>operator&gt;=</name>
+        <param>
+          <type><ref refid="classerbsland_1_1qt_1_1toml_1_1_char" kindref="compound">Char</ref></type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compare this character with another.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The other character for the comparison. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of the comparison. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Char.hpp" line="58" column="20" bodyfile="erbsland/qt/toml/Char.hpp" bodystart="58" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_char_1ab5eb5ad4f69c6520c4ef2d567f5d2871" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr auto</type>
+        <definition>constexpr auto erbsland::qt::toml::Char::operator&lt;</definition>
+        <argsstring>(Char other) const noexcept -&gt; bool</argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type><ref refid="classerbsland_1_1qt_1_1toml_1_1_char" kindref="compound">Char</ref></type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compare this character with another.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The other character for the comparison. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of the comparison. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Char.hpp" line="62" column="15" bodyfile="erbsland/qt/toml/Char.hpp" bodystart="62" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_char_1a099ace9f1b660946b9c9c3bcc149fdf1" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr auto</type>
+        <definition>constexpr auto erbsland::qt::toml::Char::operator&lt;=</definition>
+        <argsstring>(Char other) const noexcept -&gt; bool</argsstring>
+        <name>operator&lt;=</name>
+        <param>
+          <type><ref refid="classerbsland_1_1qt_1_1toml_1_1_char" kindref="compound">Char</ref></type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compare this character with another.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The other character for the comparison. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of the comparison. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Char.hpp" line="66" column="15" bodyfile="erbsland/qt/toml/Char.hpp" bodystart="66" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_char_1a399e8bd5746e8513f77ff9750b86de55" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr auto</type>
+        <definition>constexpr auto erbsland::qt::toml::Char::operator==</definition>
+        <argsstring>(char asciiChar) const noexcept -&gt; bool</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>char</type>
+          <declname>asciiChar</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compare this character with an ascii character.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>asciiChar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ascii character. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of the comparison. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Char.hpp" line="76" column="20" bodyfile="erbsland/qt/toml/Char.hpp" bodystart="76" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_char_1a9d5d7de6ff34de6a495ea49af33e2ee4" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr auto</type>
+        <definition>constexpr auto erbsland::qt::toml::Char::operator!=</definition>
+        <argsstring>(char asciiChar) const noexcept -&gt; bool</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>char</type>
+          <declname>asciiChar</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compare this character with an ascii character.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>asciiChar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ascii character. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of the comparison. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Char.hpp" line="80" column="20" bodyfile="erbsland/qt/toml/Char.hpp" bodystart="80" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_char_1a3d1b27e2d1a68c488d3ab08c1b9460f1" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr auto</type>
+        <definition>constexpr auto erbsland::qt::toml::Char::operator&lt;</definition>
+        <argsstring>(char asciiChar) const noexcept -&gt; bool</argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type>char</type>
+          <declname>asciiChar</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compare this character with an ascii character.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>asciiChar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ascii character. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of the comparison. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Char.hpp" line="84" column="15" bodyfile="erbsland/qt/toml/Char.hpp" bodystart="84" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_char_1a534caca43c4a7e6965459af46df70080" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr auto</type>
+        <definition>constexpr auto erbsland::qt::toml::Char::operator&lt;=</definition>
+        <argsstring>(char asciiChar) const noexcept -&gt; bool</argsstring>
+        <name>operator&lt;=</name>
+        <param>
+          <type>char</type>
+          <declname>asciiChar</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compare this character with an ascii character.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>asciiChar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ascii character. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of the comparison. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Char.hpp" line="88" column="15" bodyfile="erbsland/qt/toml/Char.hpp" bodystart="88" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_char_1ab99ac2994fc845942f538d9273d6d592" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr auto</type>
+        <definition>constexpr auto erbsland::qt::toml::Char::operator&gt;</definition>
+        <argsstring>(char asciiChar) const noexcept -&gt; bool</argsstring>
+        <name>operator&gt;</name>
+        <param>
+          <type>char</type>
+          <declname>asciiChar</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compare this character with an ascii character.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>asciiChar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ascii character. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of the comparison. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Char.hpp" line="92" column="20" bodyfile="erbsland/qt/toml/Char.hpp" bodystart="92" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_char_1ad989357f369a01c798648c493bbc321f" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr auto</type>
+        <definition>constexpr auto erbsland::qt::toml::Char::operator&gt;=</definition>
+        <argsstring>(char asciiChar) const noexcept -&gt; bool</argsstring>
+        <name>operator&gt;=</name>
+        <param>
+          <type>char</type>
+          <declname>asciiChar</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compare this character with an ascii character.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>asciiChar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ascii character. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of the comparison. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Char.hpp" line="96" column="20" bodyfile="erbsland/qt/toml/Char.hpp" bodystart="96" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_char_1af4d8b4ecab4c98f5e92ba76bec9b14dd" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Int</type>
+          </param>
+          <param>
+            <type>std::enable_if_t&lt; std::is_integral_v&lt; Int &gt;, bool &gt;</type>
+            <defval>true</defval>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto erbsland::qt::toml::Char::operator==</definition>
+        <argsstring>(Int anyInteger) const noexcept -&gt; bool</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>Int</type>
+          <declname>anyInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compare this characters code point with an integer value.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Int</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The integer type. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>anyInteger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The integer for the comparison. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of the comparison. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Char.hpp" line="108" column="20" bodyfile="erbsland/qt/toml/Char.hpp" bodystart="108" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_char_1a8ae6f0cf31f4c555c53d1d1549616ff9" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Int</type>
+          </param>
+          <param>
+            <type>std::enable_if_t&lt; std::is_integral_v&lt; Int &gt;, bool &gt;</type>
+            <defval>true</defval>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto erbsland::qt::toml::Char::operator!=</definition>
+        <argsstring>(Int anyInteger) const noexcept -&gt; bool</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>Int</type>
+          <declname>anyInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compare this characters code point with an integer value.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Int</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The integer type. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>anyInteger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The integer for the comparison. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of the comparison. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Char.hpp" line="117" column="20" bodyfile="erbsland/qt/toml/Char.hpp" bodystart="117" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_char_1a5e8df890533e5a9881ec9851752596ca" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Int</type>
+          </param>
+          <param>
+            <type>std::enable_if_t&lt; std::is_integral_v&lt; Int &gt;, bool &gt;</type>
+            <defval>true</defval>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto erbsland::qt::toml::Char::operator&gt;</definition>
+        <argsstring>(Int anyInteger) const noexcept -&gt; bool</argsstring>
+        <name>operator&gt;</name>
+        <param>
+          <type>Int</type>
+          <declname>anyInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compare this characters code point with an integer value.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Int</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The integer type. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>anyInteger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The integer for the comparison. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of the comparison. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Char.hpp" line="122" column="20" bodyfile="erbsland/qt/toml/Char.hpp" bodystart="122" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_char_1a8ff06e4a0411b4a698d83b9bf921107f" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Int</type>
+          </param>
+          <param>
+            <type>std::enable_if_t&lt; std::is_integral_v&lt; Int &gt;, bool &gt;</type>
+            <defval>true</defval>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto erbsland::qt::toml::Char::operator&gt;=</definition>
+        <argsstring>(Int anyInteger) const noexcept -&gt; bool</argsstring>
+        <name>operator&gt;=</name>
+        <param>
+          <type>Int</type>
+          <declname>anyInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compare this characters code point with an integer value.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Int</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The integer type. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>anyInteger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The integer for the comparison. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of the comparison. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Char.hpp" line="131" column="20" bodyfile="erbsland/qt/toml/Char.hpp" bodystart="131" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_char_1a60d05374c740f4728b9a4525ae964fc6" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Int</type>
+          </param>
+          <param>
+            <type>std::enable_if_t&lt; std::is_integral_v&lt; Int &gt;, bool &gt;</type>
+            <defval>true</defval>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto erbsland::qt::toml::Char::operator&lt;</definition>
+        <argsstring>(Int anyInteger) const noexcept -&gt; bool</argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type>Int</type>
+          <declname>anyInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compare this characters code point with an integer value.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Int</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The integer type. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>anyInteger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The integer for the comparison. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of the comparison. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Char.hpp" line="136" column="15" bodyfile="erbsland/qt/toml/Char.hpp" bodystart="136" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_char_1a80a173f02a3cc636b7f453d53261c941" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Int</type>
+          </param>
+          <param>
+            <type>std::enable_if_t&lt; std::is_integral_v&lt; Int &gt;, bool &gt;</type>
+            <defval>true</defval>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto erbsland::qt::toml::Char::operator&lt;=</definition>
+        <argsstring>(Int anyInteger) const noexcept -&gt; bool</argsstring>
+        <name>operator&lt;=</name>
+        <param>
+          <type>Int</type>
+          <declname>anyInteger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compare this characters code point with an integer value.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Int</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The integer type. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>anyInteger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The integer for the comparison. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of the comparison. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Char.hpp" line="145" column="15" bodyfile="erbsland/qt/toml/Char.hpp" bodystart="145" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_char_1a800dbc7ccc67a589d93d0907a1a07b19" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr auto</type>
+        <definition>constexpr auto erbsland::qt::toml::Char::isNull</definition>
+        <argsstring>() const noexcept -&gt; bool</argsstring>
+        <name>isNull</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Test if this is a null character. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Char.hpp" line="152" column="21" bodyfile="erbsland/qt/toml/Char.hpp" bodystart="152" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_char_1a07998471b93f1da8ca021797e6711d48" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr auto</type>
+        <definition>constexpr auto erbsland::qt::toml::Char::isValidUnicode</definition>
+        <argsstring>() const noexcept -&gt; bool</argsstring>
+        <name>isValidUnicode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Test if this character is a valid unicode character. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Char.hpp" line="158" column="21" bodyfile="erbsland/qt/toml/Char.hpp" bodystart="158" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_char_1aabf9fa38942d32dba776068c43b51107" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr auto</type>
+        <definition>constexpr auto erbsland::qt::toml::Char::toAscii</definition>
+        <argsstring>() const noexcept -&gt; char</argsstring>
+        <name>toAscii</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If possible, covert the unicode character to an ascii character.</para>
+<para><simplesect kind="return"><para>The ascii character, or if the unicode character is &gt;0x7f, zero is returned. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Char.hpp" line="167" column="21" bodyfile="erbsland/qt/toml/Char.hpp" bodystart="167" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_char_1a292a4dbd6b081b5cddc4da3f5e4047d8" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::qt::toml::Char::appendToString</definition>
+        <argsstring>(QString &amp;str) const noexcept</argsstring>
+        <name>appendToString</name>
+        <param>
+          <type>QString &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Append this character to a QString.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to append this character. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Char.hpp" line="175" column="17" bodyfile="erbsland/qt/toml/Char.hpp" bodystart="175" bodyend="181"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_char_1a41b2c789108bd80ceb14385648d33299" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::qt::toml::Char::~Char</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Char</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>dtor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Char.hpp" line="32" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_char_1a8a980119fcf4ef1a0477d11c487e984b" prot="private" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::qt::toml::Char::Char</definition>
+        <argsstring>(const Char &amp;) noexcept=default</argsstring>
+        <name>Char</name>
+        <param>
+          <type>const <ref refid="classerbsland_1_1qt_1_1toml_1_1_char" kindref="compound">Char</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>copy </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Char.hpp" line="35" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_char_1a7e35415e07ed5e3d3e3d782634395028" prot="private" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Char::operator=</definition>
+        <argsstring>(const Char &amp;) noexcept -&gt; Char &amp;=default</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classerbsland_1_1qt_1_1toml_1_1_char" kindref="compound">Char</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>assign </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Char.hpp" line="38" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A 32bit unicode character. </para>
+    </detaileddescription>
+    <location file="erbsland/qt/toml/Char.hpp" line="19" column="1" bodyfile="erbsland/qt/toml/Char.hpp" bodystart="19" bodyend="185"/>
+    <listofallmembers>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1a0298d2c2f266c6712f0ec0d2cc17295d" prot="private" virt="non-virtual"><scope>erbsland::qt::toml::Char</scope><name>_value</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1a292a4dbd6b081b5cddc4da3f5e4047d8" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Char</scope><name>appendToString</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1a602e5154f13bdd585b9c9419f82deaac" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Char</scope><name>Char</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1a0ba5407ed5bebf8f9fe03afdb4efe102" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Char</scope><name>Char</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1a8a980119fcf4ef1a0477d11c487e984b" prot="private" virt="non-virtual"><scope>erbsland::qt::toml::Char</scope><name>Char</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1a800dbc7ccc67a589d93d0907a1a07b19" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Char</scope><name>isNull</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1a07998471b93f1da8ca021797e6711d48" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Char</scope><name>isValidUnicode</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1afb1a6ca0d50d33c7bc9a251f6f045252" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Char</scope><name>operator!=</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1a9d5d7de6ff34de6a495ea49af33e2ee4" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Char</scope><name>operator!=</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1a8ae6f0cf31f4c555c53d1d1549616ff9" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Char</scope><name>operator!=</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1ab5eb5ad4f69c6520c4ef2d567f5d2871" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Char</scope><name>operator&lt;</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1a3d1b27e2d1a68c488d3ab08c1b9460f1" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Char</scope><name>operator&lt;</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1a60d05374c740f4728b9a4525ae964fc6" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Char</scope><name>operator&lt;</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1a099ace9f1b660946b9c9c3bcc149fdf1" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Char</scope><name>operator&lt;=</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1a534caca43c4a7e6965459af46df70080" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Char</scope><name>operator&lt;=</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1a80a173f02a3cc636b7f453d53261c941" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Char</scope><name>operator&lt;=</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1a7e35415e07ed5e3d3e3d782634395028" prot="private" virt="non-virtual"><scope>erbsland::qt::toml::Char</scope><name>operator=</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1a0299d3e22c6c26e4fcf74b5cd18d1322" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Char</scope><name>operator==</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1a399e8bd5746e8513f77ff9750b86de55" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Char</scope><name>operator==</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1af4d8b4ecab4c98f5e92ba76bec9b14dd" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Char</scope><name>operator==</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1ac40412db2d983d494da624deb6c0a043" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Char</scope><name>operator&gt;</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1ab99ac2994fc845942f538d9273d6d592" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Char</scope><name>operator&gt;</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1a5e8df890533e5a9881ec9851752596ca" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Char</scope><name>operator&gt;</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1a1776bcf210ffcf4ff03fef8f78c0633a" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Char</scope><name>operator&gt;=</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1ad989357f369a01c798648c493bbc321f" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Char</scope><name>operator&gt;=</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1a8ff06e4a0411b4a698d83b9bf921107f" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Char</scope><name>operator&gt;=</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1aabf9fa38942d32dba776068c43b51107" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Char</scope><name>toAscii</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_char_1a41b2c789108bd80ceb14385648d33299" prot="private" virt="non-virtual"><scope>erbsland::qt::toml::Char</scope><name>~Char</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

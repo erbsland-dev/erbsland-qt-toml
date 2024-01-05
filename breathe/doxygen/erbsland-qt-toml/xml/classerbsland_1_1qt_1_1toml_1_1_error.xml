@@ -1,0 +1,510 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classerbsland_1_1qt_1_1toml_1_1_error" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>erbsland::qt::toml::Error</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::exception</basecompoundref>
+    <includes refid="_error_8hpp" local="no">erbsland/qt/toml/Error.hpp</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classerbsland_1_1qt_1_1toml_1_1_error_1a64aab71412e0105574e8c5699f698e9e" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>Type</name>
+        <enumvalue id="classerbsland_1_1qt_1_1toml_1_1_error_1a64aab71412e0105574e8c5699f698e9ea8045a0a6c688b0635e3caccc408a1446" prot="public">
+          <name>Generic</name>
+          <briefdescription>
+<para>A generic error. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1qt_1_1toml_1_1_error_1a64aab71412e0105574e8c5699f698e9ea92e9d6227d5534e7afc27a11179c808e" prot="public">
+          <name>Syntax</name>
+          <briefdescription>
+<para>An error with the syntax of the document. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1qt_1_1toml_1_1_error_1a64aab71412e0105574e8c5699f698e9ea169a6f6b44766410bffebf76ff3dcf17" prot="public">
+          <name>Encoding</name>
+          <briefdescription>
+<para>A low-level encoding error. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1qt_1_1toml_1_1_error_1a64aab71412e0105574e8c5699f698e9eacf3882f1c43ab22bff0bd9d82d83251b" prot="public">
+          <name>IO</name>
+          <briefdescription>
+<para>A IO error while reading from a device. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The type of the error. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Error.hpp" line="28" column="5" bodyfile="erbsland/qt/toml/Error.hpp" bodystart="28" bodyend="33"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classerbsland_1_1qt_1_1toml_1_1_error_1a908c4dfb8f96fe7a8fcdaf1034e4cd77" prot="private" static="no" mutable="no">
+        <type><ref refid="classerbsland_1_1qt_1_1toml_1_1_error_1a64aab71412e0105574e8c5699f698e9e" kindref="member">Type</ref></type>
+        <definition>Type erbsland::qt::toml::Error::_type</definition>
+        <argsstring></argsstring>
+        <name>_type</name>
+        <initializer>{<ref refid="classerbsland_1_1qt_1_1toml_1_1_error_1a64aab71412e0105574e8c5699f698e9ea8045a0a6c688b0635e3caccc408a1446" kindref="member">Type::Generic</ref>}</initializer>
+        <briefdescription>
+<para>The type of this error. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Error.hpp" line="121" column="10" bodyfile="erbsland/qt/toml/Error.hpp" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classerbsland_1_1qt_1_1toml_1_1_error_1aeb3cbd3a16b9c6ee6a820a0fe5b8e393" prot="private" static="no" mutable="no">
+        <type>QString</type>
+        <definition>QString erbsland::qt::toml::Error::_document</definition>
+        <argsstring></argsstring>
+        <name>_document</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+<para>The optional document that caused the error (e.g. file path). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Error.hpp" line="122" column="13" bodyfile="erbsland/qt/toml/Error.hpp" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classerbsland_1_1qt_1_1toml_1_1_error_1acbc5196d869da5ff7d38ee04f04ac8a5" prot="private" static="no" mutable="no">
+        <type><ref refid="classerbsland_1_1qt_1_1toml_1_1_location" kindref="compound">Location</ref></type>
+        <definition>Location erbsland::qt::toml::Error::_location</definition>
+        <argsstring></argsstring>
+        <name>_location</name>
+        <initializer>{<ref refid="classerbsland_1_1qt_1_1toml_1_1_location_1a4387ce0b9659dfa0cbaf0c2171ddde73" kindref="member">Location::createNotSet</ref>()}</initializer>
+        <briefdescription>
+<para>The location of the error. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Error.hpp" line="123" column="14" bodyfile="erbsland/qt/toml/Error.hpp" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classerbsland_1_1qt_1_1toml_1_1_error_1a1c1950c5efbab2790b772f82f42be45e" prot="private" static="no" mutable="no">
+        <type>QString</type>
+        <definition>QString erbsland::qt::toml::Error::_message</definition>
+        <argsstring></argsstring>
+        <name>_message</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+<para>The message of this error. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Error.hpp" line="124" column="13" bodyfile="erbsland/qt/toml/Error.hpp" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classerbsland_1_1qt_1_1toml_1_1_error_1aa9531a223bcc5c6bdde083af3ab9aa72" prot="private" static="no" mutable="yes">
+        <type>std::string</type>
+        <definition>std::string erbsland::qt::toml::Error::_whatCache</definition>
+        <argsstring></argsstring>
+        <name>_whatCache</name>
+        <briefdescription>
+<para>A cache for the implementation of the <computeroutput>what()</computeroutput> method. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Error.hpp" line="125" column="25" bodyfile="erbsland/qt/toml/Error.hpp" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_error_1ae82af59421973c194014ac71930d901e" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::qt::toml::Error::Error</definition>
+        <argsstring>() noexcept=default</argsstring>
+        <name>Error</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a generic error with no message. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Error.hpp" line="38" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_error_1a349165723194800473bc2d3151eeafdf" prot="public" static="no" const="no" explicit="yes" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::qt::toml::Error::Error</definition>
+        <argsstring>(QString message) noexcept</argsstring>
+        <name>Error</name>
+        <param>
+          <type>QString</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a generic error.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string containing the error message. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Error.hpp" line="44" column="14" bodyfile="erbsland/qt/toml/Error.cpp" bodystart="13" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_error_1a5dd34081c0744974f819616f9d684a45" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Error::document</definition>
+        <argsstring>() const noexcept -&gt; QString</argsstring>
+        <name>document</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the document of the error.</para>
+<para>For strings, the document is <computeroutput>[string]</computeroutput>, for byte data it is <computeroutput>[data]</computeroutput> and for files is the path to the file as it was passed to the parser.</para>
+<para><simplesect kind="return"><para>The document for the error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Error.hpp" line="94" column="18" bodyfile="erbsland/qt/toml/Error.hpp" bodystart="94" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_error_1aa1224a1c443fec91cd5b2f46a17d841c" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Error::toString</definition>
+        <argsstring>() const noexcept -&gt; QString</argsstring>
+        <name>toString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert the error into a string.</para>
+<para><simplesect kind="return"><para>A string with all information of this error message. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Error.hpp" line="102" column="11" bodyfile="erbsland/qt/toml/Error.cpp" bodystart="39" bodyend="69"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_error_1a9792cf78b63d123d8c80a3169dcc5a74" prot="private" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::qt::toml::Error::Error</definition>
+        <argsstring>(Type type, QString document, Location location, QString message) noexcept</argsstring>
+        <name>Error</name>
+        <param>
+          <type><ref refid="classerbsland_1_1qt_1_1toml_1_1_error_1a64aab71412e0105574e8c5699f698e9e" kindref="member">Type</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>QString</type>
+          <declname>document</declname>
+        </param>
+        <param>
+          <type><ref refid="classerbsland_1_1qt_1_1toml_1_1_location" kindref="compound">Location</ref></type>
+          <declname>location</declname>
+        </param>
+        <param>
+          <type>QString</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Private ctor with all parameters.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the error. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>document</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The document that caused the error (e.g. file path). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>location</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The location of the error. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message of this error. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Error.hpp" line="54" column="5" bodyfile="erbsland/qt/toml/Error.cpp" bodystart="18" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_error_1afd3dcb25c84197b3ca085828136d1df4" prot="private" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Error::what</definition>
+        <argsstring>() const noexcept -&gt; const char *override</argsstring>
+        <name>what</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Method for compatibility with the standard library.</para>
+<para><simplesect kind="return"><para>Pointer to a local buffer with the text in UTF-8 format. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Error.hpp" line="110" column="11" bodyfile="erbsland/qt/toml/Error.cpp" bodystart="88" bodyend="93"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_error_1a2e39470c997a91ba7bf196f8d5cfbf73" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Error::createIO</definition>
+        <argsstring>(const QString &amp;document, const QIODevice &amp;ioDevice) noexcept -&gt; Error</argsstring>
+        <name>createIO</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>document</declname>
+        </param>
+        <param>
+          <type>const QIODevice &amp;</type>
+          <declname>ioDevice</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates an IO error with a specified document and IO device.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>document</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The document that caused the error (e.g. file path). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ioDevice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The QIODevice that caused the error. <ref refid="classerbsland_1_1qt_1_1toml_1_1_error" kindref="compound">Error</ref> message is copied from this device. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new instance with the specified properties. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Error.hpp" line="67" column="17" bodyfile="erbsland/qt/toml/Error.cpp" bodystart="24" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_error_1a2d972ea2cdd1c8a6e3307a5edac90c44" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Error::createEncoding</definition>
+        <argsstring>(const QString &amp;document, Location location) noexcept -&gt; Error</argsstring>
+        <name>createEncoding</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>document</declname>
+        </param>
+        <param>
+          <type><ref refid="classerbsland_1_1qt_1_1toml_1_1_location" kindref="compound">Location</ref></type>
+          <declname>location</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates an Encoding error with a specified document, line, and column.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>document</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The document that caused the error (e.g. file path). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>location</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The location of the error. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new instance with the specified properties. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Error.hpp" line="75" column="17" bodyfile="erbsland/qt/toml/Error.cpp" bodystart="29" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_error_1a7ee8a05450f23b1655df64bd5cec756c" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Error::createSyntax</definition>
+        <argsstring>(const QString &amp;document, Location location, const QString &amp;message) noexcept -&gt; Error</argsstring>
+        <name>createSyntax</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>document</declname>
+        </param>
+        <param>
+          <type><ref refid="classerbsland_1_1qt_1_1toml_1_1_location" kindref="compound">Location</ref></type>
+          <declname>location</declname>
+        </param>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a Syntax error with a specified document, line, column, and message.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>document</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The document that caused the error (e.g. file path). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>location</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The location of the error. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message of this error. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new instance with the specified properties. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Error.hpp" line="84" column="17" bodyfile="erbsland/qt/toml/Error.cpp" bodystart="34" bodyend="36"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_error_1a27e0e1eea9cb0ed109e67e1967954705" prot="private" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Error::typeToString</definition>
+        <argsstring>(Type type) noexcept -&gt; QString</argsstring>
+        <name>typeToString</name>
+        <param>
+          <type><ref refid="classerbsland_1_1qt_1_1toml_1_1_error_1a64aab71412e0105574e8c5699f698e9e" kindref="member">Type</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert the given type to a string.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A string for the type. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Error.hpp" line="118" column="17" bodyfile="erbsland/qt/toml/Error.cpp" bodystart="72" bodyend="85"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>An error thrown by the interfaces of the TOML library. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>std::exception</label>
+      </node>
+      <node id="1">
+        <label>erbsland::qt::toml::Error</label>
+        <link refid="classerbsland_1_1qt_1_1toml_1_1_error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>std::exception</label>
+      </node>
+      <node id="1">
+        <label>erbsland::qt::toml::Error</label>
+        <link refid="classerbsland_1_1qt_1_1toml_1_1_error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="erbsland/qt/toml/Error.hpp" line="22" column="1" bodyfile="erbsland/qt/toml/Error.hpp" bodystart="22" bodyend="126"/>
+    <listofallmembers>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_error_1aeb3cbd3a16b9c6ee6a820a0fe5b8e393" prot="private" virt="non-virtual"><scope>erbsland::qt::toml::Error</scope><name>_document</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_error_1acbc5196d869da5ff7d38ee04f04ac8a5" prot="private" virt="non-virtual"><scope>erbsland::qt::toml::Error</scope><name>_location</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_error_1a1c1950c5efbab2790b772f82f42be45e" prot="private" virt="non-virtual"><scope>erbsland::qt::toml::Error</scope><name>_message</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_error_1a908c4dfb8f96fe7a8fcdaf1034e4cd77" prot="private" virt="non-virtual"><scope>erbsland::qt::toml::Error</scope><name>_type</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_error_1aa9531a223bcc5c6bdde083af3ab9aa72" prot="private" virt="non-virtual"><scope>erbsland::qt::toml::Error</scope><name>_whatCache</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_error_1a2d972ea2cdd1c8a6e3307a5edac90c44" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Error</scope><name>createEncoding</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_error_1a2e39470c997a91ba7bf196f8d5cfbf73" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Error</scope><name>createIO</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_error_1a7ee8a05450f23b1655df64bd5cec756c" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Error</scope><name>createSyntax</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_error_1a5dd34081c0744974f819616f9d684a45" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Error</scope><name>document</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_error_1ae82af59421973c194014ac71930d901e" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Error</scope><name>Error</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_error_1a349165723194800473bc2d3151eeafdf" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Error</scope><name>Error</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_error_1a9792cf78b63d123d8c80a3169dcc5a74" prot="private" virt="non-virtual"><scope>erbsland::qt::toml::Error</scope><name>Error</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_error_1aa1224a1c443fec91cd5b2f46a17d841c" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Error</scope><name>toString</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_error_1a64aab71412e0105574e8c5699f698e9e" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Error</scope><name>Type</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_error_1a27e0e1eea9cb0ed109e67e1967954705" prot="private" virt="non-virtual"><scope>erbsland::qt::toml::Error</scope><name>typeToString</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_error_1afd3dcb25c84197b3ca085828136d1df4" prot="private" virt="non-virtual"><scope>erbsland::qt::toml::Error</scope><name>what</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

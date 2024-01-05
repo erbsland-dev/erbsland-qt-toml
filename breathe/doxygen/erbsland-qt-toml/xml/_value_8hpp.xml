@@ -1,0 +1,373 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_value_8hpp" kind="file" language="C++">
+    <compoundname>Value.hpp</compoundname>
+    <includes refid="_namespace_8hpp" local="yes">Namespace.hpp</includes>
+    <includes refid="_location_range_8hpp" local="yes">LocationRange.hpp</includes>
+    <includes refid="_value_iterator_8hpp" local="yes">ValueIterator.hpp</includes>
+    <includes refid="_value_source_8hpp" local="yes">ValueSource.hpp</includes>
+    <includes refid="_value_type_8hpp" local="yes">ValueType.hpp</includes>
+    <includes local="no">QtCore/QString</includes>
+    <includes local="no">QtCore/QTime</includes>
+    <includes local="no">QtCore/QDate</includes>
+    <includes local="no">QtCore/QDateTime</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">variant</includes>
+    <includes local="no">cstdint</includes>
+    <includes local="no">unordered_map</includes>
+    <includedby refid="all_8hpp" local="yes">erbsland/qt/toml/all.hpp</includedby>
+    <includedby refid="_parser_8hpp" local="yes">erbsland/qt/toml/Parser.hpp</includedby>
+    <includedby refid="_value_8cpp" local="yes">erbsland/qt/toml/Value.cpp</includedby>
+    <includedby refid="_value_iterator_8cpp" local="yes">erbsland/qt/toml/ValueIterator.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>erbsland/qt/toml/Value.hpp</label>
+        <link refid="_value_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>ValueIterator.hpp</label>
+        <link refid="_value_iterator_8hpp_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>ValueType.hpp</label>
+        <link refid="_value_type_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>cstdint</label>
+      </node>
+      <node id="15">
+        <label>QtCore/QDateTime</label>
+      </node>
+      <node id="2">
+        <label>Namespace.hpp</label>
+        <link refid="_namespace_8hpp_source"/>
+      </node>
+      <node id="16">
+        <label>variant</label>
+      </node>
+      <node id="4">
+        <label>Location.hpp</label>
+        <link refid="_location_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>LocationRange.hpp</label>
+        <link refid="_location_range_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>QtCore/QDate</label>
+      </node>
+      <node id="13">
+        <label>QtCore/QTime</label>
+      </node>
+      <node id="5">
+        <label>LocationFormat.hpp</label>
+        <link refid="_location_format_8hpp_source"/>
+      </node>
+      <node id="11">
+        <label>ValueSource.hpp</label>
+        <link refid="_value_source_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>QtCore/QString</label>
+      </node>
+      <node id="17">
+        <label>unordered_map</label>
+      </node>
+      <node id="8">
+        <label>algorithm</label>
+      </node>
+      <node id="10">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>erbsland/qt/toml/Value.hpp</label>
+        <link refid="_value_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>erbsland/qt/TomlParser.hpp</label>
+        <link refid="_toml_parser_8hpp_source"/>
+      </node>
+      <node id="5">
+        <label>erbsland/qt/TomlValue.hpp</label>
+        <link refid="_toml_value_8hpp_source"/>
+      </node>
+      <node id="2">
+        <label>erbsland/qt/toml/all.hpp</label>
+        <link refid="all_8hpp_source"/>
+      </node>
+      <node id="3">
+        <label>erbsland/qt/toml/Parser.hpp</label>
+        <link refid="_parser_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classerbsland_1_1qt_1_1toml_1_1_value" prot="public">erbsland::qt::toml::Value</innerclass>
+    <innerclass refid="structerbsland_1_1qt_1_1toml_1_1_value_1_1_private_tag" prot="private">erbsland::qt::toml::Value::PrivateTag</innerclass>
+    <innernamespace refid="namespaceerbsland">erbsland</innernamespace>
+    <innernamespace refid="namespaceerbsland_1_1qt">erbsland::qt</innernamespace>
+    <innernamespace refid="namespaceerbsland_1_1qt_1_1toml">erbsland::qt::toml</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>©<sp/>2023-2024<sp/>Tobias<sp/>Erbsland<sp/>https://erbsland.dev/<sp/>and<sp/>EducateIT<sp/>GmbH<sp/>https://educateit.ch</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>According<sp/>to<sp/>the<sp/>copyright<sp/>terms<sp/>specified<sp/>in<sp/>the<sp/>file<sp/>&quot;COPYRIGHT.md&quot;.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SPDX-License-Identifier:<sp/>LGPL-3.0-or-later</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Namespace.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;LocationRange.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ValueIterator.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ValueSource.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ValueType.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtCore/QString&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtCore/QTime&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtCore/QDate&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtCore/QDateTime&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;variant&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unordered_map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">QJsonValue;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">QVariant;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceerbsland_1_1qt_1_1toml" kindref="compound">erbsland::qt::toml</ref><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="namespaceerbsland_1_1qt_1_1toml_1a51e4748f2f9f18dd439906cfb8cf01a3a689202409e48743b914713f96d93947c" kindref="member">Value</ref>;</highlight></codeline>
+<codeline lineno="32" refid="namespaceerbsland_1_1qt_1_1toml_1aab3cc5b714cc77d2d409a7ffd098c2e5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1aab3cc5b714cc77d2d409a7ffd098c2e5" kindref="member">ValuePtr</ref><sp/>=<sp/>std::shared_ptr&lt;Value&gt;;<sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="classerbsland_1_1qt_1_1toml_1_1_value" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classerbsland_1_1qt_1_1toml_1_1_value" kindref="compound">Value</ref><sp/>final<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>std::enable_shared_from_this&lt;Value&gt;<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>fwd-entry:<sp/>class<sp/>Value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_iterator" kindref="compound">ValueIterator</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="45" refid="classerbsland_1_1qt_1_1toml_1_1_value_1ad50945c35c852ab36898a1de54faf6ef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1ad50945c35c852ab36898a1de54faf6ef" kindref="member">TableValue</ref><sp/>=<sp/>std::unordered_map&lt;QString,<sp/>ValuePtr&gt;;<sp/></highlight></codeline>
+<codeline lineno="46" refid="classerbsland_1_1qt_1_1toml_1_1_value_1ab035c7bc474995efa7bc25c0f3cd9f57" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1ab035c7bc474995efa7bc25c0f3cd9f57" kindref="member">ArrayValue</ref><sp/>=<sp/>std::vector&lt;ValuePtr&gt;;<sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>Storage<sp/>=<sp/>std::variant&lt;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int64_t,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>0,<sp/>Integer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>double,<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>1,<sp/>Float</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bool,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>2,<sp/>Boolean</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QString,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>3,<sp/>String</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QTime,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>4,<sp/>Time</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QDate,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>5,<sp/>Date</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QDateTime,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>6,<sp/>DateTime</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1ad50945c35c852ab36898a1de54faf6ef" kindref="member">TableValue</ref>,<sp/><sp/></highlight><highlight class="comment">//<sp/>7,<sp/>Table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1ab035c7bc474995efa7bc25c0f3cd9f57" kindref="member">ArrayValue</ref>&gt;;<sp/></highlight><highlight class="comment">//<sp/>8,<sp/>Array</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="comment">//<sp/>local<sp/>enum<sp/>names.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="classerbsland_1_1qt_1_1toml_1_1_value_1ad46471df6d41852c99e8a479587fa807" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24ae" kindref="member">Type</ref><sp/>=<sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24ae" kindref="member">ValueType</ref>;<sp/></highlight></codeline>
+<codeline lineno="64" refid="classerbsland_1_1qt_1_1toml_1_1_value_1a951281c180ba37bc2f2e7ef221d53cb4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1a51e4748f2f9f18dd439906cfb8cf01a3" kindref="member">Source</ref><sp/>=<sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1a51e4748f2f9f18dd439906cfb8cf01a3" kindref="member">ValueSource</ref>;<sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="comment">//<sp/>access</highlight></codeline>
+<codeline lineno="69" refid="classerbsland_1_1qt_1_1toml_1_1_value_1a2671665d49e9552bca83b3c6f4abb169" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1a2671665d49e9552bca83b3c6f4abb169" kindref="member">type</ref>()<sp/>const<sp/>noexcept<sp/>-&gt;<sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24ae" kindref="member">Type</ref><sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_type;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="classerbsland_1_1qt_1_1toml_1_1_value_1a08bc72e19c2e49443a651d08972982ad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1a08bc72e19c2e49443a651d08972982ad" kindref="member">source</ref>()<sp/>const<sp/>noexcept<sp/>-&gt;<sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1a51e4748f2f9f18dd439906cfb8cf01a3" kindref="member">Source</ref><sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_source;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="classerbsland_1_1qt_1_1toml_1_1_value_1a6942871bd7bfe568b28b9e34cc1d0aad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1a6942871bd7bfe568b28b9e34cc1d0aad" kindref="member">locationRange</ref>()<sp/>const<sp/>noexcept<sp/>-&gt;<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_location_range" kindref="compound">LocationRange</ref><sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_locationRange;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1a17b61c4da1dc161c24c534ceba615daa" kindref="member">size</ref>()<sp/>const<sp/>noexcept<sp/>-&gt;<sp/>std::</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>auto<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1acea38a91de97def5a47c4c4170a60641" kindref="member">value</ref>(std::</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index)<sp/>const<sp/>noexcept<sp/>-&gt;<sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1aab3cc5b714cc77d2d409a7ffd098c2e5" kindref="member">ValuePtr</ref>;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>auto<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1a3a7523e1229bb15b3ead47cb6b5166c0" kindref="member">hasValue</ref>(const<sp/>QString<sp/>&amp;keyPath)<sp/>const<sp/>noexcept<sp/>-&gt;<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>auto<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1acea38a91de97def5a47c4c4170a60641" kindref="member">value</ref>(const<sp/>QString<sp/>&amp;keyPath)<sp/>const<sp/>noexcept<sp/>-&gt;<sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1aab3cc5b714cc77d2d409a7ffd098c2e5" kindref="member">ValuePtr</ref>;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>auto<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1a3e5619f5abc331f605b675394205bba8" kindref="member">hasKey</ref>(const<sp/>QString<sp/>&amp;key)<sp/>const<sp/>noexcept<sp/>-&gt;<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>auto<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1a910415414eacbb26fe0c723c0d4acb34" kindref="member">valueFromKey</ref>(const<sp/>QString<sp/>&amp;key)<sp/>const<sp/>noexcept<sp/>-&gt;<sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1aab3cc5b714cc77d2d409a7ffd098c2e5" kindref="member">ValuePtr</ref>;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal">public:<sp/></highlight><highlight class="comment">//<sp/>convenience<sp/>access</highlight></codeline>
+<codeline lineno="136"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>auto<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1adfbd9763f91ec0e2a7fd30303b34eda3" kindref="member">stringValue</ref>(const<sp/>QString<sp/>&amp;keyPath,<sp/>const<sp/>QString<sp/>&amp;defaultValue<sp/>=<sp/>{})<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>noexcept<sp/>-&gt;<sp/>QString;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1a6415259681abd94a83257042397e655a" kindref="member">integerValue</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QString<sp/>&amp;keyPath,<sp/>int64_t<sp/>defaultValue<sp/>=<sp/>{})<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>noexcept<sp/>-&gt;<sp/>int64_t;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1a7896164c5d20f127eb913b0048ad058d" kindref="member">floatValue</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QString<sp/>&amp;keyPath,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>defaultValue<sp/>=<sp/>{})<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>noexcept<sp/>-&gt;<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1aa0a5107ccf285f1323a8741e73e430d2" kindref="member">booleanValue</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QString<sp/>&amp;keyPath,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>defaultValue<sp/>=<sp/>{})<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>noexcept<sp/>-&gt;<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1abe6a52f09f86069a140057d2fde32cf0" kindref="member">timeValue</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QString<sp/>&amp;keyPath,<sp/>QTime<sp/>defaultValue<sp/>=<sp/>{})<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>noexcept<sp/>-&gt;<sp/>QTime;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1a9973af66099dcf5642d7e79abc08814f" kindref="member">dateValue</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QString<sp/>&amp;keyPath,<sp/>QDate<sp/>defaultValue<sp/>=<sp/>{})<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>noexcept<sp/>-&gt;<sp/>QDate;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1a2ef8499b9cf0c5a46521efed974d81c6" kindref="member">dateTimeValue</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QString<sp/>&amp;keyPath,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QDateTime&amp;<sp/>defaultValue<sp/>=<sp/>{})<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>noexcept<sp/>-&gt;<sp/>QDateTime;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1a803063cb7b0b30d8a21549671e8757ba" kindref="member">tableValue</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QString<sp/>&amp;keyPath)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>noexcept<sp/>-&gt;<sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1aab3cc5b714cc77d2d409a7ffd098c2e5" kindref="member">ValuePtr</ref>;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1a6848e526f1f053832b62b59f732c7e45" kindref="member">arrayValue</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QString<sp/>&amp;keyPath)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>noexcept<sp/>-&gt;<sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1aab3cc5b714cc77d2d409a7ffd098c2e5" kindref="member">ValuePtr</ref>;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1a4849e01ef862f08911cb401f0da968d2" kindref="member">tableKeys</ref>()<sp/>const<sp/>noexcept<sp/>-&gt;<sp/>QStringList;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>auto<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1a9552862957c8b00760d80f1a867229d9" kindref="member">begin</ref>()<sp/>noexcept<sp/>-&gt;<sp/>ValueIterator;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>auto<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1afffcfb6f24ba440a9cf68d909858400f" kindref="member">end</ref>()<sp/>noexcept<sp/>-&gt;<sp/>ValueIterator;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal">public:<sp/></highlight><highlight class="comment">//<sp/>modification</highlight></codeline>
+<codeline lineno="218"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1a2e4091a9eb5f942304b69781f0d1f80c" kindref="member">setLocationRange</ref>(const<sp/>LocationRange<sp/>&amp;<ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1a6942871bd7bfe568b28b9e34cc1d0aad" kindref="member">locationRange</ref>)<sp/>noexcept;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1a656e2087f6ba6833c5aad2f2e30d15a9" kindref="member">setValue</ref>(const<sp/>QString<sp/>&amp;key,<sp/>const<sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1aab3cc5b714cc77d2d409a7ffd098c2e5" kindref="member">ValuePtr</ref><sp/>&amp;<ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1acea38a91de97def5a47c4c4170a60641" kindref="member">value</ref>)<sp/>noexcept;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1ac3b9adff7476f13f2ead0d3167948100" kindref="member">addValue</ref>(const<sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1aab3cc5b714cc77d2d409a7ffd098c2e5" kindref="member">ValuePtr</ref><sp/>&amp;<ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1acea38a91de97def5a47c4c4170a60641" kindref="member">value</ref>)<sp/>noexcept;</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1afd52778da85d49f4e5e3c0c2dd2458bd" kindref="member">makeExplicit</ref>()<sp/>noexcept;</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/>auto<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1aeabcdd605bd36a971706b21fb6e94f09" kindref="member">clone</ref>()<sp/>const<sp/>noexcept<sp/>-&gt;<sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1aab3cc5b714cc77d2d409a7ffd098c2e5" kindref="member">ValuePtr</ref>;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal">public:<sp/></highlight><highlight class="comment">//<sp/>tests</highlight></codeline>
+<codeline lineno="248" refid="classerbsland_1_1qt_1_1toml_1_1_value_1acaed63cf54ee1bd10c8f6dc5f40ebc63" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>inline<sp/>auto<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1acaed63cf54ee1bd10c8f6dc5f40ebc63" kindref="member">isTable</ref>()<sp/>const<sp/>noexcept<sp/>-&gt;<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_type<sp/>==<sp/>Type::Table;</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254" refid="classerbsland_1_1qt_1_1toml_1_1_value_1a154e80451dec86cd9776c4efca5e2fa3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1a154e80451dec86cd9776c4efca5e2fa3" kindref="member">isArray</ref>()<sp/>const<sp/>noexcept<sp/>-&gt;<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_type<sp/>==<sp/>Type::Array;</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="comment">//<sp/>conversion</highlight></codeline>
+<codeline lineno="263"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1aa748214c11c12fee01c800b4c99e0833" kindref="member">toInteger</ref>()<sp/>const<sp/>noexcept<sp/>-&gt;<sp/>int64_t;</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>auto<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1ae9ac47aac949dbabd10ec7cf4e8f6ff7" kindref="member">toFloat</ref>()<sp/>const<sp/>noexcept<sp/>-&gt;<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>auto<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1abe66b64a42cdafbb24f3d2c9630df6e2" kindref="member">toBoolean</ref>()<sp/>const<sp/>noexcept<sp/>-&gt;<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>auto<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1ab9b40f8f018c6c351502f40326ff307d" kindref="member">toString</ref>()<sp/>const<sp/>noexcept<sp/>-&gt;<sp/>QString;</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>auto<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1a2601d306034a0fff9cd57884e1607ff7" kindref="member">toTime</ref>()<sp/>const<sp/>noexcept<sp/>-&gt;<sp/>QTime;</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>auto<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1a73f11b0e44ad391bf1e74d154268f024" kindref="member">toDate</ref>()<sp/>const<sp/>noexcept<sp/>-&gt;<sp/>QDate;</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>auto<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1af86f6d24d564af7e173ba7d420fc655b" kindref="member">toDateTime</ref>()<sp/>const<sp/>noexcept<sp/>-&gt;<sp/>QDateTime;</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>auto<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1a7b1ab0789171dcb45a8f11ca1e2cff31" kindref="member">toTable</ref>()<sp/>const<sp/>noexcept<sp/>-&gt;<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1ad50945c35c852ab36898a1de54faf6ef" kindref="member">TableValue</ref>;</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>auto<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1a63ad97fe8e6c0734ea4474dddce71dd7" kindref="member">toArray</ref>()<sp/>const<sp/>noexcept<sp/>-&gt;<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1ab035c7bc474995efa7bc25c0f3cd9f57" kindref="member">ArrayValue</ref>;</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>auto<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1a18cd485411fbffc410cbc251379f9f50" kindref="member">toJson</ref>()<sp/>const<sp/>noexcept<sp/>-&gt;<sp/>QJsonValue;</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>auto<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1aec175681da2fabb90e8a703683b78b0c" kindref="member">toVariant</ref>()<sp/>const<sp/>noexcept<sp/>-&gt;<sp/>QVariant;</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"></highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>auto<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1a572d1cb8af6a404424f2c8c88ca36386" kindref="member">toUnitTestJson</ref>()<sp/>const<sp/>noexcept<sp/>-&gt;<sp/>QJsonValue;</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal">public:</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/>static<sp/>auto<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1a8c209c7a538e71a72b9da3e746a96585" kindref="member">createInteger</ref>(int64_t<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1acea38a91de97def5a47c4c4170a60641" kindref="member">value</ref>)<sp/>noexcept<sp/>-&gt;<sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1aab3cc5b714cc77d2d409a7ffd098c2e5" kindref="member">ValuePtr</ref>;</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/>static<sp/>auto<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1abdeef5d1c910041a70dce323c270e44a" kindref="member">createFloat</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1acea38a91de97def5a47c4c4170a60641" kindref="member">value</ref>)<sp/>noexcept<sp/>-&gt;<sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1aab3cc5b714cc77d2d409a7ffd098c2e5" kindref="member">ValuePtr</ref>;</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"></highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/>static<sp/>auto<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1a7ae743ed89b09121f7239d3dfdefa3e2" kindref="member">createBoolean</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1acea38a91de97def5a47c4c4170a60641" kindref="member">value</ref>)<sp/>noexcept<sp/>-&gt;<sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1aab3cc5b714cc77d2d409a7ffd098c2e5" kindref="member">ValuePtr</ref>;</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"></highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/>static<sp/>auto<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1a7a99b0c76f4d2241f62d6041bef6afb8" kindref="member">createString</ref>(QString<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1acea38a91de97def5a47c4c4170a60641" kindref="member">value</ref>)<sp/>noexcept<sp/>-&gt;<sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1aab3cc5b714cc77d2d409a7ffd098c2e5" kindref="member">ValuePtr</ref>;</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"></highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/>static<sp/>auto<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1ae6ba4fae07632a653a4a043e207e1b95" kindref="member">createTime</ref>(QTime<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1acea38a91de97def5a47c4c4170a60641" kindref="member">value</ref>)<sp/>noexcept<sp/>-&gt;<sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1aab3cc5b714cc77d2d409a7ffd098c2e5" kindref="member">ValuePtr</ref>;</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"></highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/>static<sp/>auto<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1afbe2a4fc81db05e44634c62bc15a07db" kindref="member">createDate</ref>(QDate<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1acea38a91de97def5a47c4c4170a60641" kindref="member">value</ref>)<sp/>noexcept<sp/>-&gt;<sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1aab3cc5b714cc77d2d409a7ffd098c2e5" kindref="member">ValuePtr</ref>;</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"></highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/>static<sp/>auto<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1a7f97c5a489c8eeb607614800221f9440" kindref="member">createDateTime</ref>(QDateTime<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1acea38a91de97def5a47c4c4170a60641" kindref="member">value</ref>)<sp/>noexcept<sp/>-&gt;<sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1aab3cc5b714cc77d2d409a7ffd098c2e5" kindref="member">ValuePtr</ref>;</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"></highlight></codeline>
+<codeline lineno="400"><highlight class="normal"><sp/><sp/><sp/><sp/>static<sp/>auto<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1ad6396a30692e4b655940f6712d29872b" kindref="member">createTable</ref>(<ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1a951281c180ba37bc2f2e7ef221d53cb4" kindref="member">Source</ref><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1a08bc72e19c2e49443a651d08972982ad" kindref="member">source</ref>)<sp/>noexcept<sp/>-&gt;<sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1aab3cc5b714cc77d2d409a7ffd098c2e5" kindref="member">ValuePtr</ref>;</highlight></codeline>
+<codeline lineno="401"><highlight class="normal"></highlight></codeline>
+<codeline lineno="407"><highlight class="normal"><sp/><sp/><sp/><sp/>static<sp/>auto<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1aab685561423149889894c1f3108f2183" kindref="member">createArray</ref>(<ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1a951281c180ba37bc2f2e7ef221d53cb4" kindref="member">Source</ref><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1a08bc72e19c2e49443a651d08972982ad" kindref="member">source</ref>)<sp/>noexcept<sp/>-&gt;<sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1aab3cc5b714cc77d2d409a7ffd098c2e5" kindref="member">ValuePtr</ref>;</highlight></codeline>
+<codeline lineno="408"><highlight class="normal"></highlight></codeline>
+<codeline lineno="409"><highlight class="normal">private:</highlight></codeline>
+<codeline lineno="412"><highlight class="normal"><sp/><sp/><sp/><sp/>struct<sp/>PrivateTag<sp/>{};</highlight></codeline>
+<codeline lineno="413"><highlight class="normal"></highlight></codeline>
+<codeline lineno="414"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="422"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>Value(<ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1ad46471df6d41852c99e8a479587fa807" kindref="member">Type</ref><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1a2671665d49e9552bca83b3c6f4abb169" kindref="member">type</ref>,<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1a951281c180ba37bc2f2e7ef221d53cb4" kindref="member">Source</ref><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1a08bc72e19c2e49443a651d08972982ad" kindref="member">source</ref>,<sp/>Storage<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1acea38a91de97def5a47c4c4170a60641" kindref="member">value</ref>,<sp/>Value::PrivateTag<sp/></highlight><highlight class="comment">/*unused*/</highlight><highlight class="normal">)<sp/>noexcept</highlight></codeline>
+<codeline lineno="423"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>_type{<ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1a2671665d49e9552bca83b3c6f4abb169" kindref="member">type</ref>},<sp/>_source{<ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1a08bc72e19c2e49443a651d08972982ad" kindref="member">source</ref>},<sp/>_storage{std::move(<ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1acea38a91de97def5a47c4c4170a60641" kindref="member">value</ref>)}<sp/>{</highlight></codeline>
+<codeline lineno="424"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="425"><highlight class="normal"></highlight></codeline>
+<codeline lineno="426"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="429"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="430"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>toValue(<ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1ad46471df6d41852c99e8a479587fa807" kindref="member">Type</ref><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1a2671665d49e9552bca83b3c6f4abb169" kindref="member">type</ref>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>noexcept<sp/>-&gt;<sp/>T;</highlight></codeline>
+<codeline lineno="431"><highlight class="normal"></highlight></codeline>
+<codeline lineno="440"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="441"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>typeValue(<ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1ad46471df6d41852c99e8a479587fa807" kindref="member">Type</ref><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1a2671665d49e9552bca83b3c6f4abb169" kindref="member">type</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QString<sp/>&amp;keyPath,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T<sp/>&amp;defaultValue)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>noexcept<sp/>-&gt;<sp/>T;</highlight></codeline>
+<codeline lineno="442"><highlight class="normal"></highlight></codeline>
+<codeline lineno="443"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="444"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1ad46471df6d41852c99e8a479587fa807" kindref="member">Type</ref><sp/>_type;<sp/></highlight></codeline>
+<codeline lineno="445"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1a951281c180ba37bc2f2e7ef221d53cb4" kindref="member">Source</ref><sp/>_source;<sp/></highlight></codeline>
+<codeline lineno="446"><highlight class="normal"><sp/><sp/><sp/><sp/>LocationRange<sp/>_locationRange{<ref refid="classerbsland_1_1qt_1_1toml_1_1_location_range_1a13815ae973cb65434d13c94c8a835dff" kindref="member">LocationRange::createNotSet</ref>()};<sp/></highlight></codeline>
+<codeline lineno="447"><highlight class="normal"><sp/><sp/><sp/><sp/>Storage<sp/>_storage;<sp/></highlight></codeline>
+<codeline lineno="448"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="449"><highlight class="normal"></highlight></codeline>
+<codeline lineno="450"><highlight class="normal"></highlight></codeline>
+<codeline lineno="451"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="452"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="erbsland/qt/toml/Value.hpp"/>
+  </compounddef>
+</doxygen>

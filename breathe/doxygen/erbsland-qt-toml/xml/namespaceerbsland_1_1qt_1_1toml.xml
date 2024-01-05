@@ -1,0 +1,467 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespaceerbsland_1_1qt_1_1toml" kind="namespace" language="C++">
+    <compoundname>erbsland::qt::toml</compoundname>
+    <innerclass refid="classerbsland_1_1qt_1_1toml_1_1_char" prot="public">erbsland::qt::toml::Char</innerclass>
+    <innerclass refid="classerbsland_1_1qt_1_1toml_1_1_error" prot="public">erbsland::qt::toml::Error</innerclass>
+    <innerclass refid="classerbsland_1_1qt_1_1toml_1_1_input_stream" prot="public">erbsland::qt::toml::InputStream</innerclass>
+    <innerclass refid="classerbsland_1_1qt_1_1toml_1_1_location" prot="public">erbsland::qt::toml::Location</innerclass>
+    <innerclass refid="classerbsland_1_1qt_1_1toml_1_1_location_range" prot="public">erbsland::qt::toml::LocationRange</innerclass>
+    <innerclass refid="classerbsland_1_1qt_1_1toml_1_1_parser" prot="public">erbsland::qt::toml::Parser</innerclass>
+    <innerclass refid="classerbsland_1_1qt_1_1toml_1_1_value" prot="public">erbsland::qt::toml::Value</innerclass>
+    <innerclass refid="classerbsland_1_1qt_1_1toml_1_1_value_iterator" prot="public">erbsland::qt::toml::ValueIterator</innerclass>
+    <innernamespace refid="namespaceerbsland_1_1qt_1_1toml_1_1impl">erbsland::qt::toml::impl</innernamespace>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespaceerbsland_1_1qt_1_1toml_1a06a315dbcc1a56376b3d1a00650e177a" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>LocationFormat</name>
+        <enumvalue id="namespaceerbsland_1_1qt_1_1toml_1a06a315dbcc1a56376b3d1a00650e177aab1fe2c2a59e883740e7ea87667e44a24" prot="public">
+          <name>Compact</name>
+          <briefdescription>
+<para>Generates a text in the format <computeroutput>[line]:[column]</computeroutput>. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceerbsland_1_1qt_1_1toml_1a06a315dbcc1a56376b3d1a00650e177aa197732de835a64962e6e06d060a7208c" prot="public">
+          <name>CompactWithIndex</name>
+          <briefdescription>
+<para>Generates a text in the format <computeroutput>[line]:[column]:([index])</computeroutput>. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceerbsland_1_1qt_1_1toml_1a06a315dbcc1a56376b3d1a00650e177aa8394f0347c184cf156ac5924dccb773b" prot="public">
+          <name>Long</name>
+          <briefdescription>
+<para>Generates a text in the format <computeroutput>line [line], column [column]</computeroutput>. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceerbsland_1_1qt_1_1toml_1a06a315dbcc1a56376b3d1a00650e177aa63abd19a5803918223058a01cc8abe29" prot="public">
+          <name>LongWithIndex</name>
+          <briefdescription>
+<para>Generates a text in the format <computeroutput>line [line], column [column] (index [index])</computeroutput>. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The string format for the location. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/LocationFormat.hpp" line="12" column="1" bodyfile="erbsland/qt/toml/LocationFormat.hpp" bodystart="12" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespaceerbsland_1_1qt_1_1toml_1a5d994656f551138656a92c8e822a70b6" prot="public" static="no" strong="yes">
+        <type>int</type>
+        <name>Specification</name>
+        <enumvalue id="namespaceerbsland_1_1qt_1_1toml_1a5d994656f551138656a92c8e822a70b6ae9914d03abe9cb6381eba59283eb96e7" prot="public">
+          <name>Version_1_0</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceerbsland_1_1qt_1_1toml_1a5d994656f551138656a92c8e822a70b6af54b79d05609d8eaca32c34874d779b5" prot="public">
+          <name>Version_1_1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The specification version. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Specification.hpp" line="17" column="1" bodyfile="erbsland/qt/toml/Specification.hpp" bodystart="17" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespaceerbsland_1_1qt_1_1toml_1a51e4748f2f9f18dd439906cfb8cf01a3" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>ValueSource</name>
+        <enumvalue id="namespaceerbsland_1_1qt_1_1toml_1a51e4748f2f9f18dd439906cfb8cf01a3a48fbc207f7a61fcca264a195260a47b8" prot="public">
+          <name>ImplicitTable</name>
+          <briefdescription>
+<para>Implicit key of a table <computeroutput>[this.this.key]</computeroutput> </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceerbsland_1_1qt_1_1toml_1a51e4748f2f9f18dd439906cfb8cf01a3af28b515f29d1fcd6097b14a2d099453e" prot="public">
+          <name>ExplicitTable</name>
+          <briefdescription>
+<para>Explicit key of a table <computeroutput>[key.key.this]</computeroutput> </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceerbsland_1_1qt_1_1toml_1a51e4748f2f9f18dd439906cfb8cf01a3aad99b7772a0fd5c664efa2a2d9236f5e" prot="public">
+          <name>ImplicitValue</name>
+          <briefdescription>
+<para>Implicit key of a value <computeroutput>this.key.name = 5</computeroutput> </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceerbsland_1_1qt_1_1toml_1a51e4748f2f9f18dd439906cfb8cf01a3afde0e6ca7326a18e631731f3fb185fc0" prot="public">
+          <name>ExplicitValue</name>
+          <briefdescription>
+<para>Explicit key of a value <computeroutput>key.this.name = 5</computeroutput> </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceerbsland_1_1qt_1_1toml_1a51e4748f2f9f18dd439906cfb8cf01a3a689202409e48743b914713f96d93947c" prot="public">
+          <name>Value</name>
+          <briefdescription>
+<para>A value or an inline table or list: <computeroutput>key = { ... }</computeroutput> or <computeroutput>key = [ ... ]</computeroutput> </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The source that defined the value. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/ValueSource.hpp" line="17" column="1" bodyfile="erbsland/qt/toml/ValueSource.hpp" bodystart="17" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24ae" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>ValueType</name>
+        <enumvalue id="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aeaa0faef0851b4294c06f2b94bb1cb2044" prot="public">
+          <name>Integer</name>
+          <briefdescription>
+<para>A signed integer. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aea22ae0e2b89e5e3d477f988cc36d3272b" prot="public">
+          <name>Float</name>
+          <briefdescription>
+<para>A floating-point number. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aea27226c864bac7454a8504f8edb15d95b" prot="public">
+          <name>Boolean</name>
+          <briefdescription>
+<para>A boolean value (either <computeroutput>true</computeroutput> or <computeroutput>false</computeroutput>). </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aea27118326006d3829667a400ad23d5d98" prot="public">
+          <name>String</name>
+          <briefdescription>
+<para>A string. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aeaa76d4ef5f3f6a672bbfab2865563e530" prot="public">
+          <name>Time</name>
+          <briefdescription>
+<para>A local time of day. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aea44749712dbec183e983dcd78a7736c41" prot="public">
+          <name>Date</name>
+          <briefdescription>
+<para>A local calendar date. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aea8cf10d2341ed01492506085688270c1e" prot="public">
+          <name>DateTime</name>
+          <briefdescription>
+<para>A date and time with or without offset. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aea51c45b795d5d18a3e4e0c37e8b20a141" prot="public">
+          <name>Table</name>
+          <briefdescription>
+<para>An unordered map of TOML key-value pairs. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aea4410ec34d9e6c1a68100ca0ce033fb17" prot="public">
+          <name>Array</name>
+          <briefdescription>
+<para>An ordered list of TOML values. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The type of a value. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/ValueType.hpp" line="17" column="1" bodyfile="erbsland/qt/toml/ValueType.hpp" bodystart="17" bodyend="27"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespaceerbsland_1_1qt_1_1toml_1af3fbda439ad741c0de4de24b54fb1f8e" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classerbsland_1_1qt_1_1toml_1_1_input_stream" kindref="compound">InputStream</ref> &gt;</type>
+        <definition>using erbsland::qt::toml::InputStreamPtr = typedef std::shared_ptr&lt;InputStream&gt;</definition>
+        <argsstring></argsstring>
+        <name>InputStreamPtr</name>
+        <briefdescription>
+<para>A shared pointer for the input stream. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/InputStream.hpp" line="23" column="1" bodyfile="erbsland/qt/toml/InputStream.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceerbsland_1_1qt_1_1toml_1aab3cc5b714cc77d2d409a7ffd098c2e5" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classerbsland_1_1qt_1_1toml_1_1_value" kindref="compound">Value</ref> &gt;</type>
+        <definition>typedef std::shared_ptr&lt; Value &gt; erbsland::qt::toml::ValuePtr</definition>
+        <argsstring></argsstring>
+        <name>ValuePtr</name>
+        <briefdescription>
+<para>A shared pointer for the <computeroutput><ref refid="classerbsland_1_1qt_1_1toml_1_1_value" kindref="compound">Value</ref></computeroutput> class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="32" column="1" bodyfile="erbsland/qt/toml/Value.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceerbsland_1_1qt_1_1toml_1af137e14a5640c17e6e500b68c8025a3d" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::specificationToString</definition>
+        <argsstring>(Specification specification) noexcept -&gt; QString</argsstring>
+        <name>specificationToString</name>
+        <param>
+          <type><ref refid="namespaceerbsland_1_1qt_1_1toml_1a5d994656f551138656a92c8e822a70b6" kindref="member">Specification</ref></type>
+          <declname>specification</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert a value source enumeration into a string.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>specification</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The specification. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A string for the specification in the format <computeroutput>TOML 1.0</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Specification.cpp" line="10" column="6" bodyfile="erbsland/qt/toml/Specification.cpp" bodystart="10" bodyend="19" declfile="erbsland/qt/toml/Specification.hpp" declline="28" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceerbsland_1_1qt_1_1toml_1af3ac17bb78b24e05fef7d808c63c2910" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::operator==</definition>
+        <argsstring>(const ValueIterator &amp;a, const ValueIterator &amp;b) noexcept -&gt; bool</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classerbsland_1_1qt_1_1toml_1_1_value_iterator" kindref="compound">ValueIterator</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classerbsland_1_1qt_1_1toml_1_1_value_iterator" kindref="compound">ValueIterator</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compare two iterators.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first iterator. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second iterator. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of the comparison. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/ValueIterator.cpp" line="54" column="6" bodyfile="erbsland/qt/toml/ValueIterator.cpp" bodystart="54" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceerbsland_1_1qt_1_1toml_1a6bd399f8aeba098f99061e2878be3d30" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::operator!=</definition>
+        <argsstring>(const ValueIterator &amp;a, const ValueIterator &amp;b) noexcept -&gt; bool</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classerbsland_1_1qt_1_1toml_1_1_value_iterator" kindref="compound">ValueIterator</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classerbsland_1_1qt_1_1toml_1_1_value_iterator" kindref="compound">ValueIterator</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compare two iterators.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first iterator. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second iterator. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of the comparison. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/ValueIterator.cpp" line="59" column="6" bodyfile="erbsland/qt/toml/ValueIterator.cpp" bodystart="59" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceerbsland_1_1qt_1_1toml_1a125c106f9ae5a087edf5894cdf59d0a4" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::valueSourceToString</definition>
+        <argsstring>(ValueSource valueSource) noexcept -&gt; QString</argsstring>
+        <name>valueSourceToString</name>
+        <param>
+          <type><ref refid="namespaceerbsland_1_1qt_1_1toml_1a51e4748f2f9f18dd439906cfb8cf01a3" kindref="member">ValueSource</ref></type>
+          <declname>valueSource</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert a value source enumeration into a string.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>valueSource</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value source. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A string for the enum value, like <computeroutput>Implicit Table</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/ValueSource.cpp" line="10" column="6" bodyfile="erbsland/qt/toml/ValueSource.cpp" bodystart="10" bodyend="25" declfile="erbsland/qt/toml/ValueSource.hpp" declline="31" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceerbsland_1_1qt_1_1toml_1a8763f4e6183a5db29ed289e05ff2ffee" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::valueTypeToString</definition>
+        <argsstring>(ValueType valueType) noexcept -&gt; QString</argsstring>
+        <name>valueTypeToString</name>
+        <param>
+          <type><ref refid="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24ae" kindref="member">ValueType</ref></type>
+          <declname>valueType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert a value type enumeration into a string.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>valueType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value source. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A string for the enum value, like <computeroutput>Integer</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/ValueType.cpp" line="10" column="6" bodyfile="erbsland/qt/toml/ValueType.cpp" bodystart="10" bodyend="33" declfile="erbsland/qt/toml/ValueType.hpp" declline="35" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceerbsland_1_1qt_1_1toml_1a4cd37b7400e8ddc13f4b20d749d9777e" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::valueTypeToUnitTestString</definition>
+        <argsstring>(ValueType valueType) noexcept -&gt; QString</argsstring>
+        <name>valueTypeToUnitTestString</name>
+        <param>
+          <type><ref refid="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24ae" kindref="member">ValueType</ref></type>
+          <declname>valueType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert a value type enumeration into a string.</para>
+<para>This function is like <computeroutput>valueTypeToString</computeroutput>, but returns the type information as: <computeroutput>integer</computeroutput>, <computeroutput>float</computeroutput>, <computeroutput>bool</computeroutput>, <computeroutput>string</computeroutput>, <computeroutput>date-local</computeroutput>, <computeroutput>time-local</computeroutput>, <computeroutput>datetime</computeroutput>, <computeroutput>table</computeroutput>, <computeroutput>array</computeroutput>. There is no <computeroutput>datetime-local</computeroutput>, as you have to inspect the actual date/time value to determine if its a local or offset date.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>valueType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value source. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A string for the enum value, like <computeroutput>integer</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/ValueType.cpp" line="36" column="6" bodyfile="erbsland/qt/toml/ValueType.cpp" bodystart="36" bodyend="59" declfile="erbsland/qt/toml/ValueType.hpp" declline="47" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The namespace for the Erbsland Qt TOML library. </para>
+    </detaileddescription>
+    <location file="erbsland/qt/toml/Char.hpp" line="14" column="1"/>
+  </compounddef>
+</doxygen>

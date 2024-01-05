@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structerbsland_1_1qt_1_1toml_1_1_value_1_1_private_tag" kind="struct" language="C++" prot="private">
+    <compoundname>erbsland::qt::toml::Value::PrivateTag</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A tag for the private constructor. </para>
+    </detaileddescription>
+    <location file="erbsland/qt/toml/Value.hpp" line="412" column="5" bodyfile="erbsland/qt/toml/Value.hpp" bodystart="412" bodyend="412"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

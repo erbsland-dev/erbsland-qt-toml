@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespaceerbsland" kind="namespace" language="C++">
+    <compoundname>erbsland</compoundname>
+    <innernamespace refid="namespaceerbsland_1_1qt">erbsland::qt</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The base namespace for all Erbsland DEV libraries. </para>
+    </detaileddescription>
+    <location file="erbsland/qt/TomlParser.hpp" line="10" column="1"/>
+  </compounddef>
+</doxygen>
