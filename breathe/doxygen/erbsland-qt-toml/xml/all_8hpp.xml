@@ -1,0 +1,272 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="all_8hpp" kind="file" language="C++">
+    <compoundname>all.hpp</compoundname>
+    <includes refid="_char_8hpp" local="yes">Char.hpp</includes>
+    <includes refid="_error_8hpp" local="yes">Error.hpp</includes>
+    <includes refid="_input_stream_8hpp" local="yes">InputStream.hpp</includes>
+    <includes refid="_location_8hpp" local="yes">Location.hpp</includes>
+    <includes refid="_location_format_8hpp" local="yes">LocationFormat.hpp</includes>
+    <includes refid="_location_range_8hpp" local="yes">LocationRange.hpp</includes>
+    <includes refid="_namespace_8hpp" local="yes">Namespace.hpp</includes>
+    <includes refid="_parser_8hpp" local="yes">Parser.hpp</includes>
+    <includes refid="_specification_8hpp" local="yes">Specification.hpp</includes>
+    <includes refid="_value_8hpp" local="yes">Value.hpp</includes>
+    <includes refid="_value_source_8hpp" local="yes">ValueSource.hpp</includes>
+    <includes refid="_value_type_8hpp" local="yes">ValueType.hpp</includes>
+    <incdepgraph>
+      <node id="21">
+        <label>Value.hpp</label>
+        <link refid="_value_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>ValueIterator.hpp</label>
+        <link refid="_value_iterator_8hpp_source"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>ValueType.hpp</label>
+        <link refid="_value_type_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>QtCore/QIODevice</label>
+      </node>
+      <node id="5">
+        <label>cstdint</label>
+      </node>
+      <node id="27">
+        <label>QtCore/QDateTime</label>
+      </node>
+      <node id="3">
+        <label>Namespace.hpp</label>
+        <link refid="_namespace_8hpp_source"/>
+      </node>
+      <node id="28">
+        <label>variant</label>
+      </node>
+      <node id="2">
+        <label>Char.hpp</label>
+        <link refid="_char_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Location.hpp</label>
+        <link refid="_location_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>erbsland/qt/toml/all.hpp</label>
+        <link refid="all_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>LocationRange.hpp</label>
+        <link refid="_location_range_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>QtCore/QDate</label>
+      </node>
+      <node id="10">
+        <label>exception</label>
+      </node>
+      <node id="19">
+        <label>Parser.hpp</label>
+        <link refid="_parser_8hpp_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>QtCore/QTime</label>
+      </node>
+      <node id="20">
+        <label>Specification.hpp</label>
+        <link refid="_specification_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>LocationFormat.hpp</label>
+        <link refid="_location_format_8hpp_source"/>
+      </node>
+      <node id="13">
+        <label>QtCore/QTextStream</label>
+      </node>
+      <node id="23">
+        <label>ValueSource.hpp</label>
+        <link refid="_value_source_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>QtCore/QByteArray</label>
+      </node>
+      <node id="6">
+        <label>Error.hpp</label>
+        <link refid="_error_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>QtCore/QString</label>
+      </node>
+      <node id="29">
+        <label>unordered_map</label>
+      </node>
+      <node id="14">
+        <label>QtCore/QFile</label>
+      </node>
+      <node id="11">
+        <label>InputStream.hpp</label>
+        <link refid="_input_stream_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>algorithm</label>
+      </node>
+      <node id="15">
+        <label>QtCore/QChar</label>
+      </node>
+      <node id="16">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>©<sp/>2023-2024<sp/>Tobias<sp/>Erbsland<sp/>https://erbsland.dev/<sp/>and<sp/>EducateIT<sp/>GmbH<sp/>https://educateit.ch</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>According<sp/>to<sp/>the<sp/>copyright<sp/>terms<sp/>specified<sp/>in<sp/>the<sp/>file<sp/>&quot;COPYRIGHT.md&quot;.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SPDX-License-Identifier:<sp/>LGPL-3.0-or-later</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Char.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Error.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;InputStream.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Location.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;LocationFormat.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;LocationRange.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Namespace.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Parser.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Specification.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Value.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ValueSource.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ValueType.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="erbsland/qt/toml/all.hpp"/>
+  </compounddef>
+</doxygen>

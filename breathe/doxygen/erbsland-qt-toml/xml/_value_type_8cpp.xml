@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_value_type_8cpp" kind="file" language="C++">
+    <compoundname>ValueType.cpp</compoundname>
+    <includes refid="_value_type_8hpp" local="yes">ValueType.hpp</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>ValueType.hpp</label>
+        <link refid="_value_type_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Namespace.hpp</label>
+        <link refid="_namespace_8hpp_source"/>
+      </node>
+      <node id="1">
+        <label>erbsland/qt/toml/ValueType.cpp</label>
+        <link refid="_value_type_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>QtCore/QString</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceerbsland">erbsland</innernamespace>
+    <innernamespace refid="namespaceerbsland_1_1qt">erbsland::qt</innernamespace>
+    <innernamespace refid="namespaceerbsland_1_1qt_1_1toml">erbsland::qt::toml</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>©<sp/>2023-2024<sp/>Tobias<sp/>Erbsland<sp/>https://erbsland.dev/<sp/>and<sp/>EducateIT<sp/>GmbH<sp/>https://educateit.ch</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>According<sp/>to<sp/>the<sp/>copyright<sp/>terms<sp/>specified<sp/>in<sp/>the<sp/>file<sp/>&quot;COPYRIGHT.md&quot;.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SPDX-License-Identifier:<sp/>LGPL-3.0-or-later</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ValueType.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceerbsland_1_1qt_1_1toml" kindref="compound">erbsland::qt::toml</ref><sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1a8763f4e6183a5db29ed289e05ff2ffee" kindref="member">valueTypeToString</ref>(<ref refid="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24ae" kindref="member">ValueType</ref><sp/>valueType)<sp/>noexcept<sp/>-&gt;<sp/>QString<sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(valueType)<sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aeaa0faef0851b4294c06f2b94bb1cb2044" kindref="member">ValueType::Integer</ref>:</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>QStringLiteral(</highlight><highlight class="stringliteral">&quot;Integer&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aea22ae0e2b89e5e3d477f988cc36d3272b" kindref="member">ValueType::Float</ref>:</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>QStringLiteral(</highlight><highlight class="stringliteral">&quot;Float&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aea27226c864bac7454a8504f8edb15d95b" kindref="member">ValueType::Boolean</ref>:</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>QStringLiteral(</highlight><highlight class="stringliteral">&quot;Boolean&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aea27118326006d3829667a400ad23d5d98" kindref="member">ValueType::String</ref>:</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>QStringLiteral(</highlight><highlight class="stringliteral">&quot;String&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aeaa76d4ef5f3f6a672bbfab2865563e530" kindref="member">ValueType::Time</ref>:</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>QStringLiteral(</highlight><highlight class="stringliteral">&quot;Time&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aea44749712dbec183e983dcd78a7736c41" kindref="member">ValueType::Date</ref>:</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>QStringLiteral(</highlight><highlight class="stringliteral">&quot;Date&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aea8cf10d2341ed01492506085688270c1e" kindref="member">ValueType::DateTime</ref>:</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>QStringLiteral(</highlight><highlight class="stringliteral">&quot;DateTime&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aea51c45b795d5d18a3e4e0c37e8b20a141" kindref="member">ValueType::Table</ref>:</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>QStringLiteral(</highlight><highlight class="stringliteral">&quot;Table&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aea4410ec34d9e6c1a68100ca0ce033fb17" kindref="member">ValueType::Array</ref>:</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>QStringLiteral(</highlight><highlight class="stringliteral">&quot;Array&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>QStringLiteral(</highlight><highlight class="stringliteral">&quot;Unknown&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1a4cd37b7400e8ddc13f4b20d749d9777e" kindref="member">valueTypeToUnitTestString</ref>(<ref refid="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24ae" kindref="member">ValueType</ref><sp/>valueType)<sp/>noexcept<sp/>-&gt;<sp/>QString<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(valueType)<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aeaa0faef0851b4294c06f2b94bb1cb2044" kindref="member">ValueType::Integer</ref>:</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>QStringLiteral(</highlight><highlight class="stringliteral">&quot;integer&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aea22ae0e2b89e5e3d477f988cc36d3272b" kindref="member">ValueType::Float</ref>:</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>QStringLiteral(</highlight><highlight class="stringliteral">&quot;float&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aea27226c864bac7454a8504f8edb15d95b" kindref="member">ValueType::Boolean</ref>:</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>QStringLiteral(</highlight><highlight class="stringliteral">&quot;bool&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aea27118326006d3829667a400ad23d5d98" kindref="member">ValueType::String</ref>:</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>QStringLiteral(</highlight><highlight class="stringliteral">&quot;string&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aeaa76d4ef5f3f6a672bbfab2865563e530" kindref="member">ValueType::Time</ref>:</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>QStringLiteral(</highlight><highlight class="stringliteral">&quot;time-local&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aea44749712dbec183e983dcd78a7736c41" kindref="member">ValueType::Date</ref>:</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>QStringLiteral(</highlight><highlight class="stringliteral">&quot;date-local&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aea8cf10d2341ed01492506085688270c1e" kindref="member">ValueType::DateTime</ref>:</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>QStringLiteral(</highlight><highlight class="stringliteral">&quot;datetime&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aea51c45b795d5d18a3e4e0c37e8b20a141" kindref="member">ValueType::Table</ref>:</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>QStringLiteral(</highlight><highlight class="stringliteral">&quot;table&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aea4410ec34d9e6c1a68100ca0ce033fb17" kindref="member">ValueType::Array</ref>:</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>QStringLiteral(</highlight><highlight class="stringliteral">&quot;array&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>QStringLiteral(</highlight><highlight class="stringliteral">&quot;unknown&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="erbsland/qt/toml/ValueType.cpp"/>
+  </compounddef>
+</doxygen>

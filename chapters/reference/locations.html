@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Locations &mdash; Erbsland Qt TOML 1.2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=61243dd2"></script>
+        <script src="../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Input Streams" href="streams.html" />
+    <link rel="prev" title="Error Handling" href="errors.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Erbsland Qt TOML
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quick-start.html">Quick Start Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="namespaces.html">Namespaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parser.html">Parsing Documents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="errors.html">Error Handling</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Locations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="streams.html">Input Streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classes.html">Classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="enumerations.html">Enumerations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../roadmap.html">Roadmap</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Erbsland Qt TOML</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Locations</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/chapters/reference/locations.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="locations">
+<span id="index-0"></span><h1>Locations<a class="headerlink" href="#locations" title="Link to this heading"></a></h1>
+<p>A unique feature of this TOML parser is its ability to transfer the parsing location from the parsed document to the returned value. Consequently, after parsing, you can retrieve the location from which a value was derived using the <span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="classes.html#_CPPv4N8erbsland2qt4toml5ValueE" title="erbsland::qt::toml::Value"><span class="n">Value</span></a><span class="p">::</span><a class="reference internal" href="classes.html#_CPPv4NK8erbsland2qt4toml5Value13locationRangeEv" title="erbsland::qt::toml::Value::locationRange"><span class="n">locationRange</span></a><span class="p">(</span><span class="p">)</span></span> method.</p>
+<p>This key functionality allows you to report not just logical errors in the configuration, but also communicate the error’s location to the user. Both the <span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="classes.html#_CPPv4N8erbsland2qt4toml8LocationE" title="erbsland::qt::toml::Location"><span class="n">Location</span></a></span> and <span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="classes.html#_CPPv4N8erbsland2qt4toml13LocationRangeE" title="erbsland::qt::toml::LocationRange"><span class="n">LocationRange</span></a></span> classes come equipped with a <span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="classes.html#_CPPv4N8erbsland2qt4toml8LocationE" title="erbsland::qt::toml::Location"><span class="n">Location</span></a><span class="p">::</span><a class="reference internal" href="classes.html#_CPPv4NK8erbsland2qt4toml8Location8toStringE6Format" title="erbsland::qt::toml::Location::toString"><span class="n">toString</span></a><span class="p">(</span><span class="p">)</span></span> method. This method swiftly transforms the location or location range into a format suitable for logging or user display.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;erbsland/qt/toml/Value.hpp&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">elqt</span><span class="o">::</span><span class="nn">toml</span><span class="p">;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">useConfiguration</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">ValuePtr</span><span class="w"> </span><span class="o">&amp;</span><span class="n">rootTable</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">ports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rootTable</span><span class="o">-&gt;</span><span class="n">arrayValue</span><span class="p">(</span><span class="n">QStringLiteral</span><span class="p">(</span><span class="s">&quot;ports&quot;</span><span class="p">));</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="p">[</span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="n">value</span><span class="p">]</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">ports</span><span class="o">-&gt;</span><span class="n">toTable</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">value</span><span class="o">-&gt;</span><span class="n">type</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">ValueType</span><span class="o">::</span><span class="n">Integer</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;The values in the &#39;ports&#39; table must be integer values. &quot;</span>
+<span class="w">                </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">value</span><span class="o">-&gt;</span><span class="n">locationRange</span><span class="p">().</span><span class="n">toString</span><span class="p">().</span><span class="n">toStdString</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">            </span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="c1">// ...</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="errors.html" class="btn btn-neutral float-left" title="Error Handling" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="streams.html" class="btn btn-neutral float-right" title="Input Streams" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2024, Erbsland DEV.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

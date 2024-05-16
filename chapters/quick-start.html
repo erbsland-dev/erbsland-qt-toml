@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quick Start Tutorial &mdash; Erbsland Qt TOML 1.2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=61243dd2"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Frequently Asked Questions" href="faq.html" />
+    <link rel="prev" title="Preface" href="preface.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Erbsland Qt TOML
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="preface.html">Preface</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Quick Start Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-up-the-project-directory-structure">Setting up the Project Directory Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-the-application-source-files">Creating the Application Source Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-up-cmake">Setting up CMake</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#building-and-running-the-application">Building and Running the Application</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference/namespaces.html">Namespaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference/parser.html">Parsing Documents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference/errors.html">Error Handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference/locations.html">Locations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference/streams.html">Input Streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference/classes.html">Classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference/enumerations.html">Enumerations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="roadmap.html">Roadmap</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Erbsland Qt TOML</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Quick Start Tutorial</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/chapters/quick-start.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="quick-start-tutorial">
+<h1>Quick Start Tutorial<a class="headerlink" href="#quick-start-tutorial" title="Link to this heading"></a></h1>
+<p>This tutorial will guide you through the process of creating a simple application that uses the Erbsland Qt TOML library to read and display a TOML configuration file. This application will serve as an example to demonstrate how to integrate this library into a Qt application using CMake.</p>
+<p>I you do not like to follow this tutorial, you will find this example application <a class="reference external" href="https://github.com/erbsland-dev/erbsland-qt-toml-example/">here</a>.</p>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading"></a></h2>
+<p>Before we start, make sure you have the following installed:</p>
+<ul class="simple">
+<li><p><cite>CMake</cite> version 3.25 or newer</p></li>
+<li><p><cite>Qt5</cite> or <cite>Qt6</cite></p></li>
+<li><p><cite>Git</cite></p></li>
+</ul>
+</section>
+<section id="setting-up-the-project-directory-structure">
+<h2>Setting up the Project Directory Structure<a class="headerlink" href="#setting-up-the-project-directory-structure" title="Link to this heading"></a></h2>
+<p>We will first create the project directory structure.</p>
+<ol class="arabic simple">
+<li><p>Start by creating a new directory for the project. Let’s call it <cite>project</cite>.</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>project
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Move into the <cite>project</cite> directory.</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>project
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Create a git submodule for the Erbsland Qt TOML library.</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>submodule<span class="w"> </span>add<span class="w"> </span>https://github.com/erbsland-dev/erbsland-qt-toml.git
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Create a directory for the example application.</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>example-app
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Inside <cite>example-app</cite>, create <cite>src</cite> and <cite>data</cite> directories.</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>example-app/src
+mkdir<span class="w"> </span>example-app/data
+</pre></div>
+</div>
+<p>At this point, your directory structure should look like this:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>project
+├── erbsland-qt-toml
+└── example-app
+    ├── data
+    └── src
+</pre></div>
+</div>
+</section>
+<section id="creating-the-application-source-files">
+<h2>Creating the Application Source Files<a class="headerlink" href="#creating-the-application-source-files" title="Link to this heading"></a></h2>
+<p>Now that we have our directory structure ready, let’s create the required source files.</p>
+<ol class="arabic simple">
+<li><p>Create a new file <cite>main.cpp</cite> inside the <cite>example-app/src</cite> directory. Copy and paste the following content into <cite>main.cpp</cite>.</p></li>
+</ol>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;erbsland/qt/toml/Parser.hpp&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;erbsland/qt/toml/Error.hpp&gt;</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;QCoreApplication&gt;</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">elqt</span><span class="o">::</span><span class="nn">toml</span><span class="p">;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">displayValue</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">ValuePtr</span><span class="w"> </span><span class="o">&amp;</span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">QString</span><span class="w"> </span><span class="o">&amp;</span><span class="n">path</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">path</span><span class="p">.</span><span class="n">toStdString</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">value</span><span class="o">-&gt;</span><span class="n">isTable</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Table: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">value</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; Elements&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="p">[</span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="n">tableValue</span><span class="p">]</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">value</span><span class="o">-&gt;</span><span class="n">toTable</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">displayValue</span><span class="p">(</span><span class="n">tableValue</span><span class="p">,</span><span class="w"> </span><span class="n">path</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="sc">&#39;/&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">key</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">value</span><span class="o">-&gt;</span><span class="n">isArray</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Array: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">value</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; Elements&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="k">auto</span><span class="w"> </span><span class="n">array</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value</span><span class="o">-&gt;</span><span class="n">toArray</span><span class="p">();</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">array</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">displayValue</span><span class="p">(</span><span class="n">array</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">i</span><span class="p">),</span><span class="w"> </span><span class="n">path</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">QStringLiteral</span><span class="p">(</span><span class="s">&quot;/[%1]&quot;</span><span class="p">).</span><span class="n">arg</span><span class="p">(</span><span class="n">i</span><span class="p">));</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Value: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">value</span><span class="o">-&gt;</span><span class="n">toVariant</span><span class="p">().</span><span class="n">toString</span><span class="p">().</span><span class="n">toStdString</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">argv</span><span class="p">[])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">QCoreApplication</span><span class="w"> </span><span class="n">application</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="n">argv</span><span class="p">);</span>
+<span class="w">    </span><span class="n">ValuePtr</span><span class="w"> </span><span class="n">toml</span><span class="p">{};</span>
+<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">auto</span><span class="w"> </span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QCoreApplication</span><span class="o">::</span><span class="n">applicationDirPath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;/config.toml&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">Parser</span><span class="w"> </span><span class="n">parser</span><span class="p">{};</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Reading configuration from: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">path</span><span class="p">.</span><span class="n">toStdString</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">toml</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parser</span><span class="p">.</span><span class="n">parseFileOrThrow</span><span class="p">(</span><span class="n">path</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Error</span><span class="w"> </span><span class="o">&amp;</span><span class="n">err</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">err</span><span class="p">.</span><span class="n">toString</span><span class="p">().</span><span class="n">toStdString</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">       </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">displayValue</span><span class="p">(</span><span class="n">toml</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[root]&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Now, create a TOML configuration file <cite>config.toml</cite> in the <cite>example-app/data</cite> directory. Copy and paste the following content into <cite>config.toml</cite>.</p></li>
+</ol>
+<div class="highlight-toml notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="c1"># Example Configuration</span>
+<span class="c1">#</span>
+
+<span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Example&quot;</span>
+
+<span class="k">[main]</span>
+<span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;This is an Example&quot;</span>
+<span class="n">last_update</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ld">2023-05-13 12:00:00</span>
+
+<span class="k">[connection]</span>
+<span class="n">services</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">&quot;http&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;ftp&quot;</span><span class="w"> </span><span class="p">]</span>
+<span class="n">ssl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+<span class="n">ports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="mi">8080</span><span class="p">,</span><span class="w"> </span><span class="mi">8081</span><span class="p">,</span><span class="w"> </span><span class="mi">8022</span><span class="w"> </span><span class="p">]</span>
+
+<span class="k">[service.http]</span>
+<span class="n">ip</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span>
+<span class="n">base_dir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;~/public_http&quot;</span>
+
+<span class="k">[service.ftp]</span>
+<span class="n">ip</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span>
+<span class="n">base_dir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;~/public_http&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="setting-up-cmake">
+<h2>Setting up CMake<a class="headerlink" href="#setting-up-cmake" title="Link to this heading"></a></h2>
+<p>We will use CMake as our build system. Let’s create two <cite>CMakeLists.txt</cite> files - one for the example application, and one for the project root.</p>
+<ol class="arabic simple">
+<li><p>In the <cite>example-app</cite> directory, create a file named <cite>CMakeLists.txt</cite>. Copy and paste the following content into <cite>example-app/CMakeLists.txt</cite>.</p></li>
+</ol>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">cmake_minimum_required</span><span class="p">(</span><span class="s">VERSION</span><span class="w"> </span><span class="s">3.25</span><span class="p">)</span>
+
+<span class="nb">project</span><span class="p">(</span><span class="s">example-app</span><span class="p">)</span>
+
+<span class="nb">add_executable</span><span class="p">(</span><span class="s">example-app</span><span class="w"> </span><span class="s">src/main.cpp</span><span class="p">)</span>
+
+<span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">example-app</span><span class="w"> </span><span class="s">PRIVATE</span><span class="w"> </span><span class="s">erbsland-qt-toml</span><span class="p">)</span>
+<span class="nb">set_property</span><span class="p">(</span><span class="s">TARGET</span><span class="w"> </span><span class="s">example-app</span><span class="w"> </span><span class="s">PROPERTY</span><span class="w"> </span><span class="s">CXX_STANDARD</span><span class="w"> </span><span class="s">17</span><span class="p">)</span>
+<span class="nb">target_compile_features</span><span class="p">(</span><span class="s">example-app</span><span class="w"> </span><span class="s">PRIVATE</span><span class="w"> </span><span class="s">cxx_std_17</span><span class="p">)</span>
+<span class="nb">add_custom_command</span><span class="p">(</span><span class="s">TARGET</span><span class="w"> </span><span class="s">example-app</span><span class="w"> </span><span class="s">POST_BUILD</span>
+<span class="w">        </span><span class="s">COMMAND</span><span class="w"> </span><span class="o">${</span><span class="nv">CMAKE_COMMAND</span><span class="o">}</span><span class="w"> </span><span class="s">-E</span><span class="w"> </span><span class="s">copy</span>
+<span class="w">        </span><span class="s2">&quot;${CMAKE_CURRENT_LIST_DIR}/data/config.toml&quot;</span>
+<span class="w">        </span><span class="s2">&quot;$&lt;TARGET_FILE_DIR:example-app&gt;/config.toml&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>In the root of the <cite>project</cite> directory, create a file named <cite>CMakeLists.txt</cite>. Copy and paste the following content into <cite>CMakeLists.txt</cite>.</p></li>
+</ol>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">cmake_minimum_required</span><span class="p">(</span><span class="s">VERSION</span><span class="w"> </span><span class="s">3.25</span><span class="p">)</span>
+
+<span class="nb">project</span><span class="p">(</span><span class="s">erbsland-qt-toml-example</span><span class="p">)</span>
+
+<span class="c"># Detect and load either Qt5 or Qt6.</span>
+<span class="nb">if</span><span class="w"> </span><span class="p">(</span><span class="s">DEFINED</span><span class="w"> </span><span class="s">Qt6_DIR</span><span class="w"> </span><span class="s">AND</span><span class="w"> </span><span class="s">NOT</span><span class="w"> </span><span class="s">Qt6_DIR</span><span class="w"> </span><span class="s">MATCHES</span><span class="w"> </span><span class="s2">&quot;-NOTFOUND&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">find_package</span><span class="p">(</span><span class="s">Qt6</span><span class="w"> </span><span class="s">REQUIRED</span><span class="w"> </span><span class="s">GLOBAL</span><span class="w"> </span><span class="s">COMPONENTS</span><span class="w"> </span><span class="s">Core</span><span class="p">)</span>
+<span class="nb">elseif</span><span class="w"> </span><span class="p">(</span><span class="s">DEFINED</span><span class="w"> </span><span class="s">Qt5_DIR</span><span class="w"> </span><span class="s">AND</span><span class="w"> </span><span class="s">NOT</span><span class="w"> </span><span class="s">Qt5_DIR</span><span class="w"> </span><span class="s">MATCHES</span><span class="w"> </span><span class="s2">&quot;-NOTFOUND&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">find_package</span><span class="p">(</span><span class="s">Qt5</span><span class="w"> </span><span class="s">REQUIRED</span><span class="w"> </span><span class="s">GLOBAL</span><span class="w"> </span><span class="s">COMPONENTS</span><span class="w"> </span><span class="s">Core</span><span class="p">)</span>
+<span class="nb">else</span><span class="p">()</span>
+<span class="w">    </span><span class="nb">find_package</span><span class="p">(</span><span class="s">Qt6</span><span class="w"> </span><span class="s">GLOBAL</span><span class="w"> </span><span class="s">COMPONENTS</span><span class="w"> </span><span class="s">Core</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">if</span><span class="w"> </span><span class="p">(</span><span class="s">NOT</span><span class="w"> </span><span class="s">DEFINED</span><span class="w"> </span><span class="s">Qt6_FOUND</span><span class="p">)</span>
+<span class="w">        </span><span class="nb">find_package</span><span class="p">(</span><span class="s">Qt5</span><span class="w"> </span><span class="s">GLOBAL</span><span class="w"> </span><span class="s">REQUIRED</span><span class="w"> </span><span class="s">COMPONENTS</span><span class="w"> </span><span class="s">Core</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">endif</span><span class="w"> </span><span class="p">()</span>
+<span class="nb">endif</span><span class="w"> </span><span class="p">()</span>
+
+<span class="nb">add_subdirectory</span><span class="p">(</span><span class="s">erbsland-qt-toml</span><span class="p">)</span>
+<span class="nb">add_subdirectory</span><span class="p">(</span><span class="s">example-app</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="building-and-running-the-application">
+<h2>Building and Running the Application<a class="headerlink" href="#building-and-running-the-application" title="Link to this heading"></a></h2>
+<p>With everything in place, it’s time to build and run the application.</p>
+<ol class="arabic simple">
+<li><p>Move to the root of the <cite>project</cite> directory.</p></li>
+<li><p>Create a new directory called <cite>build</cite>.</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>build
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Move into the <cite>build</cite> directory.</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>build
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Run <cite>cmake</cite> to configure the project. Make sure to replace <cite>/path/to/qt</cite> with the correct path to your Qt installation.</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cmake<span class="w"> </span>..<span class="w"> </span>-DCMAKE_PREFIX_PATH<span class="o">=</span>/path/to/qt
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Once configuration is done without errors, run <cite>make</cite> to build the application.</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make
+</pre></div>
+</div>
+<ol class="arabic simple" start="6">
+<li><p>Finally, run the application.</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./example-app
+</pre></div>
+</div>
+<p>That concludes the tutorial. By now, you should have built and run the Erbsland Qt TOML example application. When executed, the application reads the <cite>config.toml</cite> file and prints the configuration values to the standard output.</p>
+<p>Remember that this is just a basic example. The Erbsland Qt TOML library offers much more functionality that you can use to handle TOML files in your Qt applications.</p>
+<p>If you wish to expand on this, consider the following:</p>
+<ul class="simple">
+<li><p>Experiment with different TOML files and observe the output.</p></li>
+<li><p>Modify the <cite>main.cpp</cite> file to add more functionality, like writing to TOML files.</p></li>
+<li><p>Check out the documentation of the Erbsland Qt TOML library to learn more about its capabilities and how you can use them in your projects.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="preface.html" class="btn btn-neutral float-left" title="Preface" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="faq.html" class="btn btn-neutral float-right" title="Frequently Asked Questions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2024, Erbsland DEV.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

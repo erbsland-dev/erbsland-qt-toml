@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parsing Documents &mdash; Erbsland Qt TOML 1.2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=61243dd2"></script>
+        <script src="../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Error Handling" href="errors.html" />
+    <link rel="prev" title="Namespaces" href="namespaces.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Erbsland Qt TOML
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quick-start.html">Quick Start Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="namespaces.html">Namespaces</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Parsing Documents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#instantiate-the-parser">Instantiate the Parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#file-parsing">File Parsing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#parsing-strings-and-byte-data">Parsing Strings and Byte Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#thread-safety">Thread Safety</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#interacting-with-the-parsed-output">Interacting with the Parsed Output</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#accessing-individual-values-using-keys">Accessing Individual Values using Keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#array-iteration">Array Iteration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#retrieving-all-keys-and-values-of-a-table">Retrieving All Keys and Values of a Table</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="errors.html">Error Handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="locations.html">Locations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="streams.html">Input Streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classes.html">Classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="enumerations.html">Enumerations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../roadmap.html">Roadmap</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Erbsland Qt TOML</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Parsing Documents</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/chapters/reference/parser.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="parsing-documents">
+<span id="index-0"></span><h1>Parsing Documents<a class="headerlink" href="#parsing-documents" title="Link to this heading"></a></h1>
+<section id="instantiate-the-parser">
+<span id="index-1"></span><h2>Instantiate the Parser<a class="headerlink" href="#instantiate-the-parser" title="Link to this heading"></a></h2>
+<p>To parse TOML documents, utilise the <a class="reference internal" href="classes.html#_CPPv4N8erbsland2qt4toml6ParserE" title="erbsland::qt::toml::Parser"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Parser</span></code></a> class. This class is lightweight and designed to be instantiated as a local variable on the stack:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;erbsland/qt/toml/Parser.hpp&gt;</span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">elqt</span><span class="o">::</span><span class="nn">toml</span><span class="p">;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">parseConfiguration</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Parser</span><span class="w"> </span><span class="n">parser</span><span class="p">{};</span>
+<span class="w">    </span><span class="c1">// ..</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The parser’s constructor accepts an optional argument indicating the TOML <a class="reference internal" href="enumerations.html#_CPPv4N8erbsland2qt4toml13SpecificationE" title="erbsland::qt::toml::Specification"><code class="xref cpp cpp-enum docutils literal notranslate"><span class="pre">Specification</span></code></a> to be used. We advise sticking with the default constructor, as it automatically adopts the latest TOML version whenever a new release occurs.</p>
+<p>If you need to restrict parsing to a specific TOML version or use an unreleased version, you can specify this using the optional argument:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;erbsland/qt/toml/Parser.hpp&gt;</span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">elqt</span><span class="o">::</span><span class="nn">toml</span><span class="p">;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">parseConfiguration</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Parser</span><span class="w"> </span><span class="n">parser</span><span class="p">{</span><span class="n">Specification</span><span class="o">::</span><span class="n">TOML_1_1</span><span class="p">};</span><span class="w"> </span><span class="c1">// Use the TOML 1.1 specification</span>
+<span class="w">    </span><span class="c1">// ..</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="file-parsing">
+<span id="index-2"></span><h2>File Parsing<a class="headerlink" href="#file-parsing" title="Link to this heading"></a></h2>
+<p>The <span class="cpp-texpr sig sig-inline cpp"><a class="reference internal" href="classes.html#_CPPv4N8erbsland2qt4toml6Parser16parseFileOrThrowERK7QString" title="erbsland::qt::toml::Parser::parseFileOrThrow"><span class="n">parseFileOrThrow</span></a><span class="p">(</span><span class="p">)</span></span> method is used to read and interpret TOML configuration files from disk. It requires one parameter: the absolute path to the file to be parsed.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;erbsland/qt/toml/Parser.hpp&gt;</span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">elqt</span><span class="o">::</span><span class="nn">toml</span><span class="p">;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">parseConfiguration</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QStringLiteral</span><span class="p">(</span><span class="s">&quot;/path/to/config.toml&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Parser</span><span class="w"> </span><span class="n">parser</span><span class="p">{};</span>
+<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">auto</span><span class="w"> </span><span class="n">toml</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parser</span><span class="p">.</span><span class="n">parseFileOrThrow</span><span class="p">(</span><span class="n">path</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">// Process the TOML document here.</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Error</span><span class="w"> </span><span class="o">&amp;</span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Handle any parsing errors here.</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The parser will attempt to open, read, and parse the specified file. If any issues arise during this process, an exception is thrown.</p>
+<p>The <span class="cpp-texpr sig sig-inline cpp"><a class="reference internal" href="classes.html#_CPPv4N8erbsland2qt4toml5ErrorE" title="erbsland::qt::toml::Error"><span class="n">Error</span></a></span> object of the exception provides valuable information about the problem that prevented successful parsing. For more details, see the <a class="reference internal" href="errors.html#error-handling"><span class="std std-ref">Error Handling</span></a> chapter.</p>
+</section>
+<section id="parsing-strings-and-byte-data">
+<h2>Parsing Strings and Byte Data<a class="headerlink" href="#parsing-strings-and-byte-data" title="Link to this heading"></a></h2>
+<p>If the TOML file has already been read by another component of your software, you can parse TOML data from a <code class="docutils literal notranslate"><span class="pre">QString</span></code> or <code class="docutils literal notranslate"><span class="pre">QByteArray</span></code> using the <span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="classes.html#_CPPv4N8erbsland2qt4toml6Parser18parseStringOrThrowERK7QString" title="erbsland::qt::toml::Parser::parseStringOrThrow"><span class="n">parseStringOrThrow</span></a><span class="p">(</span><span class="p">)</span></span> and <span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="classes.html#_CPPv4N8erbsland2qt4toml6Parser16parseDataOrThrowERK10QByteArray" title="erbsland::qt::toml::Parser::parseDataOrThrow"><span class="n">parseDataOrThrow</span></a><span class="p">(</span><span class="p">)</span></span> methods, respectively.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;erbsland/qt/toml/Parser.hpp&gt;</span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">elqt</span><span class="o">::</span><span class="nn">toml</span><span class="p">;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">parseConfiguration</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">QString</span><span class="w"> </span><span class="o">&amp;</span><span class="n">tomlText</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Parser</span><span class="w"> </span><span class="n">parser</span><span class="p">{};</span>
+<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">auto</span><span class="w"> </span><span class="n">toml</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parser</span><span class="p">.</span><span class="n">parseStringOrThrow</span><span class="p">(</span><span class="n">tomlText</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">// Process the TOML document here.</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Error</span><span class="w"> </span><span class="o">&amp;</span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Handle any parsing errors here.</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>These methods work similarly to <span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="classes.html#_CPPv4N8erbsland2qt4toml6Parser16parseFileOrThrowERK7QString" title="erbsland::qt::toml::Parser::parseFileOrThrow"><span class="n">parseFileOrThrow</span></a><span class="p">(</span><span class="p">)</span></span>, with the key difference being that they won’t throw an <span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="classes.html#_CPPv4N8erbsland2qt4toml5ErrorE" title="erbsland::qt::toml::Error"><span class="n">Error</span></a><span class="p">::</span><a class="reference internal" href="classes.html#_CPPv4N8erbsland2qt4toml5Error4TypeE" title="erbsland::qt::toml::Error::Type"><span class="n">Type</span></a><span class="p">::</span><a class="reference internal" href="classes.html#_CPPv4N8erbsland2qt4toml5Error4Type2IOE" title="erbsland::qt::toml::Error::Type::IO"><span class="n">IO</span></a></span> error.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Although <span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="classes.html#_CPPv4N8erbsland2qt4toml6Parser16parseFileOrThrowERK7QString" title="erbsland::qt::toml::Parser::parseFileOrThrow"><span class="n">parseFileOrThrow</span></a><span class="p">(</span><span class="p">)</span></span> and <span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="classes.html#_CPPv4N8erbsland2qt4toml6Parser16parseDataOrThrowERK10QByteArray" title="erbsland::qt::toml::Parser::parseDataOrThrow"><span class="n">parseDataOrThrow</span></a><span class="p">(</span><span class="p">)</span></span> utilise the same strict built-in UTF-8 decoder, <span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="classes.html#_CPPv4N8erbsland2qt4toml6Parser18parseStringOrThrowERK7QString" title="erbsland::qt::toml::Parser::parseStringOrThrow"><span class="n">parseStringOrThrow</span></a><span class="p">(</span><span class="p">)</span></span> initially relies on the UTF-16 encoding inherent to the string. Any encoding errors will be detected when these values are read from the string.</p>
+<p>Therefore, even with a <code class="docutils literal notranslate"><span class="pre">QString</span></code>, you may encounter <span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="classes.html#_CPPv4N8erbsland2qt4toml5ErrorE" title="erbsland::qt::toml::Error"><span class="n">Error</span></a><span class="p">::</span><a class="reference internal" href="classes.html#_CPPv4N8erbsland2qt4toml5Error4TypeE" title="erbsland::qt::toml::Error::Type"><span class="n">Type</span></a><span class="p">::</span><a class="reference internal" href="classes.html#_CPPv4N8erbsland2qt4toml5Error4Type8EncodingE" title="erbsland::qt::toml::Error::Type::Encoding"><span class="n">Encoding</span></a></span> errors. However, these errors would be due to issues with UTF-16 encoding, not UTF-8.</p>
+</div>
+</section>
+<section id="thread-safety">
+<h2>Thread Safety<a class="headerlink" href="#thread-safety" title="Link to this heading"></a></h2>
+<p>Every function within the <em>Erbsland Qt TOML</em> parser is <strong>reentrant</strong>, meaning it can be safely executed concurrently from multiple threads. However, it’s essential that each thread operates on its own <a class="reference internal" href="classes.html#_CPPv4N8erbsland2qt4toml6ParserE" title="erbsland::qt::toml::Parser"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Parser</span></code></a> instance.</p>
+<p>To put it in simpler terms, a reentrant function is one that can be paused partway through its execution, called again (reentered), and then safely resumed from where it left off, without causing any conflicts or inconsistencies. This characteristic makes reentrant functions particularly useful in multi-threaded environments.</p>
+<p>With <em>Erbsland Qt TOML</em> parser, you can have multiple threads parsing different TOML documents simultaneously, as long as each thread uses its own <span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="classes.html#_CPPv4N8erbsland2qt4toml6ParserE" title="erbsland::qt::toml::Parser"><span class="n">Parser</span></a></span> instance.</p>
+</section>
+<section id="interacting-with-the-parsed-output">
+<h2>Interacting with the Parsed Output<a class="headerlink" href="#interacting-with-the-parsed-output" title="Link to this heading"></a></h2>
+<p>The parser generates the output as a nested hierarchy of <span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="classes.html#_CPPv4N8erbsland2qt4toml5ValueE" title="erbsland::qt::toml::Value"><span class="n">Value</span></a></span> objects. The returned object represents the root table of the document, and it always of the <span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="enumerations.html#_CPPv4N8erbsland2qt4toml9ValueTypeE" title="erbsland::qt::toml::ValueType"><span class="n">ValueType</span></a><span class="p">::</span><a class="reference internal" href="enumerations.html#_CPPv4N8erbsland2qt4toml9ValueType5TableE" title="erbsland::qt::toml::ValueType::Table"><span class="n">Table</span></a></span> type.</p>
+<p>Each value in this structure can be of the following types <span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="enumerations.html#_CPPv4N8erbsland2qt4toml9ValueType7IntegerE" title="erbsland::qt::toml::ValueType::Integer"><span class="n">Integer</span></a></span>, <span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="enumerations.html#_CPPv4N8erbsland2qt4toml9ValueType5FloatE" title="erbsland::qt::toml::ValueType::Float"><span class="n">Float</span></a></span>, <span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="enumerations.html#_CPPv4N8erbsland2qt4toml9ValueType7BooleanE" title="erbsland::qt::toml::ValueType::Boolean"><span class="n">Boolean</span></a></span>, <span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="enumerations.html#_CPPv4N8erbsland2qt4toml9ValueType6StringE" title="erbsland::qt::toml::ValueType::String"><span class="n">String</span></a></span>, <span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="enumerations.html#_CPPv4N8erbsland2qt4toml9ValueType4TimeE" title="erbsland::qt::toml::ValueType::Time"><span class="n">Time</span></a></span>, <span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="enumerations.html#_CPPv4N8erbsland2qt4toml9ValueType4DateE" title="erbsland::qt::toml::ValueType::Date"><span class="n">Date</span></a></span>, <span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="enumerations.html#_CPPv4N8erbsland2qt4toml9ValueType8DateTimeE" title="erbsland::qt::toml::ValueType::DateTime"><span class="n">DateTime</span></a></span>, <span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="enumerations.html#_CPPv4N8erbsland2qt4toml9ValueType5TableE" title="erbsland::qt::toml::ValueType::Table"><span class="n">Table</span></a></span>, and <span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="enumerations.html#_CPPv4N8erbsland2qt4toml9ValueType5ArrayE" title="erbsland::qt::toml::ValueType::Array"><span class="n">Array</span></a></span>. For the latter two types, which are often checked, there are two dedicated functions: <span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="classes.html#_CPPv4N8erbsland2qt4toml5ValueE" title="erbsland::qt::toml::Value"><span class="n">Value</span></a><span class="p">::</span><a class="reference internal" href="classes.html#_CPPv4NK8erbsland2qt4toml5Value7isTableEv" title="erbsland::qt::toml::Value::isTable"><span class="n">isTable</span></a><span class="p">(</span><span class="p">)</span></span> and <span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="classes.html#_CPPv4N8erbsland2qt4toml5ValueE" title="erbsland::qt::toml::Value"><span class="n">Value</span></a><span class="p">::</span><a class="reference internal" href="classes.html#_CPPv4NK8erbsland2qt4toml5Value7isArrayEv" title="erbsland::qt::toml::Value::isArray"><span class="n">isArray</span></a><span class="p">(</span><span class="p">)</span></span>.</p>
+<p>Instead of returning a value directly, the parser returns a <span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">shared_ptr</span><span class="p">&lt;</span><a class="reference internal" href="classes.html#_CPPv4N8erbsland2qt4toml5ValueE" title="erbsland::qt::toml::Value"><span class="n">Value</span></a><span class="p">&gt;</span></span> pointing to the instance. This approach guarantees easy duplication and transfer of the parsed document’s structure to different parts of your application, eliminating the need for manual memory management. The library also defines <span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="classes.html#_CPPv4N8erbsland2qt4toml8ValuePtrE" title="erbsland::qt::toml::ValuePtr"><span class="n">ValuePtr</span></a></span> you should use in declarations for this shared pointer.</p>
+<section id="accessing-individual-values-using-keys">
+<h3>Accessing Individual Values using Keys<a class="headerlink" href="#accessing-individual-values-using-keys" title="Link to this heading"></a></h3>
+<p>We advise using the <code class="docutils literal notranslate"><span class="pre">&lt;type&gt;Value(keypath)</span></code> methods to access individual values, as demonstrated by the <span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="classes.html#_CPPv4NK8erbsland2qt4toml5Value11stringValueERK7QStringRK7QString" title="erbsland::qt::toml::Value::stringValue"><span class="n">stringValue</span></a><span class="p">(</span><span class="p">)</span></span> function in the following example.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;erbsland/qt/toml/Value.hpp&gt;</span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">elqt</span><span class="o">::</span><span class="nn">toml</span><span class="p">;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">useConfiguration</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">ValuePtr</span><span class="w"> </span><span class="o">&amp;</span><span class="n">rootTable</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">ipAddress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rootTable</span><span class="o">-&gt;</span><span class="n">stringValue</span><span class="p">(</span><span class="n">QStringLiteral</span><span class="p">(</span><span class="s">&quot;server.ip-address&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">QStringLiteral</span><span class="p">(</span><span class="s">&quot;127.0.0.1&quot;</span><span class="p">));</span>
+<span class="w">    </span><span class="c1">// ...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>These methods can process either a single key or a key path where each key is separated by a dot (<code class="docutils literal notranslate"><span class="pre">.</span></code>). If the key doesn’t exist or doesn’t match the expected type, the function will return the default value specified as the second argument.</p>
+<p>Keys that contain a dot in the name are not supported by this convenience methods, if you have to work with unusual keys like this, there is the special method <cite>valueFromKey()</cite> for this case.</p>
+</section>
+<section id="array-iteration">
+<h3>Array Iteration<a class="headerlink" href="#array-iteration" title="Link to this heading"></a></h3>
+<p>To iterate over an array, you can use the <span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="classes.html#_CPPv4N8erbsland2qt4toml5Value5beginEv" title="erbsland::qt::toml::Value::begin"><span class="n">begin</span></a><span class="p">(</span><span class="p">)</span></span> and <span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="classes.html#_CPPv4N8erbsland2qt4toml5Value3endEv" title="erbsland::qt::toml::Value::end"><span class="n">end</span></a><span class="p">(</span><span class="p">)</span></span> methods, utilize one of the standard library’s algorithms, or employ the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop syntax directly.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;erbsland/qt/toml/Value.hpp&gt;</span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">elqt</span><span class="o">::</span><span class="nn">toml</span><span class="p">;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">useConfiguration</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">ValuePtr</span><span class="w"> </span><span class="o">&amp;</span><span class="n">rootTable</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">serverNames</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rootTable</span><span class="o">-&gt;</span><span class="n">arrayValue</span><span class="p">(</span><span class="n">QStringLiteral</span><span class="p">(</span><span class="s">&quot;server_names&quot;</span><span class="p">));</span>
+<span class="w">    </span><span class="c1">// this directly accesses the vector within the value.</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">entry</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="o">*</span><span class="n">serverNames</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// ...</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Alternatively, you can first convert the table value into a <span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">vector</span></span>. In this scenario, as illustrated in the following example, the <code class="docutils literal notranslate"><span class="pre">serverNames</span></code> list becomes a copy of the vector contained in the value instance.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;erbsland/qt/toml/Value.hpp&gt;</span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">elqt</span><span class="o">::</span><span class="nn">toml</span><span class="p">;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">useConfiguration</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">ValuePtr</span><span class="w"> </span><span class="o">&amp;</span><span class="n">rootTable</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// this creates a copy of the vector stored in the value.</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">serverNames</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rootTable</span><span class="o">-&gt;</span><span class="n">arrayValue</span><span class="p">(</span><span class="n">QStringLiteral</span><span class="p">(</span><span class="s">&quot;server_names&quot;</span><span class="p">)).</span><span class="n">toArray</span><span class="p">();</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">entry</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">serverNames</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// ...</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="retrieving-all-keys-and-values-of-a-table">
+<h3>Retrieving All Keys and Values of a Table<a class="headerlink" href="#retrieving-all-keys-and-values-of-a-table" title="Link to this heading"></a></h3>
+<p>There are two primary methods to access all keys and corresponding values in a table value. The first method involves using the <span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="classes.html#_CPPv4NK8erbsland2qt4toml5Value9tableKeysEv" title="erbsland::qt::toml::Value::tableKeys"><span class="n">tableKeys</span></a><span class="p">(</span><span class="p">)</span></span> function, followed by the <span class="cpp-expr sig sig-inline cpp"><span class="n">valueForKey</span><span class="p">(</span><span class="p">)</span></span> function to fetch the value associated with a particular key.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;erbsland/qt/toml/Value.hpp&gt;</span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">elqt</span><span class="o">::</span><span class="nn">toml</span><span class="p">;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">useConfiguration</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">ValuePtr</span><span class="w"> </span><span class="o">&amp;</span><span class="n">rootTable</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">ports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rootTable</span><span class="o">-&gt;</span><span class="n">arrayValue</span><span class="p">(</span><span class="n">QStringLiteral</span><span class="p">(</span><span class="s">&quot;ports&quot;</span><span class="p">));</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">key</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">ports</span><span class="o">-&gt;</span><span class="n">tableKeys</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">auto</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ports</span><span class="o">-&gt;</span><span class="n">valueForKey</span><span class="p">(</span><span class="n">key</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">// ...</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Alternatively, you can initially convert the value into a <span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">unordered_map</span></span>, then iterate over the map’s entries as demonstrated in the following example:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;erbsland/qt/toml/Value.hpp&gt;</span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">elqt</span><span class="o">::</span><span class="nn">toml</span><span class="p">;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">useConfiguration</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">ValuePtr</span><span class="w"> </span><span class="o">&amp;</span><span class="n">rootTable</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">ports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rootTable</span><span class="o">-&gt;</span><span class="n">arrayValue</span><span class="p">(</span><span class="n">QStringLiteral</span><span class="p">(</span><span class="s">&quot;ports&quot;</span><span class="p">));</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="p">[</span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="n">value</span><span class="p">]</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">ports</span><span class="o">-&gt;</span><span class="n">toTable</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// ...</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="namespaces.html" class="btn btn-neutral float-left" title="Namespaces" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="errors.html" class="btn btn-neutral float-right" title="Error Handling" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2024, Erbsland DEV.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

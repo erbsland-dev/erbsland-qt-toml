@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Namespaces &mdash; Erbsland Qt TOML 1.2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=61243dd2"></script>
+        <script src="../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Parsing Documents" href="parser.html" />
+    <link rel="prev" title="Frequently Asked Questions" href="../faq.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Erbsland Qt TOML
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quick-start.html">Quick Start Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Namespaces</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#_CPPv48erbsland"><code class="docutils literal notranslate"><span class="pre">erbsland</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N8erbsland2qtE"><code class="docutils literal notranslate"><span class="pre">qt</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland2qt4tomlE"><code class="docutils literal notranslate"><span class="pre">toml</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#shortcuts">Shortcuts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#prevent-or-redefine-the-shortcuts">Prevent or Redefine the Shortcuts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="parser.html">Parsing Documents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="errors.html">Error Handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="locations.html">Locations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="streams.html">Input Streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classes.html">Classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="enumerations.html">Enumerations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../roadmap.html">Roadmap</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Erbsland Qt TOML</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Namespaces</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/chapters/reference/namespaces.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="namespaces">
+<span id="index-0"></span><h1>Namespaces<a class="headerlink" href="#namespaces" title="Link to this heading"></a></h1>
+<p>As this library is part of a large framework, it’s nesting of namespaces may look unnecessary complicated. If using in context of larger applications, these additional levels of namespaces provide flexibility and prevent naming conflicts.</p>
+<p>The Erbsland Qt TOML interface is placed in the namespace <code class="docutils literal notranslate"><span class="pre">erbsland::qt::toml</span></code>:</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv48erbsland">
+<span id="_CPPv38erbsland"></span><span id="_CPPv28erbsland"></span><span id="erbsland"></span><span class="target" id="namespaceerbsland"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">erbsland</span></span></span><a class="headerlink" href="#_CPPv48erbsland" title="Link to this definition"></a><br /></dt>
+<dd><p>The base namespace for all Erbsland DEV libraries. </p>
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland2qtE">
+<span id="_CPPv3N8erbsland2qtE"></span><span id="_CPPv2N8erbsland2qtE"></span><span id="erbsland::qt"></span><span class="target" id="namespaceerbsland_1_1qt"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">qt</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland2qtE" title="Link to this definition"></a><br /></dt>
+<dd><p>The base namespace for all Erbsland DEV libraries that are made for the Qt library. </p>
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland2qt4tomlE">
+<span id="_CPPv3N8erbsland2qt4tomlE"></span><span id="_CPPv2N8erbsland2qt4tomlE"></span><span id="erbsland::qt::toml"></span><span class="target" id="namespaceerbsland_1_1qt_1_1toml"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">toml</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland2qt4tomlE" title="Link to this definition"></a><br /></dt>
+<dd><p>The namespace for the Erbsland Qt TOML library. </p>
+</dd></dl>
+
+<section id="shortcuts">
+<h2>Shortcuts<a class="headerlink" href="#shortcuts" title="Link to this heading"></a></h2>
+<p>To simplify your code, shortcuts for the base namespaces are automatically created by default.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">namespace</span><span class="w"> </span><span class="nn">el</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nn">erbsland</span><span class="p">;</span>
+<span class="k">namespace</span><span class="w"> </span><span class="nn">elqt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nn">erbsland</span><span class="o">::</span><span class="nn">qt</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>We recommended that you use either use these shortcuts to name the types from the library, or write <cite>using</cite> statements, importing the types you use into the namespace of your application.</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Using the namespace shortcut <cite>elqt</cite> to use the <cite>Parser</cite> class.</span><a class="headerlink" href="#id1" title="Link to this code"></a></div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;erbsland/qt/toml/Parser.hpp&gt;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">foo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">elqt</span><span class="o">::</span><span class="n">toml</span><span class="o">::</span><span class="n">Parser</span><span class="w"> </span><span class="n">parser</span><span class="p">{};</span>
+<span class="w">    </span><span class="c1">// ...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Importing the <cite>Parser</cite> class, with the <cite>using</cite> statement.</span><a class="headerlink" href="#id2" title="Link to this code"></a></div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;erbsland/qt/toml/Parser.hpp&gt;</span>
+
+<span class="k">using</span><span class="w"> </span><span class="n">elqt</span><span class="o">::</span><span class="n">toml</span><span class="o">::</span><span class="n">Parser</span><span class="p">;</span>
+<span class="c1">// or `using erbsland::qt::toml::Parser;` when shortcuts are disabled.</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">foo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Parser</span><span class="w"> </span><span class="n">parser</span><span class="p">{};</span>
+<span class="w">    </span><span class="c1">// ...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="prevent-or-redefine-the-shortcuts">
+<h2>Prevent or Redefine the Shortcuts<a class="headerlink" href="#prevent-or-redefine-the-shortcuts" title="Link to this heading"></a></h2>
+<p>As the shortcuts can conflict with existing codes, there are several macro definitions that allow you to disable the shortcuts or redefine them. You will have to set these definition on the compile level for the whole project.</p>
+<dl class="c macro">
+<dt class="sig sig-object c" id="c.ERBSLAND_NO_SHORT_NAMESPACE">
+<span class="sig-name descname"><span class="n"><span class="pre">ERBSLAND_NO_SHORT_NAMESPACE</span></span></span><a class="headerlink" href="#c.ERBSLAND_NO_SHORT_NAMESPACE" title="Link to this definition"></a><br /></dt>
+<dd><p>If you set this preprocessor directive, no namespace shortcuts are created by default. You have to set this directive on the compile level for the whole project.</p>
+</dd></dl>
+
+<dl class="c macro">
+<dt class="sig sig-object c" id="c.ERBSLAND_SHORT_NAMESPACE">
+<span class="sig-name descname"><span class="n"><span class="pre">ERBSLAND_SHORT_NAMESPACE</span></span></span><a class="headerlink" href="#c.ERBSLAND_SHORT_NAMESPACE" title="Link to this definition"></a><br /></dt>
+<dd><p>Set this preprocessor directive to overwrite the name that is used for the shortcut for the <code class="docutils literal notranslate"><span class="pre">erbsland</span></code> namespace. You have to set this directive on the compile level for the whole project.</p>
+</dd></dl>
+
+<dl class="c macro">
+<dt class="sig sig-object c" id="c.ERBSLAND_QT_SHORT_NAMESPACE">
+<span class="sig-name descname"><span class="n"><span class="pre">ERBSLAND_QT_SHORT_NAMESPACE</span></span></span><a class="headerlink" href="#c.ERBSLAND_QT_SHORT_NAMESPACE" title="Link to this definition"></a><br /></dt>
+<dd><p>Set this preprocessor directive to overwrite the name that is used for the shortcut for the <code class="docutils literal notranslate"><span class="pre">erbsland::qt</span></code> namespace. You have to set this directive on the compile level for the whole project.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../faq.html" class="btn btn-neutral float-left" title="Frequently Asked Questions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="parser.html" class="btn btn-neutral float-right" title="Parsing Documents" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2024, Erbsland DEV.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

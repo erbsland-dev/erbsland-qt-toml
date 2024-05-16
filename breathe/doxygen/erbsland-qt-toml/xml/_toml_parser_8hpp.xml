@@ -1,0 +1,234 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_toml_parser_8hpp" kind="file" language="C++">
+    <compoundname>TomlParser.hpp</compoundname>
+    <includes refid="_parser_8hpp" local="yes">toml/Parser.hpp</includes>
+    <incdepgraph>
+      <node id="14">
+        <label>Value.hpp</label>
+        <link refid="_value_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>ValueIterator.hpp</label>
+        <link refid="_value_iterator_8hpp_source"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>ValueType.hpp</label>
+        <link refid="_value_type_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>QtCore/QIODevice</label>
+      </node>
+      <node id="7">
+        <label>cstdint</label>
+      </node>
+      <node id="24">
+        <label>QtCore/QDateTime</label>
+      </node>
+      <node id="1">
+        <label>erbsland/qt/TomlParser.hpp</label>
+        <link refid="_toml_parser_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Namespace.hpp</label>
+        <link refid="_namespace_8hpp_source"/>
+      </node>
+      <node id="25">
+        <label>variant</label>
+      </node>
+      <node id="4">
+        <label>Char.hpp</label>
+        <link refid="_char_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>Location.hpp</label>
+        <link refid="_location_8hpp_source"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>LocationRange.hpp</label>
+        <link refid="_location_range_8hpp_source"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>QtCore/QDate</label>
+      </node>
+      <node id="29">
+        <label>exception</label>
+      </node>
+      <node id="2">
+        <label>toml/Parser.hpp</label>
+        <link refid="_parser_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>QtCore/QTime</label>
+      </node>
+      <node id="13">
+        <label>Specification.hpp</label>
+        <link refid="_specification_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>LocationFormat.hpp</label>
+        <link refid="_location_format_8hpp_source"/>
+      </node>
+      <node id="9">
+        <label>QtCore/QTextStream</label>
+      </node>
+      <node id="20">
+        <label>ValueSource.hpp</label>
+        <link refid="_value_source_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>QtCore/QByteArray</label>
+      </node>
+      <node id="27">
+        <label>Error.hpp</label>
+        <link refid="_error_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>QtCore/QString</label>
+      </node>
+      <node id="26">
+        <label>unordered_map</label>
+      </node>
+      <node id="10">
+        <label>QtCore/QFile</label>
+      </node>
+      <node id="3">
+        <label>InputStream.hpp</label>
+        <link refid="_input_stream_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>algorithm</label>
+      </node>
+      <node id="11">
+        <label>QtCore/QChar</label>
+      </node>
+      <node id="12">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceerbsland">erbsland</innernamespace>
+    <innernamespace refid="namespaceerbsland_1_1qt">erbsland::qt</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>©<sp/>2023-2024<sp/>Tobias<sp/>Erbsland<sp/>https://erbsland.dev/<sp/>and<sp/>EducateIT<sp/>GmbH<sp/>https://educateit.ch</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>According<sp/>to<sp/>the<sp/>copyright<sp/>terms<sp/>specified<sp/>in<sp/>the<sp/>file<sp/>&quot;COPYRIGHT.md&quot;.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SPDX-License-Identifier:<sp/>LGPL-3.0-or-later</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;toml/Parser.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="namespaceerbsland" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceerbsland_1_1qt" kindref="compound">erbsland::qt</ref><sp/>{</highlight></codeline>
+<codeline lineno="12" refid="namespaceerbsland_1_1qt_1a63e6c0fcbc2ddebc1a52950792f8fae2" refkind="member"><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_parser" kindref="compound">TomlParser</ref><sp/>=<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_parser" kindref="compound">::erbsland::qt::toml::Parser</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="erbsland/qt/TomlParser.hpp"/>
+  </compounddef>
+</doxygen>

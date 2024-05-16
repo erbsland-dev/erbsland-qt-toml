@@ -1,0 +1,298 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classerbsland_1_1qt_1_1toml_1_1_input_stream" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>erbsland::qt::toml::InputStream</compoundname>
+    <includes refid="_input_stream_8hpp" local="no">erbsland/qt/toml/InputStream.hpp</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classerbsland_1_1qt_1_1toml_1_1_input_stream_1af210719b529740e6d8d5e596fe896611" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>Type</name>
+        <enumvalue id="classerbsland_1_1qt_1_1toml_1_1_input_stream_1af210719b529740e6d8d5e596fe896611a27118326006d3829667a400ad23d5d98" prot="public">
+          <name>String</name>
+          <briefdescription>
+<para>Streaming from a string. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1qt_1_1toml_1_1_input_stream_1af210719b529740e6d8d5e596fe896611af6068daa29dbb05a7ead1e3b5a48bbee" prot="public">
+          <name>Data</name>
+          <briefdescription>
+<para>Streaming from a block of byte data. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1qt_1_1toml_1_1_input_stream_1af210719b529740e6d8d5e596fe896611a0b27918290ff5323bea1e3b78a9cf04e" prot="public">
+          <name>File</name>
+          <briefdescription>
+<para>Streaming from a file. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1qt_1_1toml_1_1_input_stream_1af210719b529740e6d8d5e596fe896611a90589c47f06eb971d548591f23c285af" prot="public">
+          <name>Custom</name>
+          <briefdescription>
+<para>A user implemented stream. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The type of this input stream. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/InputStream.hpp" line="37" column="5" bodyfile="erbsland/qt/toml/InputStream.hpp" bodystart="37" bodyend="42"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classerbsland_1_1qt_1_1toml_1_1_input_stream_1a7aaa324332f6ddd508fd1c5002029ba9" prot="private" static="no" mutable="no">
+        <type><ref refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1af210719b529740e6d8d5e596fe896611" kindref="member">Type</ref></type>
+        <definition>Type erbsland::qt::toml::InputStream::_type</definition>
+        <argsstring></argsstring>
+        <name>_type</name>
+        <initializer>{<ref refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1af210719b529740e6d8d5e596fe896611a27118326006d3829667a400ad23d5d98" kindref="member">Type::String</ref>}</initializer>
+        <briefdescription>
+<para>The type of the input stream. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/InputStream.hpp" line="101" column="10" bodyfile="erbsland/qt/toml/InputStream.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_input_stream_1a0110d02b0d852a5f45e99253e3d752e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual erbsland::qt::toml::InputStream::~InputStream</definition>
+        <argsstring>()=default</argsstring>
+        <name>~InputStream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>dtor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/InputStream.hpp" line="47" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_input_stream_1a908fd927b3603d76292efc4f67c1cb1d" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::InputStream::type</definition>
+        <argsstring>() noexcept -&gt; Type</argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the type of this input stream. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/InputStream.hpp" line="52" column="17" bodyfile="erbsland/qt/toml/InputStream.hpp" bodystart="52" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_input_stream_1aeb0026095dcf47b9c380b39e7ce71751" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type>auto</type>
+        <definition>virtual auto erbsland::qt::toml::InputStream::atEnd</definition>
+        <argsstring>() noexcept -&gt; bool=0</argsstring>
+        <name>atEnd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Test if we reached the end of the stream.</para>
+<para><simplesect kind="return"><para><computeroutput>true</computeroutput> if the end of the stream is reached. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/InputStream.hpp" line="59" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_input_stream_1a5438e4946a3c46e4e5ba1ea947f7b579" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>auto</type>
+        <definition>virtual auto erbsland::qt::toml::InputStream::readOrThrow</definition>
+        <argsstring>() -&gt; Char=0</argsstring>
+        <name>readOrThrow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the next unicode character from the stream</para>
+<para><simplesect kind="return"><para>The unicode character. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classerbsland_1_1qt_1_1toml_1_1_error" kindref="compound">Error</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if there is an encoding error in the data or an IO error while reading the file. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/InputStream.hpp" line="66" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_input_stream_1af0b947a819e772b7f6a857d7e6dbbd95" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type>auto</type>
+        <definition>virtual auto erbsland::qt::toml::InputStream::document</definition>
+        <argsstring>() const noexcept -&gt; QString=0</argsstring>
+        <name>document</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a document string for an exception. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/InputStream.hpp" line="70" column="19"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_input_stream_1a02b07d21fc894b1e433a48eac436746a" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::InputStream::createFromString</definition>
+        <argsstring>(const QString &amp;text) noexcept -&gt; InputStreamPtr</argsstring>
+        <name>createFromString</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new input stream from the given text.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The text. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The input stream. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/InputStream.hpp" line="78" column="17" bodyfile="erbsland/qt/toml/InputStream.cpp" bodystart="21" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_input_stream_1a2f85aff2459ca789e0789f7148e55dae" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::InputStream::createFromData</definition>
+        <argsstring>(const QByteArray &amp;data) noexcept -&gt; InputStreamPtr</argsstring>
+        <name>createFromData</name>
+        <param>
+          <type>const QByteArray &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new input stream from given UTF-8 encoded binary data.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The input stream. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/InputStream.hpp" line="85" column="17" bodyfile="erbsland/qt/toml/InputStream.cpp" bodystart="26" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_input_stream_1afc2d3a7fe1badef08b86e8fa7ffe8668" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::InputStream::createFromFileOrThrow</definition>
+        <argsstring>(const QString &amp;path) -&gt; InputStreamPtr</argsstring>
+        <name>createFromFileOrThrow</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new input stream for a file.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path to the file. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The input stream. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classerbsland_1_1qt_1_1toml_1_1_error" kindref="compound">Error</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the file does not exist or cannot be opened. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/InputStream.hpp" line="93" column="17" bodyfile="erbsland/qt/toml/InputStream.cpp" bodystart="31" bodyend="33"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_input_stream_1ab1c8bc144fc11c5d34cd0640b155b5cb" prot="protected" static="no" const="no" explicit="yes" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::qt::toml::InputStream::InputStream</definition>
+        <argsstring>(Type type) noexcept</argsstring>
+        <name>InputStream</name>
+        <param>
+          <type><ref refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1af210719b529740e6d8d5e596fe896611" kindref="member">Type</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new input stream of a given type. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/InputStream.hpp" line="98" column="14" bodyfile="erbsland/qt/toml/InputStream.cpp" bodystart="17" bodyend="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A generic input stream to make this code more portable.</para>
+<para>You can subclass this interface to implement a own stream source. If you subclass this interface, please use the <computeroutput>Custom</computeroutput> type. </para>
+    </detaileddescription>
+    <location file="erbsland/qt/toml/InputStream.hpp" line="31" column="1" bodyfile="erbsland/qt/toml/InputStream.hpp" bodystart="31" bodyend="102"/>
+    <listofallmembers>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1a7aaa324332f6ddd508fd1c5002029ba9" prot="private" virt="non-virtual"><scope>erbsland::qt::toml::InputStream</scope><name>_type</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1aeb0026095dcf47b9c380b39e7ce71751" prot="public" virt="pure-virtual"><scope>erbsland::qt::toml::InputStream</scope><name>atEnd</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1a2f85aff2459ca789e0789f7148e55dae" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::InputStream</scope><name>createFromData</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1afc2d3a7fe1badef08b86e8fa7ffe8668" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::InputStream</scope><name>createFromFileOrThrow</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1a02b07d21fc894b1e433a48eac436746a" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::InputStream</scope><name>createFromString</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1af0b947a819e772b7f6a857d7e6dbbd95" prot="public" virt="pure-virtual"><scope>erbsland::qt::toml::InputStream</scope><name>document</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1ab1c8bc144fc11c5d34cd0640b155b5cb" prot="protected" virt="non-virtual"><scope>erbsland::qt::toml::InputStream</scope><name>InputStream</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1a5438e4946a3c46e4e5ba1ea947f7b579" prot="public" virt="pure-virtual"><scope>erbsland::qt::toml::InputStream</scope><name>readOrThrow</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1af210719b529740e6d8d5e596fe896611" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::InputStream</scope><name>Type</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1a908fd927b3603d76292efc4f67c1cb1d" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::InputStream</scope><name>type</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1a0110d02b0d852a5f45e99253e3d752e7" prot="public" virt="virtual"><scope>erbsland::qt::toml::InputStream</scope><name>~InputStream</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

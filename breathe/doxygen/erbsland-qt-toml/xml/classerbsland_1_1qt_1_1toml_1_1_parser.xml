@@ -1,0 +1,419 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classerbsland_1_1qt_1_1toml_1_1_parser" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>erbsland::qt::toml::Parser</compoundname>
+    <includes refid="_parser_8hpp" local="no">erbsland/qt/toml/Parser.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classerbsland_1_1qt_1_1toml_1_1_parser_1a3e7426890c504f47b0ce548b1e523fdb" prot="private" static="no" mutable="no">
+        <type>impl::ParserData *</type>
+        <definition>impl::ParserData* erbsland::qt::toml::Parser::d</definition>
+        <argsstring></argsstring>
+        <name>d</name>
+        <briefdescription>
+<para>The implementation of the parser. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Parser.hpp" line="132" column="22" bodyfile="erbsland/qt/toml/Parser.hpp" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_parser_1a959ff575183e59319468c13bb905a75f" prot="public" static="no" const="no" explicit="yes" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::qt::toml::Parser::Parser</definition>
+        <argsstring>(Specification specification=Specification::Version_1_0) noexcept</argsstring>
+        <name>Parser</name>
+        <param>
+          <type><ref refid="namespaceerbsland_1_1qt_1_1toml_1a5d994656f551138656a92c8e822a70b6" kindref="member">Specification</ref></type>
+          <declname>specification</declname>
+          <defval>Specification::Version_1_0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new parser.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>specification</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The version of the specification to use for parsing. Do not specify this value, unless you have fixed requirements for the parsed file. The default value in this library will always be set to the latest official release of the TOML specification. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Parser.hpp" line="37" column="14" bodyfile="erbsland/qt/toml/Parser.cpp" bodystart="13" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_parser_1a4a35eae548b7416876223e636a351212" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::qt::toml::Parser::~Parser</definition>
+        <argsstring>()</argsstring>
+        <name>~Parser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>dtor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Parser.hpp" line="41" column="5" bodyfile="erbsland/qt/toml/Parser.cpp" bodystart="17" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_parser_1adb6e3dfd12621ae86ccccfdc162b3ebb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::qt::toml::Parser::Parser</definition>
+        <argsstring>(const Parser &amp;)=delete</argsstring>
+        <name>Parser</name>
+        <param>
+          <type>const <ref refid="classerbsland_1_1qt_1_1toml_1_1_parser" kindref="compound">Parser</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Parser.hpp" line="44" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_parser_1a794c82f9cffa15c675dcb6306a1dc34c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Parser::operator=</definition>
+        <argsstring>(const Parser &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classerbsland_1_1qt_1_1toml_1_1_parser" kindref="compound">Parser</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Parser.hpp" line="45" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_parser_1a495cc10e50db91f2f8e452630f8c02ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Parser::parseStringOrThrow</definition>
+        <argsstring>(const QString &amp;str) -&gt; ValuePtr</argsstring>
+        <name>parseStringOrThrow</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Parse TOML data from a string.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string with the TOML data to parse. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A value that contains the parsed TOML data. This is always the special <emphasis>root table</emphasis>. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classerbsland_1_1qt_1_1toml_1_1_error" kindref="compound">Error</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in case of any problem when parsing the data. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Parser.hpp" line="54" column="11" bodyfile="erbsland/qt/toml/Parser.cpp" bodystart="22" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_parser_1a487a753faa1e3f809b729e0d9b2046ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Parser::parseDataOrThrow</definition>
+        <argsstring>(const QByteArray &amp;data) -&gt; ValuePtr</argsstring>
+        <name>parseDataOrThrow</name>
+        <param>
+          <type>const QByteArray &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Parse TOML data from UTF-8 encoded data.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>UTF-8 encoded data with TOML to parse. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A value that contains the parsed TOML data. This is always the special <emphasis>root table</emphasis>. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classerbsland_1_1qt_1_1toml_1_1_error" kindref="compound">Error</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in case of any problem when parsing the data. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Parser.hpp" line="62" column="11" bodyfile="erbsland/qt/toml/Parser.cpp" bodystart="27" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_parser_1ad0090edf3dea3ce47288e94a44139665" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Parser::parseFileOrThrow</definition>
+        <argsstring>(const QString &amp;path) -&gt; ValuePtr</argsstring>
+        <name>parseFileOrThrow</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Parse TOML data from a file.</para>
+<para>This function opens the file at <computeroutput>path</computeroutput> read-only, and reads the file as stream. It is the most efficient way to read TOML data from a file.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The absolute path to the file. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A value that contains the parsed TOML data. This is always the special <emphasis>root table</emphasis>. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classerbsland_1_1qt_1_1toml_1_1_error" kindref="compound">Error</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in case of any problem when parsing the data. If there is a problem with the file, an <computeroutput><ref refid="classerbsland_1_1qt_1_1toml_1_1_error_1a64aab71412e0105574e8c5699f698e9eacf3882f1c43ab22bff0bd9d82d83251b" kindref="member">Error::Type::IO</ref></computeroutput> error is thrown, that contains a description of the issue. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Parser.hpp" line="74" column="11" bodyfile="erbsland/qt/toml/Parser.cpp" bodystart="32" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_parser_1ab728e20892fc8831d36edc23ee338151" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Parser::parseStreamOrThrow</definition>
+        <argsstring>(const InputStreamPtr &amp;inputStream) -&gt; ValuePtr</argsstring>
+        <name>parseStreamOrThrow</name>
+        <param>
+          <type>const <ref refid="namespaceerbsland_1_1qt_1_1toml_1af3fbda439ad741c0de4de24b54fb1f8e" kindref="member">InputStreamPtr</ref> &amp;</type>
+          <declname>inputStream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Parse TOML data from an input stream.</para>
+<para>This function reads and parses data from the given input stream.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>inputStream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input stream. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A value that contains the parsed TOML data. This is always the special <emphasis>root table</emphasis>. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classerbsland_1_1qt_1_1toml_1_1_error" kindref="compound">Error</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>from the stream implementation and on any problem with the data. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Parser.hpp" line="84" column="11" bodyfile="erbsland/qt/toml/Parser.cpp" bodystart="37" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_parser_1a8edafdaa2c6712881adf2cad392067c8" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Parser::parseString</definition>
+        <argsstring>(const QString &amp;str) noexcept -&gt; ValuePtr</argsstring>
+        <name>parseString</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Parse TOML data from a string.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string with the TOML data to parse. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A value that contains the parsed TOML data, or a nullptr if there was an error. You can access the last error using the <computeroutput>lastError</computeroutput> method. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Parser.hpp" line="93" column="11" bodyfile="erbsland/qt/toml/Parser.cpp" bodystart="42" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_parser_1a890f6a2ed27028a0e3d434f4982efb3a" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Parser::parseData</definition>
+        <argsstring>(const QByteArray &amp;data) noexcept -&gt; ValuePtr</argsstring>
+        <name>parseData</name>
+        <param>
+          <type>const QByteArray &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Parse TOML data from UTF-8 encoded data.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>UTF-8 encoded data with TOML to parse. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A value that contains the parsed TOML data, or a nullptr if there was an error. You can access the last error using the <computeroutput>lastError</computeroutput> method. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Parser.hpp" line="101" column="11" bodyfile="erbsland/qt/toml/Parser.cpp" bodystart="51" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_parser_1a6e2bb4ec7ccae577b776ec9c928bd218" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Parser::parseFile</definition>
+        <argsstring>(const QString &amp;path) noexcept -&gt; ValuePtr</argsstring>
+        <name>parseFile</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Parse TOML data from a file.</para>
+<para>This function opens the file at <computeroutput>path</computeroutput> read-only, and reads the file as stream. It is the most efficient way to read TOML data from a file.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The absolute path to the file. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A value that contains the parsed TOML data, or a nullptr if there was an error. You can access the last error using the <computeroutput>lastError</computeroutput> method. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Parser.hpp" line="112" column="11" bodyfile="erbsland/qt/toml/Parser.cpp" bodystart="60" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_parser_1a840d3d370f63909cf14a2912b08a10c6" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Parser::parseStream</definition>
+        <argsstring>(const InputStreamPtr &amp;inputStream) noexcept -&gt; ValuePtr</argsstring>
+        <name>parseStream</name>
+        <param>
+          <type>const <ref refid="namespaceerbsland_1_1qt_1_1toml_1af3fbda439ad741c0de4de24b54fb1f8e" kindref="member">InputStreamPtr</ref> &amp;</type>
+          <declname>inputStream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Parse TOML data from an input stream.</para>
+<para>This function reads and parses data from the given input stream.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>inputStream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input stream. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A value that contains the parsed TOML data, or a nullptr if there was an error. You can access the last error using the <computeroutput>lastError</computeroutput> method. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Parser.hpp" line="122" column="11" bodyfile="erbsland/qt/toml/Parser.cpp" bodystart="69" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_parser_1aa5a445f85f9a0fddb7c95c75b1b8b220" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Parser::lastError</definition>
+        <argsstring>() const noexcept -&gt; const Error &amp;</argsstring>
+        <name>lastError</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Access the last error from a parse method call.</para>
+<para><simplesect kind="return"><para>The last error from one of the parse method. When called after a successful call, or before parsing was done, the behaviour is save but undefined. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Parser.hpp" line="129" column="11" bodyfile="erbsland/qt/toml/Parser.cpp" bodystart="78" bodyend="80"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The TOML parser. </para>
+    </detaileddescription>
+    <location file="erbsland/qt/toml/Parser.hpp" line="27" column="1" bodyfile="erbsland/qt/toml/Parser.hpp" bodystart="27" bodyend="133"/>
+    <listofallmembers>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_parser_1a3e7426890c504f47b0ce548b1e523fdb" prot="private" virt="non-virtual"><scope>erbsland::qt::toml::Parser</scope><name>d</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_parser_1aa5a445f85f9a0fddb7c95c75b1b8b220" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Parser</scope><name>lastError</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_parser_1a794c82f9cffa15c675dcb6306a1dc34c" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Parser</scope><name>operator=</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_parser_1a890f6a2ed27028a0e3d434f4982efb3a" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Parser</scope><name>parseData</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_parser_1a487a753faa1e3f809b729e0d9b2046ac" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Parser</scope><name>parseDataOrThrow</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_parser_1a6e2bb4ec7ccae577b776ec9c928bd218" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Parser</scope><name>parseFile</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_parser_1ad0090edf3dea3ce47288e94a44139665" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Parser</scope><name>parseFileOrThrow</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_parser_1a959ff575183e59319468c13bb905a75f" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Parser</scope><name>Parser</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_parser_1adb6e3dfd12621ae86ccccfdc162b3ebb" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Parser</scope><name>Parser</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_parser_1a840d3d370f63909cf14a2912b08a10c6" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Parser</scope><name>parseStream</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_parser_1ab728e20892fc8831d36edc23ee338151" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Parser</scope><name>parseStreamOrThrow</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_parser_1a8edafdaa2c6712881adf2cad392067c8" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Parser</scope><name>parseString</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_parser_1a495cc10e50db91f2f8e452630f8c02ca" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Parser</scope><name>parseStringOrThrow</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_parser_1a4a35eae548b7416876223e636a351212" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Parser</scope><name>~Parser</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

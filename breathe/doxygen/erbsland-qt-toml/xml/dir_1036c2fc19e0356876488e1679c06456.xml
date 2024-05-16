@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_1036c2fc19e0356876488e1679c06456" kind="dir">
+    <compoundname>erbsland/qt</compoundname>
+    <innerdir refid="dir_32ed51ae9d303ec68ea944d5f47e3441">erbsland/qt/toml</innerdir>
+    <innerfile refid="_toml_parser_8hpp">TomlParser.hpp</innerfile>
+    <innerfile refid="_toml_value_8hpp">TomlValue.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="erbsland/qt/"/>
+  </compounddef>
+</doxygen>

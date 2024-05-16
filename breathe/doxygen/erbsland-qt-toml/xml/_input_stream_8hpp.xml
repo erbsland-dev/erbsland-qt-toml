@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_input_stream_8hpp" kind="file" language="C++">
+    <compoundname>InputStream.hpp</compoundname>
+    <includes refid="_char_8hpp" local="yes">Char.hpp</includes>
+    <includes refid="_namespace_8hpp" local="yes">Namespace.hpp</includes>
+    <includes local="no">QtCore/QString</includes>
+    <includes local="no">QtCore/QByteArray</includes>
+    <includes local="no">QtCore/QTextStream</includes>
+    <includes local="no">QtCore/QFile</includes>
+    <includes local="no">QtCore/QChar</includes>
+    <includes local="no">memory</includes>
+    <includedby refid="all_8hpp" local="yes">erbsland/qt/toml/all.hpp</includedby>
+    <includedby refid="_input_stream_8cpp" local="yes">erbsland/qt/toml/InputStream.cpp</includedby>
+    <includedby refid="_parser_8hpp" local="yes">erbsland/qt/toml/Parser.hpp</includedby>
+    <incdepgraph>
+      <node id="5">
+        <label>cstdint</label>
+      </node>
+      <node id="3">
+        <label>Namespace.hpp</label>
+        <link refid="_namespace_8hpp_source"/>
+      </node>
+      <node id="2">
+        <label>Char.hpp</label>
+        <link refid="_char_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>QtCore/QTextStream</label>
+      </node>
+      <node id="6">
+        <label>QtCore/QByteArray</label>
+      </node>
+      <node id="4">
+        <label>QtCore/QString</label>
+      </node>
+      <node id="8">
+        <label>QtCore/QFile</label>
+      </node>
+      <node id="1">
+        <label>erbsland/qt/toml/InputStream.hpp</label>
+        <link refid="_input_stream_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>QtCore/QChar</label>
+      </node>
+      <node id="10">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>erbsland/qt/TomlParser.hpp</label>
+        <link refid="_toml_parser_8hpp_source"/>
+      </node>
+      <node id="5">
+        <label>erbsland/qt/TomlValue.hpp</label>
+        <link refid="_toml_value_8hpp_source"/>
+      </node>
+      <node id="2">
+        <label>erbsland/qt/toml/all.hpp</label>
+        <link refid="all_8hpp_source"/>
+      </node>
+      <node id="3">
+        <label>erbsland/qt/toml/Parser.hpp</label>
+        <link refid="_parser_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>erbsland/qt/toml/InputStream.hpp</label>
+        <link refid="_input_stream_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classerbsland_1_1qt_1_1toml_1_1_input_stream" prot="public">erbsland::qt::toml::InputStream</innerclass>
+    <innernamespace refid="namespaceerbsland">erbsland</innernamespace>
+    <innernamespace refid="namespaceerbsland_1_1qt">erbsland::qt</innernamespace>
+    <innernamespace refid="namespaceerbsland_1_1qt_1_1toml">erbsland::qt::toml</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>©<sp/>2023-2024<sp/>Tobias<sp/>Erbsland<sp/>https://erbsland.dev/<sp/>and<sp/>EducateIT<sp/>GmbH<sp/>https://educateit.ch</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>According<sp/>to<sp/>the<sp/>copyright<sp/>terms<sp/>specified<sp/>in<sp/>the<sp/>file<sp/>&quot;COPYRIGHT.md&quot;.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SPDX-License-Identifier:<sp/>LGPL-3.0-or-later</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Char.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Namespace.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtCore/QString&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtCore/QByteArray&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtCore/QTextStream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtCore/QFile&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtCore/QChar&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceerbsland_1_1qt_1_1toml" kindref="compound">erbsland::qt::toml</ref><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">InputStream;</highlight></codeline>
+<codeline lineno="23" refid="namespaceerbsland_1_1qt_1_1toml_1af3fbda439ad741c0de4de24b54fb1f8e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1af3fbda439ad741c0de4de24b54fb1f8e" kindref="member">InputStreamPtr</ref><sp/>=<sp/>std::shared_ptr&lt;InputStream&gt;;<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="classerbsland_1_1qt_1_1toml_1_1_input_stream" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classerbsland_1_1qt_1_1toml_1_1_input_stream" kindref="compound">InputStream</ref><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>fwd-entry:<sp/>class<sp/>InputStream</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="37" refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1af210719b529740e6d8d5e596fe896611" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1af210719b529740e6d8d5e596fe896611" kindref="member">Type</ref><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1af210719b529740e6d8d5e596fe896611a27118326006d3829667a400ad23d5d98" kindref="member">String</ref>,<sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1af210719b529740e6d8d5e596fe896611af6068daa29dbb05a7ead1e3b5a48bbee" kindref="member">Data</ref>,<sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1af210719b529740e6d8d5e596fe896611a0b27918290ff5323bea1e3b78a9cf04e" kindref="member">File</ref>,<sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1af210719b529740e6d8d5e596fe896611a90589c47f06eb971d548591f23c285af" kindref="member">Custom</ref>,<sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="47" refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1a0110d02b0d852a5f45e99253e3d752e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1a0110d02b0d852a5f45e99253e3d752e7" kindref="member">~InputStream</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="52" refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1a908fd927b3603d76292efc4f67c1cb1d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1a908fd927b3603d76292efc4f67c1cb1d" kindref="member">type</ref>()<sp/>noexcept<sp/>-&gt;<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1af210719b529740e6d8d5e596fe896611" kindref="member">Type</ref><sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_type;<sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="59" refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1aeb0026095dcf47b9c380b39e7ce71751" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1aeb0026095dcf47b9c380b39e7ce71751" kindref="member">atEnd</ref>()<sp/>noexcept<sp/>-&gt;<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1a5438e4946a3c46e4e5ba1ea947f7b579" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>virtual<sp/>auto<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1a5438e4946a3c46e4e5ba1ea947f7b579" kindref="member">readOrThrow</ref>()<sp/>-&gt;<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_char" kindref="compound">Char</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1af0b947a819e772b7f6a857d7e6dbbd95" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>virtual<sp/>auto<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1af0b947a819e772b7f6a857d7e6dbbd95" kindref="member">document</ref>()<sp/>const<sp/>noexcept<sp/>-&gt;<sp/>QString<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal">public:</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>static<sp/>auto<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1a02b07d21fc894b1e433a48eac436746a" kindref="member">createFromString</ref>(const<sp/>QString<sp/>&amp;text)<sp/>noexcept<sp/>-&gt;<sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1af3fbda439ad741c0de4de24b54fb1f8e" kindref="member">InputStreamPtr</ref>;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>static<sp/>auto<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1a2f85aff2459ca789e0789f7148e55dae" kindref="member">createFromData</ref>(const<sp/>QByteArray<sp/>&amp;data)<sp/>noexcept<sp/>-&gt;<sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1af3fbda439ad741c0de4de24b54fb1f8e" kindref="member">InputStreamPtr</ref>;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>static<sp/>auto<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1afc2d3a7fe1badef08b86e8fa7ffe8668" kindref="member">createFromFileOrThrow</ref>(const<sp/>QString<sp/>&amp;path)<sp/>-&gt;<sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1af3fbda439ad741c0de4de24b54fb1f8e" kindref="member">InputStreamPtr</ref>;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal">protected:</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>explicit<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_input_stream" kindref="compound">InputStream</ref>(<ref refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1af210719b529740e6d8d5e596fe896611" kindref="member">Type</ref><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1a908fd927b3603d76292efc4f67c1cb1d" kindref="member">type</ref>)<sp/>noexcept;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal">private:</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1af210719b529740e6d8d5e596fe896611" kindref="member">Type</ref><sp/>_type{<ref refid="classerbsland_1_1qt_1_1toml_1_1_input_stream_1af210719b529740e6d8d5e596fe896611a27118326006d3829667a400ad23d5d98" kindref="member">Type::String</ref>};<sp/></highlight></codeline>
+<codeline lineno="102"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="erbsland/qt/toml/InputStream.hpp"/>
+  </compounddef>
+</doxygen>

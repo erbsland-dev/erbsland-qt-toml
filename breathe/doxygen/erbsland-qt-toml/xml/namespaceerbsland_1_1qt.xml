@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespaceerbsland_1_1qt" kind="namespace" language="C++">
+    <compoundname>erbsland::qt</compoundname>
+    <innernamespace refid="namespaceerbsland_1_1qt_1_1toml">erbsland::qt::toml</innernamespace>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespaceerbsland_1_1qt_1a63e6c0fcbc2ddebc1a52950792f8fae2" prot="public" static="no">
+        <type>::<ref refid="classerbsland_1_1qt_1_1toml_1_1_parser" kindref="compound">erbsland::qt::toml::Parser</ref></type>
+        <definition>using erbsland::qt::TomlParser = typedef ::erbsland::qt::toml::Parser</definition>
+        <argsstring></argsstring>
+        <name>TomlParser</name>
+        <briefdescription>
+<para>An alias for the parser class to have the namespace part in the class name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/TomlParser.hpp" line="12" column="1" bodyfile="erbsland/qt/TomlParser.hpp" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceerbsland_1_1qt_1a61b70c93a03b16fa31140959cfbdee09" prot="public" static="no">
+        <type>::<ref refid="classerbsland_1_1qt_1_1toml_1_1_value" kindref="compound">erbsland::qt::toml::Value</ref></type>
+        <definition>using erbsland::qt::TomlValue = typedef ::erbsland::qt::toml::Value</definition>
+        <argsstring></argsstring>
+        <name>TomlValue</name>
+        <briefdescription>
+<para>An alias for the value class to have the namespace part in the class name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/TomlValue.hpp" line="12" column="1" bodyfile="erbsland/qt/TomlValue.hpp" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The base namespace for all Erbsland DEV libraries that are made for the Qt library. </para>
+    </detaileddescription>
+    <location file="erbsland/qt/TomlParser.hpp" line="10" column="1"/>
+  </compounddef>
+</doxygen>

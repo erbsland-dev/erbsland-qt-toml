@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_value_iterator_8hpp" kind="file" language="C++">
+    <compoundname>ValueIterator.hpp</compoundname>
+    <includes local="no">memory</includes>
+    <includedby refid="_value_8hpp" local="yes">erbsland/qt/toml/Value.hpp</includedby>
+    <includedby refid="_value_iterator_8cpp" local="yes">erbsland/qt/toml/ValueIterator.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>erbsland/qt/toml/ValueIterator.hpp</label>
+        <link refid="_value_iterator_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>erbsland/qt/toml/Value.hpp</label>
+        <link refid="_value_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>erbsland/qt/toml/ValueIterator.hpp</label>
+        <link refid="_value_iterator_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>erbsland/qt/TomlParser.hpp</label>
+        <link refid="_toml_parser_8hpp_source"/>
+      </node>
+      <node id="6">
+        <label>erbsland/qt/TomlValue.hpp</label>
+        <link refid="_toml_value_8hpp_source"/>
+      </node>
+      <node id="3">
+        <label>erbsland/qt/toml/all.hpp</label>
+        <link refid="all_8hpp_source"/>
+      </node>
+      <node id="4">
+        <label>erbsland/qt/toml/Parser.hpp</label>
+        <link refid="_parser_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classerbsland_1_1qt_1_1toml_1_1_value_iterator" prot="public">erbsland::qt::toml::ValueIterator</innerclass>
+    <innernamespace refid="namespaceerbsland">erbsland</innernamespace>
+    <innernamespace refid="namespaceerbsland_1_1qt">erbsland::qt</innernamespace>
+    <innernamespace refid="namespaceerbsland_1_1qt_1_1toml">erbsland::qt::toml</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>©<sp/>2023-2024<sp/>Tobias<sp/>Erbsland<sp/>https://erbsland.dev/<sp/>and<sp/>EducateIT<sp/>GmbH<sp/>https://educateit.ch</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>According<sp/>to<sp/>the<sp/>copyright<sp/>terms<sp/>specified<sp/>in<sp/>the<sp/>file<sp/>&quot;COPYRIGHT.md&quot;.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SPDX-License-Identifier:<sp/>LGPL-3.0-or-later</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceerbsland_1_1qt_1_1toml" kindref="compound">erbsland::qt::toml</ref><sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="namespaceerbsland_1_1qt_1_1toml_1a51e4748f2f9f18dd439906cfb8cf01a3a689202409e48743b914713f96d93947c" kindref="member">Value</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1aab3cc5b714cc77d2d409a7ffd098c2e5" kindref="member">ValuePtr</ref><sp/>=<sp/>std::shared_ptr&lt;Value&gt;;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="classerbsland_1_1qt_1_1toml_1_1_value_iterator" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_iterator" kindref="compound">ValueIterator</ref><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classerbsland_1_1qt_1_1toml_1_1_value" kindref="compound">Value</ref>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="comment">//<sp/>definitions<sp/>to<sp/>satisfy<sp/>the<sp/>iterator<sp/>concept.</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>iterator_category<sp/>=<sp/>std::forward_iterator_tag;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>value_type<sp/>=<sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1aab3cc5b714cc77d2d409a7ffd098c2e5" kindref="member">ValuePtr</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>difference_type<sp/>=<sp/>std::ptrdiff_t;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>pointer<sp/>=<sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1aab3cc5b714cc77d2d409a7ffd098c2e5" kindref="member">ValuePtr</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>reference<sp/>=<sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1aab3cc5b714cc77d2d409a7ffd098c2e5" kindref="member">ValuePtr</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="37" refid="classerbsland_1_1qt_1_1toml_1_1_value_iterator_1a611c1f8479d6b92db361d70f6913a096" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_iterator_1a611c1f8479d6b92db361d70f6913a096" kindref="member">ValueIterator</ref>()<sp/>noexcept<sp/>=<sp/>default;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">private:</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_iterator" kindref="compound">ValueIterator</ref>(<ref refid="namespaceerbsland_1_1qt_1_1toml_1aab3cc5b714cc77d2d409a7ffd098c2e5" kindref="member">ValuePtr</ref><sp/>value,<sp/>std::</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index)<sp/>noexcept;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal">public:<sp/></highlight><highlight class="comment">//<sp/>operators</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>auto<sp/>operator*()<sp/>const<sp/>noexcept<sp/>-&gt;<sp/>reference;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>auto<sp/>operator-&gt;()<sp/>noexcept<sp/>-&gt;<sp/>pointer;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>auto<sp/>operator++()<sp/>noexcept<sp/>-&gt;<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_iterator" kindref="compound">ValueIterator</ref>&amp;;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>auto<sp/>operator++(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)<sp/>noexcept<sp/>-&gt;<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_iterator" kindref="compound">ValueIterator</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>friend<sp/>auto<sp/>operator==(const<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_iterator" kindref="compound">ValueIterator</ref>&amp;<sp/>a,<sp/>const<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_iterator" kindref="compound">ValueIterator</ref>&amp;<sp/>b)<sp/>noexcept<sp/>-&gt;<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>friend<sp/>auto<sp/>operator!=(const<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_iterator" kindref="compound">ValueIterator</ref>&amp;<sp/>a,<sp/>const<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_iterator" kindref="compound">ValueIterator</ref>&amp;<sp/>b)<sp/>noexcept<sp/>-&gt;<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal">private:</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>std::</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>_index{};<sp/></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1aab3cc5b714cc77d2d409a7ffd098c2e5" kindref="member">ValuePtr</ref><sp/>_value{};<sp/></highlight></codeline>
+<codeline lineno="73"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="erbsland/qt/toml/ValueIterator.hpp"/>
+  </compounddef>
+</doxygen>

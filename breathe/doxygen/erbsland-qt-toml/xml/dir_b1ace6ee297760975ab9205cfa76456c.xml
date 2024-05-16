@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_b1ace6ee297760975ab9205cfa76456c" kind="dir">
+    <compoundname>erbsland</compoundname>
+    <innerdir refid="dir_1036c2fc19e0356876488e1679c06456">erbsland/qt</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="erbsland/"/>
+  </compounddef>
+</doxygen>

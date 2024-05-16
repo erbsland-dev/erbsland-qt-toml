@@ -1,0 +1,1635 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classerbsland_1_1qt_1_1toml_1_1_value" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>erbsland::qt::toml::Value</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::enable_shared_from_this&lt; Value &gt;</basecompoundref>
+    <includes refid="_value_8hpp" local="no">erbsland/qt/toml/Value.hpp</includes>
+    <innerclass refid="structerbsland_1_1qt_1_1toml_1_1_value_1_1_private_tag" prot="private">erbsland::qt::toml::Value::PrivateTag</innerclass>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classerbsland_1_1qt_1_1toml_1_1_value_1ad50945c35c852ab36898a1de54faf6ef" prot="public" static="no">
+        <type>std::unordered_map&lt; QString, <ref refid="namespaceerbsland_1_1qt_1_1toml_1aab3cc5b714cc77d2d409a7ffd098c2e5" kindref="member">ValuePtr</ref> &gt;</type>
+        <definition>using erbsland::qt::toml::Value::TableValue =  std::unordered_map&lt;QString, ValuePtr&gt;</definition>
+        <argsstring></argsstring>
+        <name>TableValue</name>
+        <briefdescription>
+<para>The storage type used for table values. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="45" column="5" bodyfile="erbsland/qt/toml/Value.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classerbsland_1_1qt_1_1toml_1_1_value_1ab035c7bc474995efa7bc25c0f3cd9f57" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="namespaceerbsland_1_1qt_1_1toml_1aab3cc5b714cc77d2d409a7ffd098c2e5" kindref="member">ValuePtr</ref> &gt;</type>
+        <definition>using erbsland::qt::toml::Value::ArrayValue =  std::vector&lt;ValuePtr&gt;</definition>
+        <argsstring></argsstring>
+        <name>ArrayValue</name>
+        <briefdescription>
+<para>The storage type used for arrays. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="46" column="5" bodyfile="erbsland/qt/toml/Value.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classerbsland_1_1qt_1_1toml_1_1_value_1ad46471df6d41852c99e8a479587fa807" prot="public" static="no">
+        <type><ref refid="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24ae" kindref="member">ValueType</ref></type>
+        <definition>using erbsland::qt::toml::Value::Type =  ValueType</definition>
+        <argsstring></argsstring>
+        <name>Type</name>
+        <briefdescription>
+<para>A local name for the value type enumeration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="63" column="5" bodyfile="erbsland/qt/toml/Value.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classerbsland_1_1qt_1_1toml_1_1_value_1a951281c180ba37bc2f2e7ef221d53cb4" prot="public" static="no">
+        <type><ref refid="namespaceerbsland_1_1qt_1_1toml_1a51e4748f2f9f18dd439906cfb8cf01a3" kindref="member">ValueSource</ref></type>
+        <definition>using erbsland::qt::toml::Value::Source =  ValueSource</definition>
+        <argsstring></argsstring>
+        <name>Source</name>
+        <briefdescription>
+<para>A local name for the value source enumeration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="64" column="5" bodyfile="erbsland/qt/toml/Value.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classerbsland_1_1qt_1_1toml_1_1_value_1ab579d06db329aefd13dec4864119863a" prot="private" static="no">
+        <type>std::variant&lt; int64_t, double, bool, QString, QTime, QDate, QDateTime, <ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1ad50945c35c852ab36898a1de54faf6ef" kindref="member">TableValue</ref>, <ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1ab035c7bc474995efa7bc25c0f3cd9f57" kindref="member">ArrayValue</ref> &gt;</type>
+        <definition>using erbsland::qt::toml::Value::Storage =  std::variant&lt; int64_t, double, bool, QString, QTime, QDate, QDateTime, TableValue, ArrayValue&gt;</definition>
+        <argsstring></argsstring>
+        <name>Storage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The variant used to store the values. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="51" column="5" bodyfile="erbsland/qt/toml/Value.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classerbsland_1_1qt_1_1toml_1_1_value_1af664ab3dc7e92649c0dc7631344894d8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class ValueIterator</definition>
+        <argsstring></argsstring>
+        <name>ValueIterator</name>
+        <param>
+          <type><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_iterator" kindref="compound">ValueIterator</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="42" column="5" bodyfile="erbsland/qt/toml/Value.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classerbsland_1_1qt_1_1toml_1_1_value_1ac9b3a3b009f4a3c243437a60606b7649" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24ae" kindref="member">Type</ref></type>
+        <definition>Type erbsland::qt::toml::Value::_type</definition>
+        <argsstring></argsstring>
+        <name>_type</name>
+        <briefdescription>
+<para>The type for this value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="444" column="10" bodyfile="erbsland/qt/toml/Value.hpp" bodystart="444" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classerbsland_1_1qt_1_1toml_1_1_value_1af9ff305180b8bcfcbb80dfbb53d3fcb3" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceerbsland_1_1qt_1_1toml_1a51e4748f2f9f18dd439906cfb8cf01a3" kindref="member">Source</ref></type>
+        <definition>Source erbsland::qt::toml::Value::_source</definition>
+        <argsstring></argsstring>
+        <name>_source</name>
+        <briefdescription>
+<para>The source for this value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="445" column="12" bodyfile="erbsland/qt/toml/Value.hpp" bodystart="445" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classerbsland_1_1qt_1_1toml_1_1_value_1a83f8f5fb8e2cabc38be8d56d9ec8b43f" prot="private" static="no" mutable="no">
+        <type><ref refid="classerbsland_1_1qt_1_1toml_1_1_location_range" kindref="compound">LocationRange</ref></type>
+        <definition>LocationRange erbsland::qt::toml::Value::_locationRange</definition>
+        <argsstring></argsstring>
+        <name>_locationRange</name>
+        <initializer>{<ref refid="classerbsland_1_1qt_1_1toml_1_1_location_range_1a13815ae973cb65434d13c94c8a835dff" kindref="member">LocationRange::createNotSet</ref>()}</initializer>
+        <briefdescription>
+<para>The location range for this value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="446" column="19" bodyfile="erbsland/qt/toml/Value.hpp" bodystart="446" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classerbsland_1_1qt_1_1toml_1_1_value_1a2ded3db02b1deeceb8e84d39078ada50" prot="private" static="no" mutable="no">
+        <type>Storage</type>
+        <definition>Storage erbsland::qt::toml::Value::_storage</definition>
+        <argsstring></argsstring>
+        <name>_storage</name>
+        <briefdescription>
+<para>The storage for this value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="447" column="13" bodyfile="erbsland/qt/toml/Value.hpp" bodystart="447" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1a2671665d49e9552bca83b3c6f4abb169" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::type</definition>
+        <argsstring>() const noexcept -&gt; Type</argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the type of this value. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="69" column="18" bodyfile="erbsland/qt/toml/Value.hpp" bodystart="69" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1a08bc72e19c2e49443a651d08972982ad" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::source</definition>
+        <argsstring>() const noexcept -&gt; Source</argsstring>
+        <name>source</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the source of this value. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="75" column="18" bodyfile="erbsland/qt/toml/Value.hpp" bodystart="75" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1a6942871bd7bfe568b28b9e34cc1d0aad" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::locationRange</definition>
+        <argsstring>() const noexcept -&gt; LocationRange</argsstring>
+        <name>locationRange</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the location range. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="81" column="18" bodyfile="erbsland/qt/toml/Value.hpp" bodystart="81" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1a17b61c4da1dc161c24c534ceba615daa" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::size</definition>
+        <argsstring>() const noexcept -&gt; std::size_t</argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the size of a table or array.</para>
+<para><simplesect kind="return"><para>The size of the table or array, or the size 0 for regular values. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="89" column="11" bodyfile="erbsland/qt/toml/Value.cpp" bodystart="18" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1acea38a91de97def5a47c4c4170a60641" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::value</definition>
+        <argsstring>(std::size_t index) const noexcept -&gt; ValuePtr</argsstring>
+        <name>value</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Access an value of an array.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value index, starting from zero. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The value for the value, or a <computeroutput>nullptr</computeroutput> if the index is out of bounds. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="96" column="11" bodyfile="erbsland/qt/toml/Value.cpp" bodystart="32" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1a3a7523e1229bb15b3ead47cb6b5166c0" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::hasValue</definition>
+        <argsstring>(const QString &amp;keyPath) const noexcept -&gt; bool</argsstring>
+        <name>hasValue</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>keyPath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Test if the value with a given key or key path exists in a table.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>keyPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key, or a key path in the form <computeroutput>key.key.key</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if a value with that key or key path exists, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="103" column="11" bodyfile="erbsland/qt/toml/Value.cpp" bodystart="45" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1adf913926633b7aa07e506a8a3935b453" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::value</definition>
+        <argsstring>(const QString &amp;keyPath) const noexcept -&gt; ValuePtr</argsstring>
+        <name>value</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>keyPath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Access a value of a table using a key or key path.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>keyPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key, or a key path in the form <computeroutput>key.key.key</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The value for the value, or a <computeroutput>nullptr</computeroutput> if the key does not exist. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="110" column="11" bodyfile="erbsland/qt/toml/Value.cpp" bodystart="55" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1a3e5619f5abc331f605b675394205bba8" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::hasKey</definition>
+        <argsstring>(const QString &amp;key) const noexcept -&gt; bool</argsstring>
+        <name>hasKey</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Test if this table has a given key.</para>
+<para>This method exists, if you have to work with keys that contain a dot so you can&apos;t use the <computeroutput><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1a3a7523e1229bb15b3ead47cb6b5166c0" kindref="member">hasValue()</ref></computeroutput> methods with key paths. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="117" column="11" bodyfile="erbsland/qt/toml/Value.cpp" bodystart="50" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1a910415414eacbb26fe0c723c0d4acb34" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::valueFromKey</definition>
+        <argsstring>(const QString &amp;key) const noexcept -&gt; ValuePtr</argsstring>
+        <name>valueFromKey</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Access a value of this table, using a single key.</para>
+<para>This method exists, if you have to work with keys that contain a dot so you can&apos;t use the <computeroutput><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1acea38a91de97def5a47c4c4170a60641" kindref="member">value()</ref></computeroutput> methods with key paths.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A single key, that can contain the dot character. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The value for the value, or a <computeroutput>nullptr</computeroutput> if the key does not exist. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="127" column="11" bodyfile="erbsland/qt/toml/Value.cpp" bodystart="74" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1adfbd9763f91ec0e2a7fd30303b34eda3" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::stringValue</definition>
+        <argsstring>(const QString &amp;keyPath, const QString &amp;defaultValue={}) const noexcept -&gt; QString</argsstring>
+        <name>stringValue</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>keyPath</declname>
+        </param>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>defaultValue</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Access a string value using a key path.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>keyPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key path to the value, each key seperated with a dot. Like <computeroutput>key.key.key</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>defaultValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The default value that is used if the key does not exist or is no string. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The string at the given key path, or the <computeroutput>defaultValue</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="136" column="11" bodyfile="erbsland/qt/toml/Value.cpp" bodystart="375" bodyend="377"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1a6415259681abd94a83257042397e655a" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::integerValue</definition>
+        <argsstring>(const QString &amp;keyPath, int64_t defaultValue={}) const noexcept -&gt; int64_t</argsstring>
+        <name>integerValue</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>keyPath</declname>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>defaultValue</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Access an integer value using a key path.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>keyPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key path to the value, each key separated with a dot. Like <computeroutput>key.key.key</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>defaultValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The default value that is used if the key does not exist or is no integer. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The integer at the given key path, or the <computeroutput>defaultValue</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="144" column="11" bodyfile="erbsland/qt/toml/Value.cpp" bodystart="380" bodyend="382"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1a7896164c5d20f127eb913b0048ad058d" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::floatValue</definition>
+        <argsstring>(const QString &amp;keyPath, double defaultValue={}) const noexcept -&gt; double</argsstring>
+        <name>floatValue</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>keyPath</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>defaultValue</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Access a float value using a key path.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>keyPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key path to the value, each key separated with a dot. Like <computeroutput>key.key.key</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>defaultValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The default value that is used if the key does not exist or is no float. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The float at the given key path, or the <computeroutput>defaultValue</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="152" column="11" bodyfile="erbsland/qt/toml/Value.cpp" bodystart="385" bodyend="387"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1aa0a5107ccf285f1323a8741e73e430d2" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::booleanValue</definition>
+        <argsstring>(const QString &amp;keyPath, bool defaultValue={}) const noexcept -&gt; bool</argsstring>
+        <name>booleanValue</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>keyPath</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>defaultValue</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Access a boolean value using a key path.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>keyPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key path to the value, each key separated with a dot. Like <computeroutput>key.key.key</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>defaultValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The default value that is used if the key does not exist or is no boolean. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The boolean at the given key path, or the <computeroutput>defaultValue</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="160" column="11" bodyfile="erbsland/qt/toml/Value.cpp" bodystart="390" bodyend="392"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1abe6a52f09f86069a140057d2fde32cf0" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::timeValue</definition>
+        <argsstring>(const QString &amp;keyPath, QTime defaultValue={}) const noexcept -&gt; QTime</argsstring>
+        <name>timeValue</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>keyPath</declname>
+        </param>
+        <param>
+          <type>QTime</type>
+          <declname>defaultValue</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Access a time value using a key path.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>keyPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key path to the value, each key separated with a dot. Like <computeroutput>key.key.key</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>defaultValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The default value that is used if the key does not exist or is no time value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The time value at the given key path, or the <computeroutput>defaultValue</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="168" column="11" bodyfile="erbsland/qt/toml/Value.cpp" bodystart="395" bodyend="397"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1a9973af66099dcf5642d7e79abc08814f" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::dateValue</definition>
+        <argsstring>(const QString &amp;keyPath, QDate defaultValue={}) const noexcept -&gt; QDate</argsstring>
+        <name>dateValue</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>keyPath</declname>
+        </param>
+        <param>
+          <type>QDate</type>
+          <declname>defaultValue</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Access a date value using a key path.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>keyPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key path to the value, each key separated with a dot. Like <computeroutput>key.key.key</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>defaultValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The default value that is used if the key does not exist or is no date value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The date value at the given key path, or the <computeroutput>defaultValue</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="176" column="11" bodyfile="erbsland/qt/toml/Value.cpp" bodystart="400" bodyend="402"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1a2ef8499b9cf0c5a46521efed974d81c6" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::dateTimeValue</definition>
+        <argsstring>(const QString &amp;keyPath, const QDateTime &amp;defaultValue={}) const noexcept -&gt; QDateTime</argsstring>
+        <name>dateTimeValue</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>keyPath</declname>
+        </param>
+        <param>
+          <type>const QDateTime &amp;</type>
+          <declname>defaultValue</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Access an date/time value using a key path.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>keyPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key path to the value, each key separated with a dot. Like <computeroutput>key.key.key</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>defaultValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The default value that is used if the key does not exist or is no date/time. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The date/time at the given key path, or the <computeroutput>defaultValue</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="184" column="11" bodyfile="erbsland/qt/toml/Value.cpp" bodystart="405" bodyend="407"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1a803063cb7b0b30d8a21549671e8757ba" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::tableValue</definition>
+        <argsstring>(const QString &amp;keyPath) const noexcept -&gt; ValuePtr</argsstring>
+        <name>tableValue</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>keyPath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Access a table value using a key path.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>keyPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key path to the value, each key separated with a dot. Like <computeroutput>key.key.key</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The table value at the given key path, or an empty unconnected table value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="191" column="11" bodyfile="erbsland/qt/toml/Value.cpp" bodystart="410" bodyend="416"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1a6848e526f1f053832b62b59f732c7e45" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::arrayValue</definition>
+        <argsstring>(const QString &amp;keyPath) const noexcept -&gt; ValuePtr</argsstring>
+        <name>arrayValue</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>keyPath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Access an array value using a key path.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>keyPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key path to the value, each key separated with a dot. Like <computeroutput>key.key.key</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The array value at the given key path, or an empty unconnected array value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="198" column="11" bodyfile="erbsland/qt/toml/Value.cpp" bodystart="419" bodyend="425"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1a4849e01ef862f08911cb401f0da968d2" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::tableKeys</definition>
+        <argsstring>() const noexcept -&gt; QStringList</argsstring>
+        <name>tableKeys</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a list with all keys of a table.</para>
+<para><simplesect kind="return"><para>An unsorted list with all keys in this table, or an empty list if this table is empty or this value is no table. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="205" column="11" bodyfile="erbsland/qt/toml/Value.cpp" bodystart="111" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1a9552862957c8b00760d80f1a867229d9" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::begin</definition>
+        <argsstring>() noexcept -&gt; ValueIterator</argsstring>
+        <name>begin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Iterator over elements of an array. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="209" column="11" bodyfile="erbsland/qt/toml/Value.cpp" bodystart="448" bodyend="453"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1afffcfb6f24ba440a9cf68d909858400f" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::end</definition>
+        <argsstring>() noexcept -&gt; ValueIterator</argsstring>
+        <name>end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Iterator over elements of an array. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="213" column="11" bodyfile="erbsland/qt/toml/Value.cpp" bodystart="456" bodyend="461"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1a2e4091a9eb5f942304b69781f0d1f80c" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::qt::toml::Value::setLocationRange</definition>
+        <argsstring>(const LocationRange &amp;locationRange) noexcept</argsstring>
+        <name>setLocationRange</name>
+        <param>
+          <type>const <ref refid="classerbsland_1_1qt_1_1toml_1_1_location_range" kindref="compound">LocationRange</ref> &amp;</type>
+          <declname>locationRange</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the location range. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="218" column="10" bodyfile="erbsland/qt/toml/Value.cpp" bodystart="464" bodyend="466"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1a656e2087f6ba6833c5aad2f2e30d15a9" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::qt::toml::Value::setValue</definition>
+        <argsstring>(const QString &amp;key, const ValuePtr &amp;value) noexcept</argsstring>
+        <name>setValue</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespaceerbsland_1_1qt_1_1toml_1aab3cc5b714cc77d2d409a7ffd098c2e5" kindref="member">ValuePtr</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set or overwrite the value in a table.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key of the value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value itself. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="225" column="10" bodyfile="erbsland/qt/toml/Value.cpp" bodystart="101" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1ac3b9adff7476f13f2ead0d3167948100" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::qt::toml::Value::addValue</definition>
+        <argsstring>(const ValuePtr &amp;value) noexcept</argsstring>
+        <name>addValue</name>
+        <param>
+          <type>const <ref refid="namespaceerbsland_1_1qt_1_1toml_1aab3cc5b714cc77d2d409a7ffd098c2e5" kindref="member">ValuePtr</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Append a value to an array.</para>
+<para>If this value is no array, the call is ignored.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to add. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="233" column="10" bodyfile="erbsland/qt/toml/Value.cpp" bodystart="88" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1afd52778da85d49f4e5e3c0c2dd2458bd" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::qt::toml::Value::makeExplicit</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>makeExplicit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Make this table explicit defined. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="237" column="10" bodyfile="erbsland/qt/toml/Value.cpp" bodystart="224" bodyend="230"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1aeabcdd605bd36a971706b21fb6e94f09" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::clone</definition>
+        <argsstring>() const noexcept -&gt; ValuePtr</argsstring>
+        <name>clone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Deep-clone this value.</para>
+<para><simplesect kind="return"><para>A deep clone of this value and value structure if there is any. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="243" column="10" bodyfile="erbsland/qt/toml/Value.cpp" bodystart="428" bodyend="445"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1acaed63cf54ee1bd10c8f6dc5f40ebc63" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::isTable</definition>
+        <argsstring>() const noexcept -&gt; bool</argsstring>
+        <name>isTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Test if this is a table (<computeroutput><ref refid="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aea51c45b795d5d18a3e4e0c37e8b20a141" kindref="member">ValueType::Table</ref></computeroutput>). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="248" column="18" bodyfile="erbsland/qt/toml/Value.hpp" bodystart="248" bodyend="250"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1a154e80451dec86cd9776c4efca5e2fa3" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::isArray</definition>
+        <argsstring>() const noexcept -&gt; bool</argsstring>
+        <name>isArray</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Test if this is an array (<computeroutput><ref refid="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aea4410ec34d9e6c1a68100ca0ce033fb17" kindref="member">ValueType::Array</ref></computeroutput>). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="254" column="18" bodyfile="erbsland/qt/toml/Value.hpp" bodystart="254" bodyend="256"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1aa748214c11c12fee01c800b4c99e0833" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::toInteger</definition>
+        <argsstring>() const noexcept -&gt; int64_t</argsstring>
+        <name>toInteger</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get an integer from this value.</para>
+<para><simplesect kind="return"><para>The integer, if this value is of the <computeroutput>Type::Integer</computeroutput>, otherwise the value 0. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="263" column="11" bodyfile="erbsland/qt/toml/Value.cpp" bodystart="134" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1ae9ac47aac949dbabd10ec7cf4e8f6ff7" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::toFloat</definition>
+        <argsstring>() const noexcept -&gt; double</argsstring>
+        <name>toFloat</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get an float from this value.</para>
+<para><simplesect kind="return"><para>The float, if this value is of the <computeroutput>Type::Float</computeroutput>, otherwise the value 0.0. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="269" column="11" bodyfile="erbsland/qt/toml/Value.cpp" bodystart="139" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1abe66b64a42cdafbb24f3d2c9630df6e2" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::toBoolean</definition>
+        <argsstring>() const noexcept -&gt; bool</argsstring>
+        <name>toBoolean</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a boolean from this value.</para>
+<para><simplesect kind="return"><para>The boolean, if this value is of the <computeroutput>Type::Boolean</computeroutput>, otherwise the value false. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="275" column="11" bodyfile="erbsland/qt/toml/Value.cpp" bodystart="144" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1ab9b40f8f018c6c351502f40326ff307d" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::toString</definition>
+        <argsstring>() const noexcept -&gt; QString</argsstring>
+        <name>toString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get an string from this value.</para>
+<para><simplesect kind="return"><para>The string, if this value is of the <computeroutput><ref refid="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aea27118326006d3829667a400ad23d5d98" kindref="member">Type::String</ref></computeroutput>, otherwise an empty string. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="281" column="11" bodyfile="erbsland/qt/toml/Value.cpp" bodystart="149" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1a2601d306034a0fff9cd57884e1607ff7" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::toTime</definition>
+        <argsstring>() const noexcept -&gt; QTime</argsstring>
+        <name>toTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a time from this value.</para>
+<para><simplesect kind="return"><para>The time, if this value is of the <computeroutput>Type::Time</computeroutput>, otherwise QTime{}. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="287" column="11" bodyfile="erbsland/qt/toml/Value.cpp" bodystart="154" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1a73f11b0e44ad391bf1e74d154268f024" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::toDate</definition>
+        <argsstring>() const noexcept -&gt; QDate</argsstring>
+        <name>toDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a date from this value.</para>
+<para><simplesect kind="return"><para>The date, if this value is of the <computeroutput>Type::Date</computeroutput>, otherwise QDate{}. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="293" column="11" bodyfile="erbsland/qt/toml/Value.cpp" bodystart="159" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1af86f6d24d564af7e173ba7d420fc655b" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::toDateTime</definition>
+        <argsstring>() const noexcept -&gt; QDateTime</argsstring>
+        <name>toDateTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a date/time from this value.</para>
+<para><simplesect kind="return"><para>The date/time, if this value is of the <computeroutput>Type::DateTime</computeroutput>, otherwise QDateTime{}. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="299" column="11" bodyfile="erbsland/qt/toml/Value.cpp" bodystart="164" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1a7b1ab0789171dcb45a8f11ca1e2cff31" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::toTable</definition>
+        <argsstring>() const noexcept -&gt; TableValue</argsstring>
+        <name>toTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get an unordered map from this value.</para>
+<para><simplesect kind="return"><para>An unordered map if this value is <computeroutput>Type::Table</computeroutput>, otherwise an empty map. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="305" column="11" bodyfile="erbsland/qt/toml/Value.cpp" bodystart="169" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1a63ad97fe8e6c0734ea4474dddce71dd7" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::toArray</definition>
+        <argsstring>() const noexcept -&gt; ArrayValue</argsstring>
+        <name>toArray</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get an vector from this value.</para>
+<para><simplesect kind="return"><para>A vector if this value is <computeroutput>Type::Array</computeroutput>, otherwise an empty vector. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="311" column="11" bodyfile="erbsland/qt/toml/Value.cpp" bodystart="174" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1a18cd485411fbffc410cbc251379f9f50" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::toJson</definition>
+        <argsstring>() const noexcept -&gt; QJsonValue</argsstring>
+        <name>toJson</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert this value to a matching QJsonValue</para>
+<para>All structures are converted as expected by the TOML specification. Values that cannot be represented in JSON are converted into a string (time, date, date/time) that could be parsed by a TOML parser.</para>
+<para><simplesect kind="return"><para>This value as <computeroutput>QJsonValue</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="320" column="11" bodyfile="erbsland/qt/toml/Value.cpp" bodystart="233" bodyend="266"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1aec175681da2fabb90e8a703683b78b0c" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::toVariant</definition>
+        <argsstring>() const noexcept -&gt; QVariant</argsstring>
+        <name>toVariant</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert this value to a QVariant</para>
+<para>Tables are converted into <computeroutput>QVariantHash</computeroutput>, arrays into <computeroutput>QVariantList</computeroutput>, all other values are converted into the best matching <computeroutput>QVariant</computeroutput> value.</para>
+<para><simplesect kind="return"><para>This value as <computeroutput>QVariant</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="329" column="11" bodyfile="erbsland/qt/toml/Value.cpp" bodystart="269" bodyend="302"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1a572d1cb8af6a404424f2c8c88ca36386" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::toUnitTestJson</definition>
+        <argsstring>() const noexcept -&gt; QJsonValue</argsstring>
+        <name>toUnitTestJson</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert this value to a QJsonValue for <computeroutput>toml-test</computeroutput>.</para>
+<para>This is a very specialized method to convert this value into the format expected by <computeroutput>toml-test</computeroutput>. It is part of the interface, as it can be useful to verify a TOML document. Structures with tables and arrays are converted like <computeroutput><ref refid="classerbsland_1_1qt_1_1toml_1_1_value_1a18cd485411fbffc410cbc251379f9f50" kindref="member">toJson()</ref></computeroutput>, but every other value creates an extra object with two entries <computeroutput>type</computeroutput> and <computeroutput>value</computeroutput>. The type is one of <computeroutput>string</computeroutput>, <computeroutput>integer</computeroutput>, <computeroutput>float</computeroutput>, <computeroutput>bool</computeroutput>, <computeroutput>datetime</computeroutput>, <computeroutput>datetime-local</computeroutput> <computeroutput>date-local</computeroutput> and <computeroutput>time-local</computeroutput> and the value is the TOML value as string. Please note that the string is recreated from the stored value. It is not the exact string as read from the document.</para>
+<para><simplesect kind="return"><para>The value in the special <computeroutput>toml-test</computeroutput> format as <computeroutput>QJsonValue</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="343" column="11" bodyfile="erbsland/qt/toml/Value.cpp" bodystart="305" bodyend="362"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1a8c209c7a538e71a72b9da3e746a96585" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::createInteger</definition>
+        <argsstring>(int64_t value) noexcept -&gt; ValuePtr</argsstring>
+        <name>createInteger</name>
+        <param>
+          <type>int64_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new integer value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value of the new integer. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A shared pointer to the new integer value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="351" column="17" bodyfile="erbsland/qt/toml/Value.cpp" bodystart="179" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1abdeef5d1c910041a70dce323c270e44a" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::createFloat</definition>
+        <argsstring>(double value) noexcept -&gt; ValuePtr</argsstring>
+        <name>createFloat</name>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new floating-point value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value of the new floating-point number. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A shared pointer to the new floating-point value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="358" column="17" bodyfile="erbsland/qt/toml/Value.cpp" bodystart="184" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1a7ae743ed89b09121f7239d3dfdefa3e2" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::createBoolean</definition>
+        <argsstring>(bool value) noexcept -&gt; ValuePtr</argsstring>
+        <name>createBoolean</name>
+        <param>
+          <type>bool</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new boolean value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value of the new boolean. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A shared pointer to the new boolean value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="365" column="17" bodyfile="erbsland/qt/toml/Value.cpp" bodystart="189" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1a7a99b0c76f4d2241f62d6041bef6afb8" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::createString</definition>
+        <argsstring>(QString value) noexcept -&gt; ValuePtr</argsstring>
+        <name>createString</name>
+        <param>
+          <type>QString</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new string value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value of the new string. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A shared pointer to the new string value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="372" column="17" bodyfile="erbsland/qt/toml/Value.cpp" bodystart="194" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1ae6ba4fae07632a653a4a043e207e1b95" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::createTime</definition>
+        <argsstring>(QTime value) noexcept -&gt; ValuePtr</argsstring>
+        <name>createTime</name>
+        <param>
+          <type>QTime</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new time value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value of the new time. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A shared pointer to the new time value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="379" column="17" bodyfile="erbsland/qt/toml/Value.cpp" bodystart="199" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1afbe2a4fc81db05e44634c62bc15a07db" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::createDate</definition>
+        <argsstring>(QDate value) noexcept -&gt; ValuePtr</argsstring>
+        <name>createDate</name>
+        <param>
+          <type>QDate</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new date value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value of the new date. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A shared pointer to the new date value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="386" column="17" bodyfile="erbsland/qt/toml/Value.cpp" bodystart="204" bodyend="206"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1a7f97c5a489c8eeb607614800221f9440" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::createDateTime</definition>
+        <argsstring>(QDateTime value) noexcept -&gt; ValuePtr</argsstring>
+        <name>createDateTime</name>
+        <param>
+          <type>QDateTime</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new date and time value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value of the new date and time. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A shared pointer to the new date and time value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="393" column="17" bodyfile="erbsland/qt/toml/Value.cpp" bodystart="209" bodyend="211"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1ad6396a30692e4b655940f6712d29872b" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::createTable</definition>
+        <argsstring>(Source source) noexcept -&gt; ValuePtr</argsstring>
+        <name>createTable</name>
+        <param>
+          <type><ref refid="namespaceerbsland_1_1qt_1_1toml_1a51e4748f2f9f18dd439906cfb8cf01a3" kindref="member">Source</ref></type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new empty table value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source of this table. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A shared pointer to the new table value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="400" column="17" bodyfile="erbsland/qt/toml/Value.cpp" bodystart="214" bodyend="216"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1aab685561423149889894c1f3108f2183" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::createArray</definition>
+        <argsstring>(Source source) noexcept -&gt; ValuePtr</argsstring>
+        <name>createArray</name>
+        <param>
+          <type><ref refid="namespaceerbsland_1_1qt_1_1toml_1a51e4748f2f9f18dd439906cfb8cf01a3" kindref="member">Source</ref></type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new empty array value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source of this array. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A shared pointer to the new array value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="407" column="17" bodyfile="erbsland/qt/toml/Value.cpp" bodystart="219" bodyend="221"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1ae8510e31cc3eaa44afc6a4a9b9200dea" prot="private" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::qt::toml::Value::Value</definition>
+        <argsstring>(Type type, Source source, Storage value, Value::PrivateTag) noexcept</argsstring>
+        <name>Value</name>
+        <param>
+          <type><ref refid="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24ae" kindref="member">Type</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceerbsland_1_1qt_1_1toml_1a51e4748f2f9f18dd439906cfb8cf01a3" kindref="member">Source</ref></type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>Storage</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>Value::PrivateTag</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The private constructor.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source for the value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="422" column="12" bodyfile="erbsland/qt/toml/Value.hpp" bodystart="422" bodyend="424"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1a2de4e1c310c9bb31e84cc463e48b517f" prot="private" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::toValue</definition>
+        <argsstring>(Type type) const noexcept -&gt; T</argsstring>
+        <name>toValue</name>
+        <param>
+          <type><ref refid="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24ae" kindref="member">Type</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the given type or the default value. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="430" column="10" bodyfile="erbsland/qt/toml/Value.cpp" bodystart="126" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1qt_1_1toml_1_1_value_1a6b0e35a7f724829cb9df481886565908" prot="private" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto erbsland::qt::toml::Value::typeValue</definition>
+        <argsstring>(Type type, const QString &amp;keyPath, const T &amp;defaultValue) const noexcept -&gt; T</argsstring>
+        <name>typeValue</name>
+        <param>
+          <type><ref refid="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24ae" kindref="member">Type</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>keyPath</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>defaultValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the value at the given key path if it exists and if it matches the type.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The expected type. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The expected type enum. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key path in the form <computeroutput>key.key.key</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>defaultValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The default value returned if the key is not found or the type does not match. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The value or <computeroutput>defaultValue</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/qt/toml/Value.hpp" line="441" column="10" bodyfile="erbsland/qt/toml/Value.cpp" bodystart="366" bodyend="372"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A value handled by the TOML parser or serializer.</para>
+<para><simplesect kind="note"><para>This value type is not protected against infinite recursion. The parser will always produce valid results, if a user is creating own value structure, they have to pay attention to this possibility. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>std::enable_shared_from_this&lt; Value &gt;</label>
+      </node>
+      <node id="1">
+        <label>erbsland::qt::toml::Value</label>
+        <link refid="classerbsland_1_1qt_1_1toml_1_1_value"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>std::enable_shared_from_this&lt; Value &gt;</label>
+      </node>
+      <node id="1">
+        <label>erbsland::qt::toml::Value</label>
+        <link refid="classerbsland_1_1qt_1_1toml_1_1_value"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="erbsland/qt/toml/Value.hpp" line="40" column="1" bodyfile="erbsland/qt/toml/Value.hpp" bodystart="40" bodyend="448"/>
+    <listofallmembers>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a83f8f5fb8e2cabc38be8d56d9ec8b43f" prot="private" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>_locationRange</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1af9ff305180b8bcfcbb80dfbb53d3fcb3" prot="private" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>_source</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a2ded3db02b1deeceb8e84d39078ada50" prot="private" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>_storage</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1ac9b3a3b009f4a3c243437a60606b7649" prot="private" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>_type</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1ac3b9adff7476f13f2ead0d3167948100" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>addValue</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1ab035c7bc474995efa7bc25c0f3cd9f57" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>ArrayValue</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a6848e526f1f053832b62b59f732c7e45" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>arrayValue</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a9552862957c8b00760d80f1a867229d9" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>begin</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1aa0a5107ccf285f1323a8741e73e430d2" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>booleanValue</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1aeabcdd605bd36a971706b21fb6e94f09" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>clone</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1aab685561423149889894c1f3108f2183" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>createArray</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a7ae743ed89b09121f7239d3dfdefa3e2" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>createBoolean</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1afbe2a4fc81db05e44634c62bc15a07db" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>createDate</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a7f97c5a489c8eeb607614800221f9440" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>createDateTime</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1abdeef5d1c910041a70dce323c270e44a" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>createFloat</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a8c209c7a538e71a72b9da3e746a96585" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>createInteger</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a7a99b0c76f4d2241f62d6041bef6afb8" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>createString</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1ad6396a30692e4b655940f6712d29872b" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>createTable</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1ae6ba4fae07632a653a4a043e207e1b95" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>createTime</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a2ef8499b9cf0c5a46521efed974d81c6" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>dateTimeValue</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a9973af66099dcf5642d7e79abc08814f" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>dateValue</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1afffcfb6f24ba440a9cf68d909858400f" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>end</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a7896164c5d20f127eb913b0048ad058d" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>floatValue</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a3e5619f5abc331f605b675394205bba8" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>hasKey</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a3a7523e1229bb15b3ead47cb6b5166c0" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>hasValue</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a6415259681abd94a83257042397e655a" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>integerValue</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a154e80451dec86cd9776c4efca5e2fa3" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>isArray</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1acaed63cf54ee1bd10c8f6dc5f40ebc63" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>isTable</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a6942871bd7bfe568b28b9e34cc1d0aad" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>locationRange</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1afd52778da85d49f4e5e3c0c2dd2458bd" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>makeExplicit</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a2e4091a9eb5f942304b69781f0d1f80c" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>setLocationRange</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a656e2087f6ba6833c5aad2f2e30d15a9" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>setValue</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a17b61c4da1dc161c24c534ceba615daa" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>size</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a08bc72e19c2e49443a651d08972982ad" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>source</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a951281c180ba37bc2f2e7ef221d53cb4" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>Source</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1ab579d06db329aefd13dec4864119863a" prot="private" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>Storage</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1adfbd9763f91ec0e2a7fd30303b34eda3" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>stringValue</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a4849e01ef862f08911cb401f0da968d2" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>tableKeys</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1ad50945c35c852ab36898a1de54faf6ef" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>TableValue</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a803063cb7b0b30d8a21549671e8757ba" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>tableValue</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1abe6a52f09f86069a140057d2fde32cf0" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>timeValue</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a63ad97fe8e6c0734ea4474dddce71dd7" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>toArray</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1abe66b64a42cdafbb24f3d2c9630df6e2" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>toBoolean</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a73f11b0e44ad391bf1e74d154268f024" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>toDate</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1af86f6d24d564af7e173ba7d420fc655b" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>toDateTime</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1ae9ac47aac949dbabd10ec7cf4e8f6ff7" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>toFloat</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1aa748214c11c12fee01c800b4c99e0833" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>toInteger</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a18cd485411fbffc410cbc251379f9f50" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>toJson</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1ab9b40f8f018c6c351502f40326ff307d" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>toString</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a7b1ab0789171dcb45a8f11ca1e2cff31" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>toTable</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a2601d306034a0fff9cd57884e1607ff7" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>toTime</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a572d1cb8af6a404424f2c8c88ca36386" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>toUnitTestJson</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a2de4e1c310c9bb31e84cc463e48b517f" prot="private" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>toValue</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1aec175681da2fabb90e8a703683b78b0c" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>toVariant</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a2671665d49e9552bca83b3c6f4abb169" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>type</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1ad46471df6d41852c99e8a479587fa807" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>Type</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a6b0e35a7f724829cb9df481886565908" prot="private" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>typeValue</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1acea38a91de97def5a47c4c4170a60641" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>value</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1adf913926633b7aa07e506a8a3935b453" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>value</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1ae8510e31cc3eaa44afc6a4a9b9200dea" prot="private" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>Value</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1a910415414eacbb26fe0c723c0d4acb34" prot="public" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>valueFromKey</name></member>
+      <member refid="classerbsland_1_1qt_1_1toml_1_1_value_1af664ab3dc7e92649c0dc7631344894d8" prot="private" virt="non-virtual"><scope>erbsland::qt::toml::Value</scope><name>ValueIterator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

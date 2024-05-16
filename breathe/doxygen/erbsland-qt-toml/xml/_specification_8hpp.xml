@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_specification_8hpp" kind="file" language="C++">
+    <compoundname>Specification.hpp</compoundname>
+    <includes refid="_namespace_8hpp" local="yes">Namespace.hpp</includes>
+    <includes local="no">QtCore/QString</includes>
+    <includedby refid="all_8hpp" local="yes">erbsland/qt/toml/all.hpp</includedby>
+    <includedby refid="_parser_8hpp" local="yes">erbsland/qt/toml/Parser.hpp</includedby>
+    <includedby refid="_specification_8cpp" local="yes">erbsland/qt/toml/Specification.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>Namespace.hpp</label>
+        <link refid="_namespace_8hpp_source"/>
+      </node>
+      <node id="1">
+        <label>erbsland/qt/toml/Specification.hpp</label>
+        <link refid="_specification_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>QtCore/QString</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>erbsland/qt/TomlParser.hpp</label>
+        <link refid="_toml_parser_8hpp_source"/>
+      </node>
+      <node id="5">
+        <label>erbsland/qt/TomlValue.hpp</label>
+        <link refid="_toml_value_8hpp_source"/>
+      </node>
+      <node id="2">
+        <label>erbsland/qt/toml/all.hpp</label>
+        <link refid="all_8hpp_source"/>
+      </node>
+      <node id="3">
+        <label>erbsland/qt/toml/Parser.hpp</label>
+        <link refid="_parser_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>erbsland/qt/toml/Specification.hpp</label>
+        <link refid="_specification_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespaceerbsland">erbsland</innernamespace>
+    <innernamespace refid="namespaceerbsland_1_1qt">erbsland::qt</innernamespace>
+    <innernamespace refid="namespaceerbsland_1_1qt_1_1toml">erbsland::qt::toml</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>©<sp/>2023-2024<sp/>Tobias<sp/>Erbsland<sp/>https://erbsland.dev/<sp/>and<sp/>EducateIT<sp/>GmbH<sp/>https://educateit.ch</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>According<sp/>to<sp/>the<sp/>copyright<sp/>terms<sp/>specified<sp/>in<sp/>the<sp/>file<sp/>&quot;COPYRIGHT.md&quot;.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SPDX-License-Identifier:<sp/>LGPL-3.0-or-later</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Namespace.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtCore/QString&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceerbsland_1_1qt_1_1toml" kindref="compound">erbsland::qt::toml</ref><sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="namespaceerbsland_1_1qt_1_1toml_1a5d994656f551138656a92c8e822a70b6" refkind="member"><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1a5d994656f551138656a92c8e822a70b6" kindref="member">Specification</ref><sp/>:<sp/>int<sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>Version_1_0<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>Version_1_1</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1af137e14a5640c17e6e500b68c8025a3d" kindref="member">specificationToString</ref>(<ref refid="namespaceerbsland_1_1qt_1_1toml_1a5d994656f551138656a92c8e822a70b6" kindref="member">Specification</ref><sp/>specification)<sp/>noexcept<sp/>-&gt;<sp/>QString;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="erbsland/qt/toml/Specification.hpp"/>
+  </compounddef>
+</doxygen>

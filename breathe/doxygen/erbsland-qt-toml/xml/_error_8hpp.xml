@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_error_8hpp" kind="file" language="C++">
+    <compoundname>Error.hpp</compoundname>
+    <includes refid="_namespace_8hpp" local="yes">Namespace.hpp</includes>
+    <includes refid="_location_8hpp" local="yes">Location.hpp</includes>
+    <includes local="no">QtCore/QString</includes>
+    <includes local="no">QtCore/QIODevice</includes>
+    <includes local="no">cstdint</includes>
+    <includes local="no">exception</includes>
+    <includedby refid="all_8hpp" local="yes">erbsland/qt/toml/all.hpp</includedby>
+    <includedby refid="_error_8cpp" local="yes">erbsland/qt/toml/Error.cpp</includedby>
+    <includedby refid="_parser_8hpp" local="yes">erbsland/qt/toml/Parser.hpp</includedby>
+    <incdepgraph>
+      <node id="7">
+        <label>QtCore/QIODevice</label>
+      </node>
+      <node id="6">
+        <label>cstdint</label>
+      </node>
+      <node id="2">
+        <label>Namespace.hpp</label>
+        <link refid="_namespace_8hpp_source"/>
+      </node>
+      <node id="3">
+        <label>Location.hpp</label>
+        <link refid="_location_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>exception</label>
+      </node>
+      <node id="4">
+        <label>LocationFormat.hpp</label>
+        <link refid="_location_format_8hpp_source"/>
+      </node>
+      <node id="1">
+        <label>erbsland/qt/toml/Error.hpp</label>
+        <link refid="_error_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>QtCore/QString</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>erbsland/qt/TomlParser.hpp</label>
+        <link refid="_toml_parser_8hpp_source"/>
+      </node>
+      <node id="5">
+        <label>erbsland/qt/TomlValue.hpp</label>
+        <link refid="_toml_value_8hpp_source"/>
+      </node>
+      <node id="2">
+        <label>erbsland/qt/toml/all.hpp</label>
+        <link refid="all_8hpp_source"/>
+      </node>
+      <node id="3">
+        <label>erbsland/qt/toml/Parser.hpp</label>
+        <link refid="_parser_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>erbsland/qt/toml/Error.hpp</label>
+        <link refid="_error_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classerbsland_1_1qt_1_1toml_1_1_error" prot="public">erbsland::qt::toml::Error</innerclass>
+    <innernamespace refid="namespaceerbsland">erbsland</innernamespace>
+    <innernamespace refid="namespaceerbsland_1_1qt">erbsland::qt</innernamespace>
+    <innernamespace refid="namespaceerbsland_1_1qt_1_1toml">erbsland::qt::toml</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>©<sp/>2023-2024<sp/>Tobias<sp/>Erbsland<sp/>https://erbsland.dev/<sp/>and<sp/>EducateIT<sp/>GmbH<sp/>https://educateit.ch</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>According<sp/>to<sp/>the<sp/>copyright<sp/>terms<sp/>specified<sp/>in<sp/>the<sp/>file<sp/>&quot;COPYRIGHT.md&quot;.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SPDX-License-Identifier:<sp/>LGPL-3.0-or-later</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Namespace.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Location.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtCore/QString&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtCore/QIODevice&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;exception&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceerbsland_1_1qt_1_1toml" kindref="compound">erbsland::qt::toml</ref><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="classerbsland_1_1qt_1_1toml_1_1_error" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classerbsland_1_1qt_1_1toml_1_1_error" kindref="compound">Error</ref><sp/>final<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>std::exception<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>fwd-entry:<sp/>class<sp/>Error</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="28" refid="classerbsland_1_1qt_1_1toml_1_1_error_1a64aab71412e0105574e8c5699f698e9e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_error_1a64aab71412e0105574e8c5699f698e9e" kindref="member">Type</ref><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_error_1a64aab71412e0105574e8c5699f698e9ea8045a0a6c688b0635e3caccc408a1446" kindref="member">Generic</ref>,<sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_error_1a64aab71412e0105574e8c5699f698e9ea92e9d6227d5534e7afc27a11179c808e" kindref="member">Syntax</ref>,<sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_error_1a64aab71412e0105574e8c5699f698e9ea169a6f6b44766410bffebf76ff3dcf17" kindref="member">Encoding</ref>,<sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_error_1a64aab71412e0105574e8c5699f698e9eacf3882f1c43ab22bff0bd9d82d83251b" kindref="member">IO</ref>,<sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="38" refid="classerbsland_1_1qt_1_1toml_1_1_error_1ae82af59421973c194014ac71930d901e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_error_1ae82af59421973c194014ac71930d901e" kindref="member">Error</ref>()<sp/>noexcept<sp/>=<sp/>default;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>explicit<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_error" kindref="compound">Error</ref>(QString<sp/>message)<sp/>noexcept;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">private:</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_error" kindref="compound">Error</ref>(</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_error_1a64aab71412e0105574e8c5699f698e9e" kindref="member">Type</ref><sp/>type,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QString<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_error_1a5dd34081c0744974f819616f9d684a45" kindref="member">document</ref>,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_location" kindref="compound">Location</ref><sp/>location,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QString<sp/>message)<sp/>noexcept;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal">public:</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>static<sp/>auto<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_error_1a2e39470c997a91ba7bf196f8d5cfbf73" kindref="member">createIO</ref>(const<sp/>QString<sp/>&amp;<ref refid="classerbsland_1_1qt_1_1toml_1_1_error_1a5dd34081c0744974f819616f9d684a45" kindref="member">document</ref>,<sp/>const<sp/>QIODevice<sp/>&amp;ioDevice)<sp/>noexcept<sp/>-&gt;<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_error" kindref="compound">Error</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>static<sp/>auto<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_error_1a2d972ea2cdd1c8a6e3307a5edac90c44" kindref="member">createEncoding</ref>(const<sp/>QString<sp/>&amp;<ref refid="classerbsland_1_1qt_1_1toml_1_1_error_1a5dd34081c0744974f819616f9d684a45" kindref="member">document</ref>,<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_location" kindref="compound">Location</ref><sp/>location)<sp/>noexcept<sp/>-&gt;<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_error" kindref="compound">Error</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>static<sp/>auto<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_error_1a7ee8a05450f23b1655df64bd5cec756c" kindref="member">createSyntax</ref>(const<sp/>QString<sp/>&amp;<ref refid="classerbsland_1_1qt_1_1toml_1_1_error_1a5dd34081c0744974f819616f9d684a45" kindref="member">document</ref>,<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_location" kindref="compound">Location</ref><sp/>location,<sp/>const<sp/>QString<sp/>&amp;message)<sp/>noexcept<sp/>-&gt;<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_error" kindref="compound">Error</ref>;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal">public:</highlight></codeline>
+<codeline lineno="94" refid="classerbsland_1_1qt_1_1toml_1_1_error_1a5dd34081c0744974f819616f9d684a45" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>inline<sp/>auto<sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_error_1a5dd34081c0744974f819616f9d684a45" kindref="member">document</ref>()<sp/>const<sp/>noexcept<sp/>-&gt;<sp/>QString<sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_document;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_error_1aa1224a1c443fec91cd5b2f46a17d841c" kindref="member">toString</ref>()<sp/>const<sp/>noexcept<sp/>-&gt;<sp/>QString;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal">public:<sp/></highlight><highlight class="comment">//<sp/>Implement<sp/>std::exception</highlight></codeline>
+<codeline lineno="110"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>auto<sp/>what()<sp/>const<sp/>noexcept<sp/>-&gt;<sp/>const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>override;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal">private:</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>static<sp/>auto<sp/>typeToString(<ref refid="classerbsland_1_1qt_1_1toml_1_1_error_1a64aab71412e0105574e8c5699f698e9e" kindref="member">Type</ref><sp/>type)<sp/>noexcept<sp/>-&gt;<sp/>QString;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal">private:</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_error_1a64aab71412e0105574e8c5699f698e9e" kindref="member">Type</ref><sp/>_type{<ref refid="classerbsland_1_1qt_1_1toml_1_1_error_1a64aab71412e0105574e8c5699f698e9ea8045a0a6c688b0635e3caccc408a1446" kindref="member">Type::Generic</ref>};<sp/></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/>_document{};<sp/></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>Location<sp/>_location{<ref refid="classerbsland_1_1qt_1_1toml_1_1_location_1a4387ce0b9659dfa0cbaf0c2171ddde73" kindref="member">Location::createNotSet</ref>()};<sp/></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/>_message{};<sp/></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">mutable</highlight><highlight class="normal"><sp/>std::string<sp/>_whatCache;<sp/></highlight></codeline>
+<codeline lineno="126"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="erbsland/qt/toml/Error.hpp"/>
+  </compounddef>
+</doxygen>

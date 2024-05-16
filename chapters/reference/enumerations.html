@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enumerations &mdash; Erbsland Qt TOML 1.2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=61243dd2"></script>
+        <script src="../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Roadmap" href="../roadmap.html" />
+    <link rel="prev" title="Classes" href="classes.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Erbsland Qt TOML
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quick-start.html">Quick Start Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="namespaces.html">Namespaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parser.html">Parsing Documents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="errors.html">Error Handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="locations.html">Locations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="streams.html">Input Streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classes.html">Classes</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Enumerations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#the-locationformat-enum-class">The <code class="docutils literal notranslate"><span class="pre">LocationFormat</span></code> Enum Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N8erbsland2qt4toml14LocationFormatE"><code class="docutils literal notranslate"><span class="pre">LocationFormat</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland2qt4toml14LocationFormat7CompactE"><code class="docutils literal notranslate"><span class="pre">LocationFormat::Compact</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland2qt4toml14LocationFormat16CompactWithIndexE"><code class="docutils literal notranslate"><span class="pre">LocationFormat::CompactWithIndex</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland2qt4toml14LocationFormat4LongE"><code class="docutils literal notranslate"><span class="pre">LocationFormat::Long</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland2qt4toml14LocationFormat13LongWithIndexE"><code class="docutils literal notranslate"><span class="pre">LocationFormat::LongWithIndex</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#the-specification-enum-class">The <code class="docutils literal notranslate"><span class="pre">Specification</span></code> Enum Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N8erbsland2qt4toml13SpecificationE"><code class="docutils literal notranslate"><span class="pre">Specification</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland2qt4toml13Specification11Version_1_0E"><code class="docutils literal notranslate"><span class="pre">Specification::Version_1_0</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland2qt4toml13Specification11Version_1_1E"><code class="docutils literal notranslate"><span class="pre">Specification::Version_1_1</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N8erbsland2qt4toml21specificationToStringE13Specification"><code class="docutils literal notranslate"><span class="pre">specificationToString()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#the-valuetype-enum-class">The <code class="docutils literal notranslate"><span class="pre">ValueType</span></code> Enum Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N8erbsland2qt4toml9ValueTypeE"><code class="docutils literal notranslate"><span class="pre">ValueType</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland2qt4toml9ValueType7IntegerE"><code class="docutils literal notranslate"><span class="pre">ValueType::Integer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland2qt4toml9ValueType5FloatE"><code class="docutils literal notranslate"><span class="pre">ValueType::Float</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland2qt4toml9ValueType7BooleanE"><code class="docutils literal notranslate"><span class="pre">ValueType::Boolean</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland2qt4toml9ValueType6StringE"><code class="docutils literal notranslate"><span class="pre">ValueType::String</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland2qt4toml9ValueType4TimeE"><code class="docutils literal notranslate"><span class="pre">ValueType::Time</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland2qt4toml9ValueType4DateE"><code class="docutils literal notranslate"><span class="pre">ValueType::Date</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland2qt4toml9ValueType8DateTimeE"><code class="docutils literal notranslate"><span class="pre">ValueType::DateTime</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland2qt4toml9ValueType5TableE"><code class="docutils literal notranslate"><span class="pre">ValueType::Table</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland2qt4toml9ValueType5ArrayE"><code class="docutils literal notranslate"><span class="pre">ValueType::Array</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N8erbsland2qt4toml17valueTypeToStringE9ValueType"><code class="docutils literal notranslate"><span class="pre">valueTypeToString()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N8erbsland2qt4toml25valueTypeToUnitTestStringE9ValueType"><code class="docutils literal notranslate"><span class="pre">valueTypeToUnitTestString()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#the-valuesource-enum-class">The <code class="docutils literal notranslate"><span class="pre">ValueSource</span></code> Enum Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N8erbsland2qt4toml11ValueSourceE"><code class="docutils literal notranslate"><span class="pre">ValueSource</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland2qt4toml11ValueSource13ImplicitTableE"><code class="docutils literal notranslate"><span class="pre">ValueSource::ImplicitTable</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland2qt4toml11ValueSource13ExplicitTableE"><code class="docutils literal notranslate"><span class="pre">ValueSource::ExplicitTable</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland2qt4toml11ValueSource13ImplicitValueE"><code class="docutils literal notranslate"><span class="pre">ValueSource::ImplicitValue</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland2qt4toml11ValueSource13ExplicitValueE"><code class="docutils literal notranslate"><span class="pre">ValueSource::ExplicitValue</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland2qt4toml11ValueSource5ValueE"><code class="docutils literal notranslate"><span class="pre">ValueSource::Value</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N8erbsland2qt4toml19valueSourceToStringE11ValueSource"><code class="docutils literal notranslate"><span class="pre">valueSourceToString()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../roadmap.html">Roadmap</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Erbsland Qt TOML</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Enumerations</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/chapters/reference/enumerations.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="enumerations">
+<h1>Enumerations<a class="headerlink" href="#enumerations" title="Link to this heading"></a></h1>
+<section id="the-locationformat-enum-class">
+<h2>The <code class="docutils literal notranslate"><span class="pre">LocationFormat</span></code> Enum Class<a class="headerlink" href="#the-locationformat-enum-class" title="Link to this heading"></a></h2>
+<dl class="cpp enum-class" id="index-0">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland2qt4toml14LocationFormatE">
+<span id="_CPPv3N8erbsland2qt4toml14LocationFormatE"></span><span id="_CPPv2N8erbsland2qt4toml14LocationFormatE"></span><span class="target" id="namespaceerbsland_1_1qt_1_1toml_1a06a315dbcc1a56376b3d1a00650e177a"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="namespaces.html#_CPPv48erbsland" title="erbsland"><span class="n"><span class="pre">erbsland</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="namespaces.html#_CPPv4N8erbsland2qtE" title="erbsland::qt"><span class="n"><span class="pre">qt</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="namespaces.html#_CPPv4N8erbsland2qt4tomlE" title="erbsland::qt::toml"><span class="n"><span class="pre">toml</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">LocationFormat</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland2qt4toml14LocationFormatE" title="Link to this definition"></a><br /></dt>
+<dd><p>The string format for the location. </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland2qt4toml14LocationFormat7CompactE">
+<span id="_CPPv3N8erbsland2qt4toml14LocationFormat7CompactE"></span><span id="_CPPv2N8erbsland2qt4toml14LocationFormat7CompactE"></span><span class="target" id="namespaceerbsland_1_1qt_1_1toml_1a06a315dbcc1a56376b3d1a00650e177aab1fe2c2a59e883740e7ea87667e44a24"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Compact</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland2qt4toml14LocationFormat7CompactE" title="Link to this definition"></a><br /></dt>
+<dd><p>Generates a text in the format <code class="docutils literal notranslate"><span class="pre">[line]:[column]</span></code>. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland2qt4toml14LocationFormat16CompactWithIndexE">
+<span id="_CPPv3N8erbsland2qt4toml14LocationFormat16CompactWithIndexE"></span><span id="_CPPv2N8erbsland2qt4toml14LocationFormat16CompactWithIndexE"></span><span class="target" id="namespaceerbsland_1_1qt_1_1toml_1a06a315dbcc1a56376b3d1a00650e177aa197732de835a64962e6e06d060a7208c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CompactWithIndex</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland2qt4toml14LocationFormat16CompactWithIndexE" title="Link to this definition"></a><br /></dt>
+<dd><p>Generates a text in the format <code class="docutils literal notranslate"><span class="pre">[line]:[column]:([index])</span></code>. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland2qt4toml14LocationFormat4LongE">
+<span id="_CPPv3N8erbsland2qt4toml14LocationFormat4LongE"></span><span id="_CPPv2N8erbsland2qt4toml14LocationFormat4LongE"></span><span class="target" id="namespaceerbsland_1_1qt_1_1toml_1a06a315dbcc1a56376b3d1a00650e177aa8394f0347c184cf156ac5924dccb773b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Long</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland2qt4toml14LocationFormat4LongE" title="Link to this definition"></a><br /></dt>
+<dd><p>Generates a text in the format <code class="docutils literal notranslate"><span class="pre">line</span> <span class="pre">[line],</span> <span class="pre">column</span> <span class="pre">[column]</span></code>. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland2qt4toml14LocationFormat13LongWithIndexE">
+<span id="_CPPv3N8erbsland2qt4toml14LocationFormat13LongWithIndexE"></span><span id="_CPPv2N8erbsland2qt4toml14LocationFormat13LongWithIndexE"></span><span class="target" id="namespaceerbsland_1_1qt_1_1toml_1a06a315dbcc1a56376b3d1a00650e177aa63abd19a5803918223058a01cc8abe29"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LongWithIndex</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland2qt4toml14LocationFormat13LongWithIndexE" title="Link to this definition"></a><br /></dt>
+<dd><p>Generates a text in the format <code class="docutils literal notranslate"><span class="pre">line</span> <span class="pre">[line],</span> <span class="pre">column</span> <span class="pre">[column]</span> <span class="pre">(index</span> <span class="pre">[index])</span></code>. </p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="the-specification-enum-class">
+<h2>The <code class="docutils literal notranslate"><span class="pre">Specification</span></code> Enum Class<a class="headerlink" href="#the-specification-enum-class" title="Link to this heading"></a></h2>
+<dl class="cpp enum-class" id="index-1">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland2qt4toml13SpecificationE">
+<span id="_CPPv3N8erbsland2qt4toml13SpecificationE"></span><span id="_CPPv2N8erbsland2qt4toml13SpecificationE"></span><span class="target" id="namespaceerbsland_1_1qt_1_1toml_1a5d994656f551138656a92c8e822a70b6"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="namespaces.html#_CPPv48erbsland" title="erbsland"><span class="n"><span class="pre">erbsland</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="namespaces.html#_CPPv4N8erbsland2qtE" title="erbsland::qt"><span class="n"><span class="pre">qt</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="namespaces.html#_CPPv4N8erbsland2qt4tomlE" title="erbsland::qt::toml"><span class="n"><span class="pre">toml</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">Specification</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><a class="headerlink" href="#_CPPv4N8erbsland2qt4toml13SpecificationE" title="Link to this definition"></a><br /></dt>
+<dd><p>The specification version. </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland2qt4toml13Specification11Version_1_0E">
+<span id="_CPPv3N8erbsland2qt4toml13Specification11Version_1_0E"></span><span id="_CPPv2N8erbsland2qt4toml13Specification11Version_1_0E"></span><span class="target" id="namespaceerbsland_1_1qt_1_1toml_1a5d994656f551138656a92c8e822a70b6ae9914d03abe9cb6381eba59283eb96e7"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Version_1_0</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland2qt4toml13Specification11Version_1_0E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland2qt4toml13Specification11Version_1_1E">
+<span id="_CPPv3N8erbsland2qt4toml13Specification11Version_1_1E"></span><span id="_CPPv2N8erbsland2qt4toml13Specification11Version_1_1E"></span><span class="target" id="namespaceerbsland_1_1qt_1_1toml_1a5d994656f551138656a92c8e822a70b6af54b79d05609d8eaca32c34874d779b5"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Version_1_1</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland2qt4toml13Specification11Version_1_1E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland2qt4toml21specificationToStringE13Specification">
+<span id="_CPPv3N8erbsland2qt4toml21specificationToStringE13Specification"></span><span id="_CPPv2N8erbsland2qt4toml21specificationToStringE13Specification"></span><span id="erbsland::qt::toml::specificationToString__Specification"></span><span class="target" id="namespaceerbsland_1_1qt_1_1toml_1af137e14a5640c17e6e500b68c8025a3d"></span><span class="kt"><span class="pre">auto</span></span><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="namespaces.html#_CPPv48erbsland" title="erbsland"><span class="n"><span class="pre">erbsland</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="namespaces.html#_CPPv4N8erbsland2qtE" title="erbsland::qt"><span class="n"><span class="pre">qt</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="namespaces.html#_CPPv4N8erbsland2qt4tomlE" title="erbsland::qt::toml"><span class="n"><span class="pre">toml</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">specificationToString</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N8erbsland2qt4toml13SpecificationE" title="erbsland::qt::toml::Specification"><span class="n"><span class="pre">Specification</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">specification</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><span class="w"> </span><span class="o"><span class="pre">-&gt;</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><a class="headerlink" href="#_CPPv4N8erbsland2qt4toml21specificationToStringE13Specification" title="Link to this definition"></a><br /></dt>
+<dd><p>Convert a value source enumeration into a string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>specification</strong> – The specification. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A string for the specification in the format <code class="docutils literal notranslate"><span class="pre">TOML</span> <span class="pre">1.0</span></code>. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="the-valuetype-enum-class">
+<h2>The <code class="docutils literal notranslate"><span class="pre">ValueType</span></code> Enum Class<a class="headerlink" href="#the-valuetype-enum-class" title="Link to this heading"></a></h2>
+<dl class="cpp enum-class" id="index-2">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland2qt4toml9ValueTypeE">
+<span id="_CPPv3N8erbsland2qt4toml9ValueTypeE"></span><span id="_CPPv2N8erbsland2qt4toml9ValueTypeE"></span><span class="target" id="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24ae"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="namespaces.html#_CPPv48erbsland" title="erbsland"><span class="n"><span class="pre">erbsland</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="namespaces.html#_CPPv4N8erbsland2qtE" title="erbsland::qt"><span class="n"><span class="pre">qt</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="namespaces.html#_CPPv4N8erbsland2qt4tomlE" title="erbsland::qt::toml"><span class="n"><span class="pre">toml</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">ValueType</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland2qt4toml9ValueTypeE" title="Link to this definition"></a><br /></dt>
+<dd><p>The type of a value. </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland2qt4toml9ValueType7IntegerE">
+<span id="_CPPv3N8erbsland2qt4toml9ValueType7IntegerE"></span><span id="_CPPv2N8erbsland2qt4toml9ValueType7IntegerE"></span><span class="target" id="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aeaa0faef0851b4294c06f2b94bb1cb2044"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Integer</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland2qt4toml9ValueType7IntegerE" title="Link to this definition"></a><br /></dt>
+<dd><p>A signed integer. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland2qt4toml9ValueType5FloatE">
+<span id="_CPPv3N8erbsland2qt4toml9ValueType5FloatE"></span><span id="_CPPv2N8erbsland2qt4toml9ValueType5FloatE"></span><span class="target" id="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aea22ae0e2b89e5e3d477f988cc36d3272b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Float</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland2qt4toml9ValueType5FloatE" title="Link to this definition"></a><br /></dt>
+<dd><p>A floating-point number. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland2qt4toml9ValueType7BooleanE">
+<span id="_CPPv3N8erbsland2qt4toml9ValueType7BooleanE"></span><span id="_CPPv2N8erbsland2qt4toml9ValueType7BooleanE"></span><span class="target" id="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aea27226c864bac7454a8504f8edb15d95b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Boolean</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland2qt4toml9ValueType7BooleanE" title="Link to this definition"></a><br /></dt>
+<dd><p>A boolean value (either <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>). </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland2qt4toml9ValueType6StringE">
+<span id="_CPPv3N8erbsland2qt4toml9ValueType6StringE"></span><span id="_CPPv2N8erbsland2qt4toml9ValueType6StringE"></span><span class="target" id="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aea27118326006d3829667a400ad23d5d98"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">String</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland2qt4toml9ValueType6StringE" title="Link to this definition"></a><br /></dt>
+<dd><p>A string. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland2qt4toml9ValueType4TimeE">
+<span id="_CPPv3N8erbsland2qt4toml9ValueType4TimeE"></span><span id="_CPPv2N8erbsland2qt4toml9ValueType4TimeE"></span><span class="target" id="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aeaa76d4ef5f3f6a672bbfab2865563e530"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Time</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland2qt4toml9ValueType4TimeE" title="Link to this definition"></a><br /></dt>
+<dd><p>A local time of day. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland2qt4toml9ValueType4DateE">
+<span id="_CPPv3N8erbsland2qt4toml9ValueType4DateE"></span><span id="_CPPv2N8erbsland2qt4toml9ValueType4DateE"></span><span class="target" id="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aea44749712dbec183e983dcd78a7736c41"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Date</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland2qt4toml9ValueType4DateE" title="Link to this definition"></a><br /></dt>
+<dd><p>A local calendar date. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland2qt4toml9ValueType8DateTimeE">
+<span id="_CPPv3N8erbsland2qt4toml9ValueType8DateTimeE"></span><span id="_CPPv2N8erbsland2qt4toml9ValueType8DateTimeE"></span><span class="target" id="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aea8cf10d2341ed01492506085688270c1e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DateTime</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland2qt4toml9ValueType8DateTimeE" title="Link to this definition"></a><br /></dt>
+<dd><p>A date and time with or without offset. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland2qt4toml9ValueType5TableE">
+<span id="_CPPv3N8erbsland2qt4toml9ValueType5TableE"></span><span id="_CPPv2N8erbsland2qt4toml9ValueType5TableE"></span><span class="target" id="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aea51c45b795d5d18a3e4e0c37e8b20a141"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Table</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland2qt4toml9ValueType5TableE" title="Link to this definition"></a><br /></dt>
+<dd><p>An unordered map of TOML key-value pairs. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland2qt4toml9ValueType5ArrayE">
+<span id="_CPPv3N8erbsland2qt4toml9ValueType5ArrayE"></span><span id="_CPPv2N8erbsland2qt4toml9ValueType5ArrayE"></span><span class="target" id="namespaceerbsland_1_1qt_1_1toml_1a58bc804d9aa3e75a9f17aacbe70f24aea4410ec34d9e6c1a68100ca0ce033fb17"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Array</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland2qt4toml9ValueType5ArrayE" title="Link to this definition"></a><br /></dt>
+<dd><p>An ordered list of TOML values. </p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland2qt4toml17valueTypeToStringE9ValueType">
+<span id="_CPPv3N8erbsland2qt4toml17valueTypeToStringE9ValueType"></span><span id="_CPPv2N8erbsland2qt4toml17valueTypeToStringE9ValueType"></span><span id="erbsland::qt::toml::valueTypeToString__ValueType"></span><span class="target" id="namespaceerbsland_1_1qt_1_1toml_1a8763f4e6183a5db29ed289e05ff2ffee"></span><span class="kt"><span class="pre">auto</span></span><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="namespaces.html#_CPPv48erbsland" title="erbsland"><span class="n"><span class="pre">erbsland</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="namespaces.html#_CPPv4N8erbsland2qtE" title="erbsland::qt"><span class="n"><span class="pre">qt</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="namespaces.html#_CPPv4N8erbsland2qt4tomlE" title="erbsland::qt::toml"><span class="n"><span class="pre">toml</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">valueTypeToString</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N8erbsland2qt4toml9ValueTypeE" title="erbsland::qt::toml::ValueType"><span class="n"><span class="pre">ValueType</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">valueType</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><span class="w"> </span><span class="o"><span class="pre">-&gt;</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><a class="headerlink" href="#_CPPv4N8erbsland2qt4toml17valueTypeToStringE9ValueType" title="Link to this definition"></a><br /></dt>
+<dd><p>Convert a value type enumeration into a string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>valueType</strong> – The value source. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A string for the enum value, like <code class="docutils literal notranslate"><span class="pre">Integer</span></code>. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland2qt4toml25valueTypeToUnitTestStringE9ValueType">
+<span id="_CPPv3N8erbsland2qt4toml25valueTypeToUnitTestStringE9ValueType"></span><span id="_CPPv2N8erbsland2qt4toml25valueTypeToUnitTestStringE9ValueType"></span><span id="erbsland::qt::toml::valueTypeToUnitTestString__ValueType"></span><span class="target" id="namespaceerbsland_1_1qt_1_1toml_1a4cd37b7400e8ddc13f4b20d749d9777e"></span><span class="kt"><span class="pre">auto</span></span><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="namespaces.html#_CPPv48erbsland" title="erbsland"><span class="n"><span class="pre">erbsland</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="namespaces.html#_CPPv4N8erbsland2qtE" title="erbsland::qt"><span class="n"><span class="pre">qt</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="namespaces.html#_CPPv4N8erbsland2qt4tomlE" title="erbsland::qt::toml"><span class="n"><span class="pre">toml</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">valueTypeToUnitTestString</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N8erbsland2qt4toml9ValueTypeE" title="erbsland::qt::toml::ValueType"><span class="n"><span class="pre">ValueType</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">valueType</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><span class="w"> </span><span class="o"><span class="pre">-&gt;</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><a class="headerlink" href="#_CPPv4N8erbsland2qt4toml25valueTypeToUnitTestStringE9ValueType" title="Link to this definition"></a><br /></dt>
+<dd><p>Convert a value type enumeration into a string.</p>
+<p>This function is like <code class="docutils literal notranslate"><span class="pre">valueTypeToString</span></code>, but returns the type information as: <code class="docutils literal notranslate"><span class="pre">integer</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code>, <code class="docutils literal notranslate"><span class="pre">bool</span></code>, <code class="docutils literal notranslate"><span class="pre">string</span></code>, <code class="docutils literal notranslate"><span class="pre">date-local</span></code>, <code class="docutils literal notranslate"><span class="pre">time-local</span></code>, <code class="docutils literal notranslate"><span class="pre">datetime</span></code>, <code class="docutils literal notranslate"><span class="pre">table</span></code>, <code class="docutils literal notranslate"><span class="pre">array</span></code>. There is no <code class="docutils literal notranslate"><span class="pre">datetime-local</span></code>, as you have to inspect the actual date/time value to determine if its a local or offset date.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>valueType</strong> – The value source. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A string for the enum value, like <code class="docutils literal notranslate"><span class="pre">integer</span></code>. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="the-valuesource-enum-class">
+<h2>The <code class="docutils literal notranslate"><span class="pre">ValueSource</span></code> Enum Class<a class="headerlink" href="#the-valuesource-enum-class" title="Link to this heading"></a></h2>
+<dl class="cpp enum-class" id="index-3">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland2qt4toml11ValueSourceE">
+<span id="_CPPv3N8erbsland2qt4toml11ValueSourceE"></span><span id="_CPPv2N8erbsland2qt4toml11ValueSourceE"></span><span class="target" id="namespaceerbsland_1_1qt_1_1toml_1a51e4748f2f9f18dd439906cfb8cf01a3"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="namespaces.html#_CPPv48erbsland" title="erbsland"><span class="n"><span class="pre">erbsland</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="namespaces.html#_CPPv4N8erbsland2qtE" title="erbsland::qt"><span class="n"><span class="pre">qt</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="namespaces.html#_CPPv4N8erbsland2qt4tomlE" title="erbsland::qt::toml"><span class="n"><span class="pre">toml</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">ValueSource</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland2qt4toml11ValueSourceE" title="Link to this definition"></a><br /></dt>
+<dd><p>The source that defined the value. </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland2qt4toml11ValueSource13ImplicitTableE">
+<span id="_CPPv3N8erbsland2qt4toml11ValueSource13ImplicitTableE"></span><span id="_CPPv2N8erbsland2qt4toml11ValueSource13ImplicitTableE"></span><span class="target" id="namespaceerbsland_1_1qt_1_1toml_1a51e4748f2f9f18dd439906cfb8cf01a3a48fbc207f7a61fcca264a195260a47b8"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ImplicitTable</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland2qt4toml11ValueSource13ImplicitTableE" title="Link to this definition"></a><br /></dt>
+<dd><p>Implicit key of a table <code class="docutils literal notranslate"><span class="pre">[this.this.key]</span></code></p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland2qt4toml11ValueSource13ExplicitTableE">
+<span id="_CPPv3N8erbsland2qt4toml11ValueSource13ExplicitTableE"></span><span id="_CPPv2N8erbsland2qt4toml11ValueSource13ExplicitTableE"></span><span class="target" id="namespaceerbsland_1_1qt_1_1toml_1a51e4748f2f9f18dd439906cfb8cf01a3af28b515f29d1fcd6097b14a2d099453e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ExplicitTable</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland2qt4toml11ValueSource13ExplicitTableE" title="Link to this definition"></a><br /></dt>
+<dd><p>Explicit key of a table <code class="docutils literal notranslate"><span class="pre">[key.key.this]</span></code></p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland2qt4toml11ValueSource13ImplicitValueE">
+<span id="_CPPv3N8erbsland2qt4toml11ValueSource13ImplicitValueE"></span><span id="_CPPv2N8erbsland2qt4toml11ValueSource13ImplicitValueE"></span><span class="target" id="namespaceerbsland_1_1qt_1_1toml_1a51e4748f2f9f18dd439906cfb8cf01a3aad99b7772a0fd5c664efa2a2d9236f5e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ImplicitValue</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland2qt4toml11ValueSource13ImplicitValueE" title="Link to this definition"></a><br /></dt>
+<dd><p>Implicit key of a value <code class="docutils literal notranslate"><span class="pre">this.key.name</span> <span class="pre">=</span> <span class="pre">5</span></code></p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland2qt4toml11ValueSource13ExplicitValueE">
+<span id="_CPPv3N8erbsland2qt4toml11ValueSource13ExplicitValueE"></span><span id="_CPPv2N8erbsland2qt4toml11ValueSource13ExplicitValueE"></span><span class="target" id="namespaceerbsland_1_1qt_1_1toml_1a51e4748f2f9f18dd439906cfb8cf01a3afde0e6ca7326a18e631731f3fb185fc0"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ExplicitValue</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland2qt4toml11ValueSource13ExplicitValueE" title="Link to this definition"></a><br /></dt>
+<dd><p>Explicit key of a value <code class="docutils literal notranslate"><span class="pre">key.this.name</span> <span class="pre">=</span> <span class="pre">5</span></code></p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland2qt4toml11ValueSource5ValueE">
+<span id="_CPPv3N8erbsland2qt4toml11ValueSource5ValueE"></span><span id="_CPPv2N8erbsland2qt4toml11ValueSource5ValueE"></span><span class="target" id="namespaceerbsland_1_1qt_1_1toml_1a51e4748f2f9f18dd439906cfb8cf01a3a689202409e48743b914713f96d93947c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Value</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland2qt4toml11ValueSource5ValueE" title="Link to this definition"></a><br /></dt>
+<dd><p>A value or an inline table or list: <code class="docutils literal notranslate"><span class="pre">key</span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">...</span> <span class="pre">}</span></code> or <code class="docutils literal notranslate"><span class="pre">key</span> <span class="pre">=</span> <span class="pre">[</span> <span class="pre">...</span> <span class="pre">]</span></code></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland2qt4toml19valueSourceToStringE11ValueSource">
+<span id="_CPPv3N8erbsland2qt4toml19valueSourceToStringE11ValueSource"></span><span id="_CPPv2N8erbsland2qt4toml19valueSourceToStringE11ValueSource"></span><span id="erbsland::qt::toml::valueSourceToString__ValueSource"></span><span class="target" id="namespaceerbsland_1_1qt_1_1toml_1a125c106f9ae5a087edf5894cdf59d0a4"></span><span class="kt"><span class="pre">auto</span></span><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="namespaces.html#_CPPv48erbsland" title="erbsland"><span class="n"><span class="pre">erbsland</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="namespaces.html#_CPPv4N8erbsland2qtE" title="erbsland::qt"><span class="n"><span class="pre">qt</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="namespaces.html#_CPPv4N8erbsland2qt4tomlE" title="erbsland::qt::toml"><span class="n"><span class="pre">toml</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">valueSourceToString</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N8erbsland2qt4toml11ValueSourceE" title="erbsland::qt::toml::ValueSource"><span class="n"><span class="pre">ValueSource</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">valueSource</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><span class="w"> </span><span class="o"><span class="pre">-&gt;</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><a class="headerlink" href="#_CPPv4N8erbsland2qt4toml19valueSourceToStringE11ValueSource" title="Link to this definition"></a><br /></dt>
+<dd><p>Convert a value source enumeration into a string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>valueSource</strong> – The value source. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A string for the enum value, like <code class="docutils literal notranslate"><span class="pre">Implicit</span> <span class="pre">Table</span></code>. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="classes.html" class="btn btn-neutral float-left" title="Classes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../roadmap.html" class="btn btn-neutral float-right" title="Roadmap" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2024, Erbsland DEV.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

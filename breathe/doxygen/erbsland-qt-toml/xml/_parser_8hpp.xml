@@ -1,0 +1,315 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_parser_8hpp" kind="file" language="C++">
+    <compoundname>Parser.hpp</compoundname>
+    <includes refid="_input_stream_8hpp" local="yes">InputStream.hpp</includes>
+    <includes refid="_specification_8hpp" local="yes">Specification.hpp</includes>
+    <includes refid="_namespace_8hpp" local="yes">Namespace.hpp</includes>
+    <includes refid="_value_8hpp" local="yes">Value.hpp</includes>
+    <includes refid="_error_8hpp" local="yes">Error.hpp</includes>
+    <includes local="no">QtCore/QString</includes>
+    <includes local="no">QtCore/QByteArray</includes>
+    <includedby refid="_toml_parser_8hpp" local="yes">erbsland/qt/TomlParser.hpp</includedby>
+    <includedby refid="_toml_value_8hpp" local="yes">erbsland/qt/TomlValue.hpp</includedby>
+    <includedby refid="all_8hpp" local="yes">erbsland/qt/toml/all.hpp</includedby>
+    <includedby refid="_parser_8cpp" local="yes">erbsland/qt/toml/Parser.cpp</includedby>
+    <incdepgraph>
+      <node id="13">
+        <label>Value.hpp</label>
+        <link refid="_value_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>ValueIterator.hpp</label>
+        <link refid="_value_iterator_8hpp_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>ValueType.hpp</label>
+        <link refid="_value_type_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>QtCore/QIODevice</label>
+      </node>
+      <node id="6">
+        <label>cstdint</label>
+      </node>
+      <node id="23">
+        <label>QtCore/QDateTime</label>
+      </node>
+      <node id="4">
+        <label>Namespace.hpp</label>
+        <link refid="_namespace_8hpp_source"/>
+      </node>
+      <node id="24">
+        <label>variant</label>
+      </node>
+      <node id="3">
+        <label>Char.hpp</label>
+        <link refid="_char_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>Location.hpp</label>
+        <link refid="_location_8hpp_source"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>LocationRange.hpp</label>
+        <link refid="_location_range_8hpp_source"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>QtCore/QDate</label>
+      </node>
+      <node id="28">
+        <label>exception</label>
+      </node>
+      <node id="1">
+        <label>erbsland/qt/toml/Parser.hpp</label>
+        <link refid="_parser_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>QtCore/QTime</label>
+      </node>
+      <node id="12">
+        <label>Specification.hpp</label>
+        <link refid="_specification_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>LocationFormat.hpp</label>
+        <link refid="_location_format_8hpp_source"/>
+      </node>
+      <node id="8">
+        <label>QtCore/QTextStream</label>
+      </node>
+      <node id="19">
+        <label>ValueSource.hpp</label>
+        <link refid="_value_source_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>QtCore/QByteArray</label>
+      </node>
+      <node id="26">
+        <label>Error.hpp</label>
+        <link refid="_error_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>QtCore/QString</label>
+      </node>
+      <node id="25">
+        <label>unordered_map</label>
+      </node>
+      <node id="9">
+        <label>QtCore/QFile</label>
+      </node>
+      <node id="2">
+        <label>InputStream.hpp</label>
+        <link refid="_input_stream_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>algorithm</label>
+      </node>
+      <node id="10">
+        <label>QtCore/QChar</label>
+      </node>
+      <node id="11">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>erbsland/qt/TomlParser.hpp</label>
+        <link refid="_toml_parser_8hpp_source"/>
+      </node>
+      <node id="3">
+        <label>erbsland/qt/TomlValue.hpp</label>
+        <link refid="_toml_value_8hpp_source"/>
+      </node>
+      <node id="4">
+        <label>erbsland/qt/toml/all.hpp</label>
+        <link refid="all_8hpp_source"/>
+      </node>
+      <node id="1">
+        <label>erbsland/qt/toml/Parser.hpp</label>
+        <link refid="_parser_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classerbsland_1_1qt_1_1toml_1_1_parser" prot="public">erbsland::qt::toml::Parser</innerclass>
+    <innernamespace refid="namespaceerbsland">erbsland</innernamespace>
+    <innernamespace refid="namespaceerbsland_1_1qt">erbsland::qt</innernamespace>
+    <innernamespace refid="namespaceerbsland_1_1qt_1_1toml">erbsland::qt::toml</innernamespace>
+    <innernamespace refid="namespaceerbsland_1_1qt_1_1toml_1_1impl">erbsland::qt::toml::impl</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>©<sp/>2023-2024<sp/>Tobias<sp/>Erbsland<sp/>https://erbsland.dev/<sp/>and<sp/>EducateIT<sp/>GmbH<sp/>https://educateit.ch</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>According<sp/>to<sp/>the<sp/>copyright<sp/>terms<sp/>specified<sp/>in<sp/>the<sp/>file<sp/>&quot;COPYRIGHT.md&quot;.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SPDX-License-Identifier:<sp/>LGPL-3.0-or-later</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;InputStream.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Specification.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Namespace.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Value.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Error.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtCore/QString&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtCore/QByteArray&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceerbsland_1_1qt_1_1toml" kindref="compound">erbsland::qt::toml</ref><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">impl<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">ParserData;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="classerbsland_1_1qt_1_1toml_1_1_parser" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classerbsland_1_1qt_1_1toml_1_1_parser" kindref="compound">Parser</ref><sp/>final<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>fwd-entry:<sp/>class<sp/>Parser</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_parser_1a959ff575183e59319468c13bb905a75f" kindref="member">Parser</ref>(<ref refid="namespaceerbsland_1_1qt_1_1toml_1a5d994656f551138656a92c8e822a70b6" kindref="member">Specification</ref><sp/>specification<sp/>=<sp/>Specification::Version_1_0)<sp/>noexcept;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_parser_1a4a35eae548b7416876223e636a351212" kindref="member">~Parser</ref>();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>no<sp/>copy<sp/>and<sp/>assignment.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_parser_1a959ff575183e59319468c13bb905a75f" kindref="member">Parser</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_parser" kindref="compound">Parser</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_parser" kindref="compound">Parser</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="comment">//<sp/>parse<sp/>methods<sp/>that<sp/>throw<sp/>exceptions.</highlight></codeline>
+<codeline lineno="54"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_parser_1a495cc10e50db91f2f8e452630f8c02ca" kindref="member">parseStringOrThrow</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QString<sp/>&amp;str)<sp/>-&gt;<sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1aab3cc5b714cc77d2d409a7ffd098c2e5" kindref="member">ValuePtr</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_parser_1a487a753faa1e3f809b729e0d9b2046ac" kindref="member">parseDataOrThrow</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QByteArray<sp/>&amp;data)<sp/>-&gt;<sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1aab3cc5b714cc77d2d409a7ffd098c2e5" kindref="member">ValuePtr</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_parser_1ad0090edf3dea3ce47288e94a44139665" kindref="member">parseFileOrThrow</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QString<sp/>&amp;path)<sp/>-&gt;<sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1aab3cc5b714cc77d2d409a7ffd098c2e5" kindref="member">ValuePtr</ref>;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_parser_1ab728e20892fc8831d36edc23ee338151" kindref="member">parseStreamOrThrow</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1af3fbda439ad741c0de4de24b54fb1f8e" kindref="member">InputStreamPtr</ref><sp/>&amp;inputStream)<sp/>-&gt;<sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1aab3cc5b714cc77d2d409a7ffd098c2e5" kindref="member">ValuePtr</ref>;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="comment">//<sp/>parse<sp/>methods<sp/>that<sp/>do<sp/>not<sp/>throw<sp/>exceptions</highlight></codeline>
+<codeline lineno="93"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_parser_1a8edafdaa2c6712881adf2cad392067c8" kindref="member">parseString</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QString<sp/>&amp;str)<sp/>noexcept<sp/>-&gt;<sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1aab3cc5b714cc77d2d409a7ffd098c2e5" kindref="member">ValuePtr</ref>;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_parser_1a890f6a2ed27028a0e3d434f4982efb3a" kindref="member">parseData</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QByteArray<sp/>&amp;data)<sp/>noexcept<sp/>-&gt;<sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1aab3cc5b714cc77d2d409a7ffd098c2e5" kindref="member">ValuePtr</ref>;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_parser_1a6e2bb4ec7ccae577b776ec9c928bd218" kindref="member">parseFile</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QString<sp/>&amp;path)<sp/>noexcept<sp/>-&gt;<sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1aab3cc5b714cc77d2d409a7ffd098c2e5" kindref="member">ValuePtr</ref>;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_parser_1a840d3d370f63909cf14a2912b08a10c6" kindref="member">parseStream</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1af3fbda439ad741c0de4de24b54fb1f8e" kindref="member">InputStreamPtr</ref><sp/>&amp;inputStream)<sp/>noexcept<sp/>-&gt;<sp/><ref refid="namespaceerbsland_1_1qt_1_1toml_1aab3cc5b714cc77d2d409a7ffd098c2e5" kindref="member">ValuePtr</ref>;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_parser_1aa5a445f85f9a0fddb7c95c75b1b8b220" kindref="member">lastError</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>noexcept<sp/>-&gt;<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1qt_1_1toml_1_1_error" kindref="compound">Error</ref>&amp;;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>impl::ParserData<sp/>*d;<sp/></highlight></codeline>
+<codeline lineno="133"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="erbsland/qt/toml/Parser.hpp"/>
+  </compounddef>
+</doxygen>
