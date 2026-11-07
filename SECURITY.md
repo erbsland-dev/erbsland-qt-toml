@@ -4,7 +4,8 @@
 
 | Version  | Supported          |
 |----------| ------------------ |
-| \>=1.0.0 | :white_check_mark: |
+| Latest 1.3.x (Qt 6) | :white_check_mark: |
+| <1.3.0 (including Qt 5) | :x: |
 
 ## Reporting a Vulnerability
 

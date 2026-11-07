@@ -1,3 +1,6 @@
+Project copyright © 2023-2026 Tobias Erbsland and EducateIT GmbH.
+See [COPYRIGHT.md](COPYRIGHT.md) for the project copyright terms.
+
 # GNU LESSER GENERAL PUBLIC LICENSE
 
 Version 3, 29 June 2007

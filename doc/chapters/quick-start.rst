@@ -13,7 +13,8 @@ Prerequisites
 Before we start, make sure you have the following installed:
 
 - `CMake` version 3.25 or newer
-- `Qt5` or `Qt6`
+- `Qt 6`
+- A C++17 compiler
 - `Git`
 
 Setting up the Project Directory Structure
@@ -172,17 +173,7 @@ We will use CMake as our build system. Let's create two `CMakeLists.txt` files -
 
    project(erbsland-qt-toml-example)
 
-   # Detect and load either Qt5 or Qt6.
-   if (DEFINED Qt6_DIR AND NOT Qt6_DIR MATCHES "-NOTFOUND")
-       find_package(Qt6 REQUIRED GLOBAL COMPONENTS Core)
-   elseif (DEFINED Qt5_DIR AND NOT Qt5_DIR MATCHES "-NOTFOUND")
-       find_package(Qt5 REQUIRED GLOBAL COMPONENTS Core)
-   else()
-       find_package(Qt6 GLOBAL COMPONENTS Core)
-       if (NOT DEFINED Qt6_FOUND)
-           find_package(Qt5 GLOBAL REQUIRED COMPONENTS Core)
-       endif ()
-   endif ()
+   find_package(Qt6 REQUIRED COMPONENTS Core)
 
    add_subdirectory(erbsland-qt-toml)
    add_subdirectory(example-app)

@@ -1,4 +1,4 @@
-// Copyright © 2023-2024 Tobias Erbsland https://erbsland.dev/ and EducateIT GmbH https://educateit.ch
+// Copyright © 2023-2026 Tobias Erbsland https://erbsland.dev/ and EducateIT GmbH https://educateit.ch
 // According to the copyright terms specified in the file "COPYRIGHT.md".
 // SPDX-License-Identifier: LGPL-3.0-or-later
 #pragma once
@@ -64,7 +64,7 @@ public: // operators
     /// @return The result of the comparison.
     ///
     friend auto operator==(const ValueIterator& a, const ValueIterator& b) noexcept -> bool;
-    /// @copydoc operator==(const ValueIterator&, const ValueIterator&)
+    /// Compare two iterators for inequality.
     friend auto operator!=(const ValueIterator& a, const ValueIterator& b) noexcept -> bool;
 
 private:

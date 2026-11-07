@@ -1,27 +1,87 @@
+# Copyright © 2026 Tobias Erbsland and EducateIT GmbH.
+# SPDX-License-Identifier: LGPL-3.0-or-later
 name: Docs
-on: [push, pull_request, workflow_dispatch]
-permissions:
-  contents: write
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: docs-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+
 jobs:
   build:
-    runs-on: ubuntu-latest
+    name: Build and validate documentation
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: read # Check out the documentation and workflow sources.
+    outputs:
+      artifact-id: ${{ steps.upload.outputs.artifact-id }}
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v3
-      - name: Install Sphinx
-        run: |
-          pip install sphinx breathe sphinx-rtd-theme
+      - name: Check out sources
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Set up Python
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version-file: .python-version
+      - name: Install locked Python dependencies
+        run: python -m pip install -r doc/requirements.txt -r tools/development/requirements.txt
+      - name: Audit Python dependencies
+        run: pip-audit -r doc/requirements.txt -r tools/development/requirements.txt
+      - name: Validate workflows with zizmor
+        run: zizmor --pedantic .github/workflows
+        env:
+          GH_TOKEN: ${{ github.token }}
       - name: Install Doxygen
-        run: sudo apt-get install doxygen -y
-        shell: bash
-      - name: Build documentation
         run: |
-          sphinx-build doc _build
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+          sudo apt-get update
+          sudo apt-get install --no-install-recommends --yes doxygen
+      - name: Build documentation
+        run: sphinx-build -W --keep-going -b html doc _build/html
+      - name: Upload documentation
+        id: upload
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: documentation
+          path: _build/html/
+          if-no-files-found: error
+          retention-days: 7
+
+  deploy:
+    name: Publish documentation
+    needs: build
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      contents: write # Publish the validated HTML to the existing gh-pages branch.
+    concurrency:
+      group: docs-deployment
+      cancel-in-progress: false
+    steps:
+      - name: Download validated documentation
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          artifact-ids: ${{ needs.build.outputs.artifact-id }}
+          path: _build/html
+          merge-multiple: true
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453 # v4.1.0
         with:
           publish_branch: gh-pages
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: _build/
+          github_token: ${{ github.token }}
+          publish_dir: _build/html/
           force_orphan: true

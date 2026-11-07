@@ -16,19 +16,15 @@ If you encounter a bug, please create a new issue in the project's issue tracker
 * Steps to reproduce the issue.
 * Any additional information that may be helpful (e.g., screenshots, logs, or environment details).
 
-### Suggesting Enhancements
+### Maintenance Scope
 
-To suggest a new feature or enhancement, please create a new issue in the project's issue tracker. In your suggestion, include:
-
-* A clear and concise description of the enhancement.
-* The motivation behind the suggestion (e.g., how it would improve the project or solve a problem).
-* Any relevant examples or resources that support your suggestion.
+This library remains maintained for bug fixes, security fixes, and Qt 6 compatibility. ErbslandDEV no longer uses Qt, so no new features will be added. Qt 5 support ended with version 1.3.0 and will not receive further updates.
 
 ### Code Contributions
 
 At Erbsland DEV, we maintain high standards for security, reliability, and quality in our software. To ensure the integrity of the codebase, we do not accept pull requests by default. If you would like to contribute code, please follow the steps below:
 
-1. Start by reporting a bug or suggesting a feature through the issue tracker. Alternatively, you can contact us directly to discuss your proposed contribution.
+1. Start by reporting a bug or compatibility issue through the issue tracker. Alternatively, you can contact us directly to discuss your proposed contribution.
 
 2. Wait for feedback from the maintainers or the community. This will help ensure that your proposed changes align with the project's goals and quality standards.
 

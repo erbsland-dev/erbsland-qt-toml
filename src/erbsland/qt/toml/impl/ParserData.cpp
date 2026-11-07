@@ -1,4 +1,4 @@
-// Copyright © 2023-2024 Tobias Erbsland https://erbsland.dev/ and EducateIT GmbH https://educateit.ch
+// Copyright © 2023-2026 Tobias Erbsland https://erbsland.dev/ and EducateIT GmbH https://educateit.ch
 // According to the copyright terms specified in the file "COPYRIGHT.md".
 // SPDX-License-Identifier: LGPL-3.0-or-later
 #include "ParserData.hpp"
@@ -9,6 +9,7 @@
 #include <QtCore/QTime>
 #include <QtCore/QDate>
 #include <QtCore/QDateTime>
+#include <QtCore/QTimeZone>
 
 
 namespace erbsland::qt::toml::impl {
@@ -327,7 +328,14 @@ auto ParserData::parseDateTimeValue() -> ValuePtr {
     auto text = QStringView(_token.text());
     auto date = convertDate(text.left(10));
     auto [time, timeSpec, offset] = convertTime(text.mid(11));
+#if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
+    const auto timeZone =
+        timeSpec == Qt::LocalTime ? QTimeZone{QTimeZone::LocalTime} : QTimeZone::fromSecondsAheadOfUtc(offset);
+    auto dateTime = QDateTime{date, time, timeZone};
+#else
+    // Qt 6.0-6.4 do not provide lightweight local and fixed-offset time zones.
     auto dateTime = QDateTime{date, time, timeSpec, offset};
+#endif
     return Value::createDateTime(dateTime);
 }
 

@@ -15,9 +15,11 @@ So, unless you're specifically listed as a *Copyright Holder*, go ahead and carr
 
 # Copyright Terms for Project *Erbsland Qt TOML*
 
-_Version: 1.0, Last Modified: 2024-01-04_
+_Version: 1.0, Last Modified: 2026-11-07_
 
 ## Copyright Holders
+
+Copyright © 2023-2026 Tobias Erbsland and EducateIT GmbH.
 
 - Tobias Erbsland, Erbsland DEV.
 - EducateIT GmbH.

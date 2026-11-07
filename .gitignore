@@ -34,3 +34,5 @@
 .idea
 cmake-build-*
 _build
+.venv/
+__pycache__/
